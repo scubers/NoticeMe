@@ -21,6 +21,9 @@
 		A893CDC11CA907CE00697980 /* NTMainNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDC01CA907CE00697980 /* NTMainNavgationController.swift */; };
 		A893CDC31CA9182000697980 /* WeChat_1458720825.png in Resources */ = {isa = PBXBuildFile; fileRef = A893CDC21CA9182000697980 /* WeChat_1458720825.png */; };
 		A893CDCD1CA9278000697980 /* NTCountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDCC1CA9278000697980 /* NTCountDownViewController.swift */; };
+		A8C7B4FC1CA9796300EFF668 /* NTAddTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B4FB1CA9796300EFF668 /* NTAddTimerViewController.swift */; };
+		A8C7B5021CA9803F00EFF668 /* UIViewController+xx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B5011CA9803F00EFF668 /* UIViewController+xx.swift */; };
+		A8C7B5041CA9851100EFF668 /* NTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B5031CA9851100EFF668 /* NTViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		A893CDC21CA9182000697980 /* WeChat_1458720825.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WeChat_1458720825.png; sourceTree = "<group>"; };
 		A893CDC41CA923AD00697980 /* NoticeMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoticeMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		A893CDCC1CA9278000697980 /* NTCountDownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTCountDownViewController.swift; sourceTree = "<group>"; };
+		A8C7B4FB1CA9796300EFF668 /* NTAddTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAddTimerViewController.swift; sourceTree = "<group>"; };
+		A8C7B5011CA9803F00EFF668 /* UIViewController+xx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+xx.swift"; sourceTree = "<group>"; };
+		A8C7B5031CA9851100EFF668 /* NTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,8 @@
 		A893CDB31CA8FA6E00697980 /* universal */ = {
 			isa = PBXGroup;
 			children = (
+				A8C7B4FD1CA97A6B00EFF668 /* controller */,
+				A8C7B4FE1CA97A6B00EFF668 /* view */,
 				A893CDB61CA9007100697980 /* mgr */,
 				A893CDB71CA9007100697980 /* service */,
 				A893CDB41CA8FCB600697980 /* PublicMethod.swift */,
@@ -269,6 +277,7 @@
 		A893CDFB1CA92B2600697980 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				A8C7B4FB1CA9796300EFF668 /* NTAddTimerViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -281,6 +290,22 @@
 			sourceTree = "<group>";
 		};
 		A893CDFD1CA92B2600697980 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A8C7B4FD1CA97A6B00EFF668 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				A8C7B5011CA9803F00EFF668 /* UIViewController+xx.swift */,
+				A8C7B5031CA9851100EFF668 /* NTViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		A8C7B4FE1CA97A6B00EFF668 /* view */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -445,8 +470,11 @@
 				A893CDB91CA900BB00697980 /* NTAppLifeMgr.swift in Sources */,
 				A893CDAD1CA8F93900697980 /* AppDelegate.swift in Sources */,
 				A893CDC11CA907CE00697980 /* NTMainNavgationController.swift in Sources */,
+				A8C7B5041CA9851100EFF668 /* NTViewController.swift in Sources */,
+				A8C7B5021CA9803F00EFF668 /* UIViewController+xx.swift in Sources */,
 				A893CDCD1CA9278000697980 /* NTCountDownViewController.swift in Sources */,
 				A893CDB51CA8FCB600697980 /* PublicMethod.swift in Sources */,
+				A8C7B4FC1CA9796300EFF668 /* NTAddTimerViewController.swift in Sources */,
 				A893CD901CA8F82300697980 /* NoticeMe.xcdatamodeld in Sources */,
 				A893CDB11CA8FA5F00697980 /* NTWelcomeViewController.swift in Sources */,
 			);

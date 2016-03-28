@@ -7,22 +7,47 @@
 //
 
 import UIKit
+import BlocksKit
 
-class NTMainMenuViewController: UIViewController {
+class NTMainMenuViewController: NTViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = jr_randomColor()
 
+        setupNavigationItems()
 
     }
 
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    private func setupNavigationItems() {
 
+        let item = UIBarButtonItem().bk_initWithTitle("进入详情", style: .Plain) { [weak self] (item) -> Void in
+
+            self?.handleDetailWithItem(item as! UIBarButtonItem)
+
+        } as! UIBarButtonItem
+
+
+        let item2 = UIBarButtonItem().bk_initWithTitle("添加页面", style: .Plain) { [weak self] (item) -> Void in
+
+            self?.handleAddWith(item as! UIBarButtonItem)
+
+            } as! UIBarButtonItem
+
+        self.navigationItem.rightBarButtonItem = item
+        self.navigationItem.leftBarButtonItem = item2
+    }
+
+    private func handleDetailWithItem(item:UIBarButtonItem) {
         self.navigationController?.pushViewController(NTWelcomeViewController(), animated: true)
-
-
     }
+
+    private func handleAddWith(item:UIBarButtonItem) {
+        presentViewController(NTAddTimerViewController(), animated: true) { () -> Void in
+            
+        }
+    }
+
 
 }

@@ -19,7 +19,7 @@ class NTMainNavgationController: UINavigationController {
         self.navigationBar.clipsToBounds = true
 
         alphaView.frame = CGRectMake(0, 0, self.navigationBar.frame.size.width, self.navigationBar.frame.size.height + 20)
-        alphaView.backgroundColor = jr_randomColor()
+        alphaView.backgroundColor = UIColor.init(white: 1, alpha: 0.5)
         self.view.insertSubview(alphaView, belowSubview: self.navigationBar)
 
         self.navigationBar.addObserver(self, forKeyPath: "frame", options: [.New], context: nil)

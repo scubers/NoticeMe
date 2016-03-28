@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NTCountDownViewController: UIViewController {
+class NTCountDownViewController: NTViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
