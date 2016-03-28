@@ -165,6 +165,7 @@
 		A893CDB21CA8FA6E00697980 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				A8C7B5051CA9895100EFF668 /* settings */,
 				A893CDFA1CA92B2600697980 /* addTimer */,
 				A893CDC81CA9275900697980 /* countDown */,
 				A893CDBA1CA905BE00697980 /* mainMenu */,
@@ -306,6 +307,37 @@
 			sourceTree = "<group>";
 		};
 		A8C7B4FE1CA97A6B00EFF668 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A8C7B5051CA9895100EFF668 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				A8C7B5061CA9895100EFF668 /* controller */,
+				A8C7B5071CA9895100EFF668 /* service */,
+				A8C7B5081CA9895100EFF668 /* view */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
+		A8C7B5061CA9895100EFF668 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		A8C7B5071CA9895100EFF668 /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		A8C7B5081CA9895100EFF668 /* view */ = {
 			isa = PBXGroup;
 			children = (
 			);
