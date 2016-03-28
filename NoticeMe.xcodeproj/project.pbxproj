@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A893CD881CA8F82300697980 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CD871CA8F82300697980 /* AppDelegate.swift */; };
-		A893CD8A1CA8F82300697980 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CD891CA8F82300697980 /* ViewController.swift */; };
+		92E5D7372ACC083732F295E4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB52CE7B95830FAD9561450 /* Pods.framework */; };
 		A893CD8D1CA8F82300697980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A893CD8B1CA8F82300697980 /* Main.storyboard */; };
 		A893CD901CA8F82300697980 /* NoticeMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A893CD8E1CA8F82300697980 /* NoticeMe.xcdatamodeld */; };
 		A893CD921CA8F82300697980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A893CD911CA8F82300697980 /* Assets.xcassets */; };
 		A893CD951CA8F82300697980 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A893CD931CA8F82300697980 /* LaunchScreen.storyboard */; };
 		A893CDA01CA8F82300697980 /* NoticeMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CD9F1CA8F82300697980 /* NoticeMeTests.swift */; };
+		A893CDAD1CA8F93900697980 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDAB1CA8F93900697980 /* AppDelegate.swift */; };
+		A893CDB11CA8FA5F00697980 /* NTWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB01CA8FA5F00697980 /* NTWelcomeViewController.swift */; };
+		A893CDB51CA8FCB600697980 /* PublicMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB41CA8FCB600697980 /* PublicMethod.swift */; };
+		A893CDB91CA900BB00697980 /* NTAppLifeMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB81CA900BB00697980 /* NTAppLifeMgr.swift */; };
+		A893CDBF1CA905ED00697980 /* NTMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDBE1CA905ED00697980 /* NTMainMenuViewController.swift */; };
+		A893CDC11CA907CE00697980 /* NTMainNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDC01CA907CE00697980 /* NTMainNavgationController.swift */; };
+		A893CDC31CA9182000697980 /* WeChat_1458720825.png in Resources */ = {isa = PBXBuildFile; fileRef = A893CDC21CA9182000697980 /* WeChat_1458720825.png */; };
+		A893CDCD1CA9278000697980 /* NTCountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDCC1CA9278000697980 /* NTCountDownViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,9 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38C2E15ED0AC5C3F6C8F51E4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8B9A88D24D353600C6A998F4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9AB52CE7B95830FAD9561450 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A893CD841CA8F82300697980 /* NoticeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoticeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A893CD871CA8F82300697980 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A893CD891CA8F82300697980 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A893CD8C1CA8F82300697980 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A893CD8F1CA8F82300697980 /* NoticeMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoticeMe.xcdatamodel; sourceTree = "<group>"; };
 		A893CD911CA8F82300697980 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +46,15 @@
 		A893CD9B1CA8F82300697980 /* NoticeMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoticeMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A893CD9F1CA8F82300697980 /* NoticeMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeMeTests.swift; sourceTree = "<group>"; };
 		A893CDA11CA8F82300697980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A893CDAB1CA8F93900697980 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A893CDB01CA8FA5F00697980 /* NTWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTWelcomeViewController.swift; sourceTree = "<group>"; };
+		A893CDB41CA8FCB600697980 /* PublicMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicMethod.swift; sourceTree = "<group>"; };
+		A893CDB81CA900BB00697980 /* NTAppLifeMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAppLifeMgr.swift; sourceTree = "<group>"; };
+		A893CDBE1CA905ED00697980 /* NTMainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTMainMenuViewController.swift; sourceTree = "<group>"; };
+		A893CDC01CA907CE00697980 /* NTMainNavgationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTMainNavgationController.swift; sourceTree = "<group>"; };
+		A893CDC21CA9182000697980 /* WeChat_1458720825.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WeChat_1458720825.png; sourceTree = "<group>"; };
+		A893CDC41CA923AD00697980 /* NoticeMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoticeMe-Bridging-Header.h"; sourceTree = "<group>"; };
+		A893CDCC1CA9278000697980 /* NTCountDownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTCountDownViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E5D7372ACC083732F295E4 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +76,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10816DDD9326CAFFAA338D58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AB52CE7B95830FAD9561450 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		266360338395FFC9361256B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38C2E15ED0AC5C3F6C8F51E4 /* Pods.debug.xcconfig */,
+				8B9A88D24D353600C6A998F4 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A893CD7B1CA8F82300697980 = {
 			isa = PBXGroup;
 			children = (
 				A893CD861CA8F82300697980 /* NoticeMe */,
 				A893CD9E1CA8F82300697980 /* NoticeMeTests */,
 				A893CD851CA8F82300697980 /* Products */,
+				266360338395FFC9361256B8 /* Pods */,
+				10816DDD9326CAFFAA338D58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +116,9 @@
 		A893CD861CA8F82300697980 /* NoticeMe */ = {
 			isa = PBXGroup;
 			children = (
-				A893CD871CA8F82300697980 /* AppDelegate.swift */,
-				A893CD891CA8F82300697980 /* ViewController.swift */,
-				A893CD8B1CA8F82300697980 /* Main.storyboard */,
-				A893CD911CA8F82300697980 /* Assets.xcassets */,
-				A893CD931CA8F82300697980 /* LaunchScreen.storyboard */,
-				A893CD961CA8F82300697980 /* Info.plist */,
-				A893CD8E1CA8F82300697980 /* NoticeMe.xcdatamodeld */,
+				A893CDC21CA9182000697980 /* WeChat_1458720825.png */,
+				A893CDAA1CA8F93900697980 /* classes */,
+				A893CDAF1CA8F95B00697980 /* supportFiles */,
 			);
 			path = NoticeMe;
 			sourceTree = "<group>";
@@ -99,6 +132,161 @@
 			path = NoticeMeTests;
 			sourceTree = "<group>";
 		};
+		A893CDAA1CA8F93900697980 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				A893CDB21CA8FA6E00697980 /* modules */,
+				A893CDB31CA8FA6E00697980 /* universal */,
+				A893CDAB1CA8F93900697980 /* AppDelegate.swift */,
+				A893CDB01CA8FA5F00697980 /* NTWelcomeViewController.swift */,
+				A893CDC41CA923AD00697980 /* NoticeMe-Bridging-Header.h */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		A893CDAF1CA8F95B00697980 /* supportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A893CD8B1CA8F82300697980 /* Main.storyboard */,
+				A893CD911CA8F82300697980 /* Assets.xcassets */,
+				A893CD931CA8F82300697980 /* LaunchScreen.storyboard */,
+				A893CD961CA8F82300697980 /* Info.plist */,
+				A893CD8E1CA8F82300697980 /* NoticeMe.xcdatamodeld */,
+			);
+			name = supportFiles;
+			sourceTree = "<group>";
+		};
+		A893CDB21CA8FA6E00697980 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				A893CDFA1CA92B2600697980 /* addTimer */,
+				A893CDC81CA9275900697980 /* countDown */,
+				A893CDBA1CA905BE00697980 /* mainMenu */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		A893CDB31CA8FA6E00697980 /* universal */ = {
+			isa = PBXGroup;
+			children = (
+				A893CDB61CA9007100697980 /* mgr */,
+				A893CDB71CA9007100697980 /* service */,
+				A893CDB41CA8FCB600697980 /* PublicMethod.swift */,
+			);
+			path = universal;
+			sourceTree = "<group>";
+		};
+		A893CDB61CA9007100697980 /* mgr */ = {
+			isa = PBXGroup;
+			children = (
+				A893CDB81CA900BB00697980 /* NTAppLifeMgr.swift */,
+			);
+			path = mgr;
+			sourceTree = "<group>";
+		};
+		A893CDB71CA9007100697980 /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		A893CDBA1CA905BE00697980 /* mainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A893CDBB1CA905BE00697980 /* controller */,
+				A893CDBC1CA905BE00697980 /* service */,
+				A893CDBD1CA905BE00697980 /* view */,
+			);
+			path = mainMenu;
+			sourceTree = "<group>";
+		};
+		A893CDBB1CA905BE00697980 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				A893CDBE1CA905ED00697980 /* NTMainMenuViewController.swift */,
+				A893CDC01CA907CE00697980 /* NTMainNavgationController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		A893CDBC1CA905BE00697980 /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		A893CDBD1CA905BE00697980 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A893CDC81CA9275900697980 /* countDown */ = {
+			isa = PBXGroup;
+			children = (
+				A893CDC91CA9275900697980 /* controller */,
+				A893CDCA1CA9275900697980 /* service */,
+				A893CDCB1CA9275900697980 /* view */,
+			);
+			path = countDown;
+			sourceTree = "<group>";
+		};
+		A893CDC91CA9275900697980 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				A893CDCC1CA9278000697980 /* NTCountDownViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		A893CDCA1CA9275900697980 /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		A893CDCB1CA9275900697980 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A893CDFA1CA92B2600697980 /* addTimer */ = {
+			isa = PBXGroup;
+			children = (
+				A893CDFB1CA92B2600697980 /* controller */,
+				A893CDFC1CA92B2600697980 /* service */,
+				A893CDFD1CA92B2600697980 /* view */,
+			);
+			path = addTimer;
+			sourceTree = "<group>";
+		};
+		A893CDFB1CA92B2600697980 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		A893CDFC1CA92B2600697980 /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		A893CDFD1CA92B2600697980 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +294,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A893CDA41CA8F82300697980 /* Build configuration list for PBXNativeTarget "NoticeMe" */;
 			buildPhases = (
+				543010116CD0CEB6FEE5819F /* Check Pods Manifest.lock */,
 				A893CD801CA8F82300697980 /* Sources */,
 				A893CD811CA8F82300697980 /* Frameworks */,
 				A893CD821CA8F82300697980 /* Resources */,
+				51B47B9BB20CB94EDE2896DC /* Embed Pods Frameworks */,
+				AE293EF83B9160AE6F27848D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,6 +340,7 @@
 				TargetAttributes = {
 					A893CD831CA8F82300697980 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = FJ535WN7FW;
 					};
 					A893CD9A1CA8F82300697980 = {
 						CreatedOnToolsVersion = 7.2;
@@ -181,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A893CD951CA8F82300697980 /* LaunchScreen.storyboard in Resources */,
+				A893CDC31CA9182000697980 /* WeChat_1458720825.png in Resources */,
 				A893CD921CA8F82300697980 /* Assets.xcassets in Resources */,
 				A893CD8D1CA8F82300697980 /* Main.storyboard in Resources */,
 			);
@@ -195,14 +388,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		51B47B9BB20CB94EDE2896DC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		543010116CD0CEB6FEE5819F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AE293EF83B9160AE6F27848D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A893CD801CA8F82300697980 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A893CD8A1CA8F82300697980 /* ViewController.swift in Sources */,
-				A893CD881CA8F82300697980 /* AppDelegate.swift in Sources */,
+				A893CDBF1CA905ED00697980 /* NTMainMenuViewController.swift in Sources */,
+				A893CDB91CA900BB00697980 /* NTAppLifeMgr.swift in Sources */,
+				A893CDAD1CA8F93900697980 /* AppDelegate.swift in Sources */,
+				A893CDC11CA907CE00697980 /* NTMainNavgationController.swift in Sources */,
+				A893CDCD1CA9278000697980 /* NTCountDownViewController.swift in Sources */,
+				A893CDB51CA8FCB600697980 /* PublicMethod.swift in Sources */,
 				A893CD901CA8F82300697980 /* NoticeMe.xcdatamodeld in Sources */,
+				A893CDB11CA8FA5F00697980 /* NTWelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,23 +575,34 @@
 		};
 		A893CDA51CA8F82300697980 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38C2E15ED0AC5C3F6C8F51E4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = NoticeMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jrwong.NoticeMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NoticeMe/classes/NoticeMe-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		A893CDA61CA8F82300697980 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B9A88D24D353600C6A998F4 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = NoticeMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jrwong.NoticeMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NoticeMe/classes/NoticeMe-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -392,6 +649,7 @@
 				A893CDA61CA8F82300697980 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A893CDA71CA8F82300697980 /* Build configuration list for PBXNativeTarget "NoticeMeTests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +658,7 @@
 				A893CDA91CA8F82300697980 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
