@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		92E5D7372ACC083732F295E4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB52CE7B95830FAD9561450 /* Pods.framework */; };
+		A80DDB2F1CAAB859003EE3B1 /* CoreDataDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB2E1CAAB859003EE3B1 /* CoreDataDAO.swift */; };
+		A80DDB311CAABE1C003EE3B1 /* NSManagedObject+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB301CAABE1C003EE3B1 /* NSManagedObject+Create.swift */; };
+		A80DDB3A1CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB381CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift */; };
+		A80DDB3B1CAAC1D3003EE3B1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB391CAAC1D3003EE3B1 /* Person.swift */; };
 		A893CD8D1CA8F82300697980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A893CD8B1CA8F82300697980 /* Main.storyboard */; };
 		A893CD901CA8F82300697980 /* NoticeMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A893CD8E1CA8F82300697980 /* NoticeMe.xcdatamodeld */; };
 		A893CD921CA8F82300697980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A893CD911CA8F82300697980 /* Assets.xcassets */; };
@@ -40,6 +44,10 @@
 		38C2E15ED0AC5C3F6C8F51E4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8B9A88D24D353600C6A998F4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9AB52CE7B95830FAD9561450 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A80DDB2E1CAAB859003EE3B1 /* CoreDataDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDAO.swift; sourceTree = "<group>"; };
+		A80DDB301CAABE1C003EE3B1 /* NSManagedObject+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Create.swift"; sourceTree = "<group>"; };
+		A80DDB381CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A80DDB391CAAC1D3003EE3B1 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		A893CD841CA8F82300697980 /* NoticeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoticeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A893CD8C1CA8F82300697980 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A893CD8F1CA8F82300697980 /* NoticeMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoticeMe.xcdatamodel; sourceTree = "<group>"; };
@@ -99,6 +107,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A80DDB2A1CAAB376003EE3B1 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				A80DDB381CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift */,
+				A80DDB391CAAC1D3003EE3B1 /* Person.swift */,
+				A80DDB2E1CAAB859003EE3B1 /* CoreDataDAO.swift */,
+				A80DDB301CAABE1C003EE3B1 /* NSManagedObject+Create.swift */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		A80DDB2B1CAAB376003EE3B1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		A893CD7B1CA8F82300697980 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +169,8 @@
 			children = (
 				A893CDB21CA8FA6E00697980 /* modules */,
 				A893CDB31CA8FA6E00697980 /* universal */,
+				A80DDB2A1CAAB376003EE3B1 /* DAO */,
+				A80DDB2B1CAAB376003EE3B1 /* Networking */,
 				A893CDAB1CA8F93900697980 /* AppDelegate.swift */,
 				A893CDB01CA8FA5F00697980 /* NTWelcomeViewController.swift */,
 				A893CDC41CA923AD00697980 /* NoticeMe-Bridging-Header.h */,
@@ -498,6 +526,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A80DDB3B1CAAC1D3003EE3B1 /* Person.swift in Sources */,
+				A80DDB3A1CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift in Sources */,
 				A893CDBF1CA905ED00697980 /* NTMainMenuViewController.swift in Sources */,
 				A893CDB91CA900BB00697980 /* NTAppLifeMgr.swift in Sources */,
 				A893CDAD1CA8F93900697980 /* AppDelegate.swift in Sources */,
@@ -507,7 +537,9 @@
 				A893CDCD1CA9278000697980 /* NTCountDownViewController.swift in Sources */,
 				A893CDB51CA8FCB600697980 /* PublicMethod.swift in Sources */,
 				A8C7B4FC1CA9796300EFF668 /* NTAddTimerViewController.swift in Sources */,
+				A80DDB2F1CAAB859003EE3B1 /* CoreDataDAO.swift in Sources */,
 				A893CD901CA8F82300697980 /* NoticeMe.xcdatamodeld in Sources */,
+				A80DDB311CAABE1C003EE3B1 /* NSManagedObject+Create.swift in Sources */,
 				A893CDB11CA8FA5F00697980 /* NTWelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
