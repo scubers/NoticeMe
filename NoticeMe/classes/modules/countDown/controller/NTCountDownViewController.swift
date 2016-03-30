@@ -12,7 +12,7 @@ class NTCountDownViewController: NTViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 
 }

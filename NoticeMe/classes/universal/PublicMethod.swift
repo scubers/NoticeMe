@@ -33,10 +33,9 @@ func jr_rgbaColor(r r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) -> UIColor? {
  *随机颜色
  */
 func jr_randomColor() -> UIColor? {
-    srandom(UInt32(time(nil)))
 
     func randomFloat() -> CGFloat {
-        return (CGFloat(random())%10000 / 10000)
+        return CGFloat(arc4random_uniform(1000)) / 1000.0
     }
 
     return UIColor(red: randomFloat(), green: randomFloat(), blue: randomFloat(), alpha: randomFloat())
@@ -154,7 +153,6 @@ extension UIImage {
         let img = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return img!
-
     }
 }
 
@@ -164,4 +162,6 @@ extension Int {
             f(i: i)
         }
     }
+
+
 }
