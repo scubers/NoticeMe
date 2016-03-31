@@ -21,6 +21,11 @@ func example(description:String? = "", @noescape closure:Void->Void) {
     closure()
 }
 
+func jr_optional<T>(obj:T) -> T? {
+    let t : T? = obj
+    return t
+}
+
 /**
  *颜色的方便方法
  */
@@ -85,83 +90,5 @@ func jr_delay(seconds:Double, queue:dispatch_queue_t, block:dispatch_block_t) {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(seconds * Double(NSEC_PER_SEC))), queue, block)
 }
 
-extension CGRect {
-
-    var center : CGPoint {
-        get {
-            return CGPointMake(CGRectGetMidX(self), CGRectGetMidY(self))
-        }
-    }
-}
 
 
-extension UIView {
-    var x : CGFloat {
-        get {
-            return self.frame.origin.x
-        }
-        set {
-            self.frame.origin.x = newValue
-        }
-    }
-    
-    var y : CGFloat {
-        get {
-            return self.frame.origin.y
-        }
-        set {
-            self.frame.origin.y = newValue
-        }
-    }
-    
-    var width : CGFloat {
-        get {
-            return self.frame.size.width
-        }
-        set {
-            self.frame.size.width = newValue
-        }
-    }
-    
-    var height : CGFloat {
-        get {
-            return self.frame.size.height
-        }
-        set {
-            self.frame.size.height = newValue
-        }
-    }
-    
-}
-
-extension CALayer {
-    func toImage() -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(self.bounds.size, true, self.contentsScale)
-        self.renderInContext(UIGraphicsGetCurrentContext()!)
-        let img = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return img
-    }
-}
-
-extension UIImage {
-
-    static func imageWithColor(color:UIColor, size: CGSize) -> UIImage {
-        UIGraphicsBeginImageContext(size)
-        color.set()
-        UIRectFill(CGRectMake(0, 0, size.width, size.height))
-        let img = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return img!
-    }
-}
-
-extension Int {
-    func times(f: (i: Int)->()) {
-        for i in 1...self {
-            f(i: i)
-        }
-    }
-
-
-}

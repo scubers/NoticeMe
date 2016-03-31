@@ -7,34 +7,33 @@
 //
 
 import UIKit
+import BlocksKit
 
 class NTMainNavgationController: UINavigationController {
 
-    var alphaView: UIView = UIView()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let img = UIImage.imageWithColor(UIColor.clearColor(), size: self.navigationBar.bounds.size)
-        self.navigationBar.setBackgroundImage(img, forBarMetrics: .Compact)
-        self.navigationBar.clipsToBounds = true
-
-        alphaView.frame = CGRectMake(0, 0, self.navigationBar.frame.size.width, self.navigationBar.frame.size.height + 20)
-        alphaView.backgroundColor = UIColor.init(white: 1, alpha: 0.5)
-        self.view.insertSubview(alphaView, belowSubview: self.navigationBar)
-
-        self.navigationBar.addObserver(self, forKeyPath: "frame", options: [.New], context: nil)
-
+    var navigationBarAlpha: CGFloat = 1 {
+        didSet {
+            setNavigationAlpha(navigationBarAlpha, color: navigationBarColor)
+        }
     }
-
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        if keyPath == "frame" {
-            let rect = change?["new"] as! CGRect
-            alphaView.frame = CGRectMake(rect.origin.x, rect.origin.y - 20, rect.size.width, rect.size.height)
+    var navigationBarColor: UIColor = UIColor.whiteColor() {
+        didSet {
+            setNavigationAlpha(navigationBarAlpha, color: navigationBarColor)
         }
     }
 
-    func setNavigationAlpha(alpah:CGFloat) {
-        alphaView.alpha = alpah
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+
+    private func setNavigationAlpha(alpha:CGFloat, color: UIColor) {
+        let size = CGSizeMake(view.bounds.size.width, 64)
+        let pointer : UnsafePointer<CGFloat> = CGColorGetComponents(jr_optional(color.CGColor))
+        let img = UIImage.imageWithColor(UIColor(red: pointer[0], green: pointer[1], blue: pointer[2], alpha: alpha), size: size)
+        self.navigationBar.setBackgroundImage(img, forBarMetrics: .Default)
+        self.navigationBar.shadowImage = UIImage.imageWithColor(UIColor.clearColor(), size: CGSizeMake(size.width, 1))
     }
 
     override func preferredStatusBarStyle() -> UIStatusBarStyle {

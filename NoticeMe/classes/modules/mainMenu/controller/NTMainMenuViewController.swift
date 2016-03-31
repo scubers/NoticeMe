@@ -18,6 +18,12 @@ class NTMainMenuViewController: NTViewController {
 
         setupNavigationItems()
 
+        let img = UIImage.imageWithColor(jr_rgbaColor(r: 200, g: 200, b: 200, a: 200)!, size: CGSizeMake(100, 100))
+
+        let iv = UIImageView(image: img)
+
+        view.addSubview(iv)
+
     }
 
     private func setupNavigationItems() {
