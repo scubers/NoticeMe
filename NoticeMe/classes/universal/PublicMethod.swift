@@ -21,10 +21,33 @@ func example(description:String? = "", @noescape closure:Void->Void) {
     closure()
 }
 
+/**
+ 将一个已知类型转成Optional类型
+ */
 func jr_optional<T>(obj:T) -> T? {
     let t : T? = obj
     return t
 }
+
+/**
+ 直接获取某个对象（不可变）的指针
+ */
+func jr_pointer<T>(inout obj: T) -> UnsafePointer<T> {
+    return withUnsafePointer(&obj) { (pointer) -> UnsafePointer<T> in
+        return pointer
+    }
+}
+
+/**
+ 直接获取某个对象（可变）的指针
+ */
+func jr_mutablePointer<T>(inout obj: T) -> UnsafeMutablePointer<T> {
+    return withUnsafeMutablePointer(&obj) { (pointer) -> UnsafeMutablePointer<T> in
+        return pointer
+    }
+}
+
+
 
 /**
  *颜色的方便方法

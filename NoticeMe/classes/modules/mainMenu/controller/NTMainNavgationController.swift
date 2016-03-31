@@ -40,4 +40,12 @@ class NTMainNavgationController: UINavigationController {
         return .LightContent
     }
 
+    func test() {
+        var arr = NSArray()
+
+        jr_pointer(&arr)
+
+        
+    }
+
 }

@@ -33,6 +33,7 @@
 		A8DC065F1CAD56F700B671B0 /* CALayer+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC065E1CAD56F700B671B0 /* CALayer+ex.swift */; };
 		A8DC06611CAD571400B671B0 /* UIImage+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06601CAD571400B671B0 /* UIImage+ex.swift */; };
 		A8DC06631CAD573500B671B0 /* Int+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06621CAD573500B671B0 /* Int+ex.swift */; };
+		A8DC06661CAD5C3800B671B0 /* NTAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06651CAD5C3800B671B0 /* NTAudioManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		A8DC065E1CAD56F700B671B0 /* CALayer+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+ex.swift"; sourceTree = "<group>"; };
 		A8DC06601CAD571400B671B0 /* UIImage+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ex.swift"; sourceTree = "<group>"; };
 		A8DC06621CAD573500B671B0 /* Int+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+ex.swift"; sourceTree = "<group>"; };
+		A8DC06651CAD5C3800B671B0 /* NTAudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAudioManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				A893CDB31CA8FA6E00697980 /* universal */,
 				A80DDB2A1CAAB376003EE3B1 /* DAO */,
 				A80DDB2B1CAAB376003EE3B1 /* Networking */,
+				A8DC06641CAD5AE100B671B0 /* AudioUtil */,
 				A8DC06591CAD567400B671B0 /* extensions */,
 				A893CDAB1CA8F93900697980 /* AppDelegate.swift */,
 				A893CDB01CA8FA5F00697980 /* NTWelcomeViewController.swift */,
@@ -395,6 +398,14 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
+		A8DC06641CAD5AE100B671B0 /* AudioUtil */ = {
+			isa = PBXGroup;
+			children = (
+				A8DC06651CAD5C3800B671B0 /* NTAudioManager.swift */,
+			);
+			path = AudioUtil;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -568,6 +579,7 @@
 				A8DC065F1CAD56F700B671B0 /* CALayer+ex.swift in Sources */,
 				A893CD901CA8F82300697980 /* NoticeMe.xcdatamodeld in Sources */,
 				A80DDB311CAABE1C003EE3B1 /* NSManagedObject+Create.swift in Sources */,
+				A8DC06661CAD5C3800B671B0 /* NTAudioManager.swift in Sources */,
 				A893CDB11CA8FA5F00697980 /* NTWelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
