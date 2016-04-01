@@ -8,30 +8,21 @@
 
 import UIKit
 import BlocksKit
+import AudioToolbox
 
 class NTMainMenuViewController: NTViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.backgroundColor = jr_randomColor()
-
         setupNavigationItems()
-
-        let img = UIImage.imageWithColor(jr_rgbaColor(r: 200, g: 200, b: 200, a: 200)!, size: CGSizeMake(100, 100))
-
-        let iv = UIImageView(image: img)
-
-        view.addSubview(iv)
 
     }
 
     private func setupNavigationItems() {
 
         let item = UIBarButtonItem().bk_initWithTitle("进入详情", style: .Plain) { [weak self] (item) -> Void in
-
             self?.handleDetailWithItem(item as! UIBarButtonItem)
-
         } as! UIBarButtonItem
 
 
@@ -50,6 +41,7 @@ class NTMainMenuViewController: NTViewController {
     }
 
     private func handleAddWith(item:UIBarButtonItem) {
+
         presentViewController(NTAddTimerViewController(), animated: true) { () -> Void in
             
         }

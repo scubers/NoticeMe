@@ -12,6 +12,7 @@
 		A80DDB311CAABE1C003EE3B1 /* NSManagedObject+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB301CAABE1C003EE3B1 /* NSManagedObject+Create.swift */; };
 		A80DDB3A1CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB381CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift */; };
 		A80DDB3B1CAAC1D3003EE3B1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB391CAAC1D3003EE3B1 /* Person.swift */; };
+		A86CF3761CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CF3751CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift */; };
 		A893CD8D1CA8F82300697980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A893CD8B1CA8F82300697980 /* Main.storyboard */; };
 		A893CD901CA8F82300697980 /* NoticeMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A893CD8E1CA8F82300697980 /* NoticeMe.xcdatamodeld */; };
 		A893CD921CA8F82300697980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A893CD911CA8F82300697980 /* Assets.xcassets */; };
@@ -23,7 +24,6 @@
 		A893CDB91CA900BB00697980 /* NTAppLifeMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB81CA900BB00697980 /* NTAppLifeMgr.swift */; };
 		A893CDBF1CA905ED00697980 /* NTMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDBE1CA905ED00697980 /* NTMainMenuViewController.swift */; };
 		A893CDC11CA907CE00697980 /* NTMainNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDC01CA907CE00697980 /* NTMainNavgationController.swift */; };
-		A893CDC31CA9182000697980 /* WeChat_1458720825.png in Resources */ = {isa = PBXBuildFile; fileRef = A893CDC21CA9182000697980 /* WeChat_1458720825.png */; };
 		A893CDCD1CA9278000697980 /* NTCountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDCC1CA9278000697980 /* NTCountDownViewController.swift */; };
 		A8C7B4FC1CA9796300EFF668 /* NTAddTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B4FB1CA9796300EFF668 /* NTAddTimerViewController.swift */; };
 		A8C7B5021CA9803F00EFF668 /* UIViewController+xx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B5011CA9803F00EFF668 /* UIViewController+xx.swift */; };
@@ -60,6 +60,7 @@
 		A80DDB301CAABE1C003EE3B1 /* NSManagedObject+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Create.swift"; sourceTree = "<group>"; };
 		A80DDB381CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A80DDB391CAAC1D3003EE3B1 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		A86CF3751CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAudioSystemAudioSourceManager.swift; sourceTree = "<group>"; };
 		A893CD841CA8F82300697980 /* NoticeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoticeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A893CD8C1CA8F82300697980 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A893CD8F1CA8F82300697980 /* NoticeMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoticeMe.xcdatamodel; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		A893CDB81CA900BB00697980 /* NTAppLifeMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAppLifeMgr.swift; sourceTree = "<group>"; };
 		A893CDBE1CA905ED00697980 /* NTMainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTMainMenuViewController.swift; sourceTree = "<group>"; };
 		A893CDC01CA907CE00697980 /* NTMainNavgationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTMainNavgationController.swift; sourceTree = "<group>"; };
-		A893CDC21CA9182000697980 /* WeChat_1458720825.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WeChat_1458720825.png; sourceTree = "<group>"; };
 		A893CDC41CA923AD00697980 /* NoticeMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoticeMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		A893CDCC1CA9278000697980 /* NTCountDownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTCountDownViewController.swift; sourceTree = "<group>"; };
 		A8C7B4FB1CA9796300EFF668 /* NTAddTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAddTimerViewController.swift; sourceTree = "<group>"; };
@@ -181,7 +181,6 @@
 		A893CD861CA8F82300697980 /* NoticeMe */ = {
 			isa = PBXGroup;
 			children = (
-				A893CDC21CA9182000697980 /* WeChat_1458720825.png */,
 				A893CDAA1CA8F93900697980 /* classes */,
 				A893CDAF1CA8F95B00697980 /* supportFiles */,
 			);
@@ -425,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				A8DC06651CAD5C3800B671B0 /* NTAudioManager.swift */,
+				A86CF3751CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift */,
 			);
 			path = AudioUtil;
 			sourceTree = "<group>";
@@ -566,7 +566,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A893CD951CA8F82300697980 /* LaunchScreen.storyboard in Resources */,
-				A893CDC31CA9182000697980 /* WeChat_1458720825.png in Resources */,
 				A893CD921CA8F82300697980 /* Assets.xcassets in Resources */,
 				A893CD8D1CA8F82300697980 /* Main.storyboard in Resources */,
 			);
@@ -653,6 +652,7 @@
 				A8C7B4FC1CA9796300EFF668 /* NTAddTimerViewController.swift in Sources */,
 				A8DC065B1CAD56A200B671B0 /* UIView+ex.swift in Sources */,
 				A8DC067A1CAD7DD700B671B0 /* amrFileCodec.mm in Sources */,
+				A86CF3761CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift in Sources */,
 				A80DDB2F1CAAB859003EE3B1 /* CoreDataDAO.swift in Sources */,
 				A8DC065F1CAD56F700B671B0 /* CALayer+ex.swift in Sources */,
 				A893CD901CA8F82300697980 /* NoticeMe.xcdatamodeld in Sources */,
@@ -790,6 +790,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = NoticeMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -812,6 +813,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = NoticeMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

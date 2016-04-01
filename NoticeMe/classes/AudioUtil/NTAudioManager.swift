@@ -8,10 +8,13 @@
 
 import AVFoundation
 
+let pathKey: String = "path"
+
 enum NTAudioType {
     case AMR
     case MP3
     case WAV
+    case CAF
 }
 
 class NTAudioManager : NSObject {
@@ -62,7 +65,8 @@ class NTAudioManager : NSObject {
      - parameter complete: complete
      - returns: 返回播放器
      */
-    func playAudioWithPath(path: String, sourceType: NTAudioType, needStopOther: Bool, willPlay:NTAudioPlayerWillPlayBlock, playing:NTAudioPlayerPlayingBlock, complete: NTAudioPlayerCompleteBlock) -> AVAudioPlayer? {
+    func playAudioWithPath(path: String, sourceType: NTAudioType, needStopOther: Bool, repeatCount: Int = 1, willPlay: NTAudioPlayerWillPlayBlock?, playing: NTAudioPlayerPlayingBlock?, complete: NTAudioPlayerCompleteBlock?) -> AVAudioPlayer? {
+
 
         var player = playerWithFilePath(path)
 
@@ -84,7 +88,9 @@ class NTAudioManager : NSObject {
 
 
         do {
-            let url  = NSURL(string: destPath)
+
+            let string = "file://\(destPath)"
+            let url  = NSURL(string: string)
             let data = try NSData(contentsOfURL: url!, options: [.MappedRead])
             player   = try AVAudioPlayer(data: data, fileTypeHint: AVFileTypeWAVE)
         } catch {
@@ -93,7 +99,7 @@ class NTAudioManager : NSObject {
 
         if player == nil {return nil}
 
-        configurePlayer(player!, filePath: destPath, willBlock: willPlay, playingBlock: playing, completeBlock: complete)
+        configurePlayer(player!, filePath: destPath, repeatCount:repeatCount, willBlock: willPlay, playingBlock: playing, completeBlock: complete)
 
         return player
     }
@@ -145,7 +151,7 @@ class NTAudioManager : NSObject {
     }
 
     func playerDidPlay(timer: NSTimer) {
-        guard let path = timer.userInfo?["path"] as? String else {
+        guard let path = timer.userInfo?[pathKey] as? String else {
             return
         }
 
@@ -173,8 +179,9 @@ class NTAudioManager : NSObject {
     }
 
     private func createTimer4MonitoringPlayer(player: AVAudioPlayer) -> NSTimer {
+
         let path = path4Player(player)
-        let timer = NSTimer(timeInterval: 0.1, target: self, selector: "playerDidPlay", userInfo: ["path" : path] as? AnyObject, repeats: true)
+        let timer = NSTimer(timeInterval: 0.1, target: self, selector: #selector(NTAudioManager.playerDidPlay(_:)), userInfo: [pathKey : path] as? AnyObject, repeats: true)
         NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
         return timer
     }
@@ -189,9 +196,12 @@ class NTAudioManager : NSObject {
         timers.removeValueForKey(name)
     }
 
-    private func configurePlayer(player: AVAudioPlayer, filePath: String, willBlock: NTAudioPlayerWillPlayBlock?, playingBlock: NTAudioPlayerPlayingBlock?, completeBlock: NTAudioPlayerCompleteBlock?) {
+    private func configurePlayer(player: AVAudioPlayer, filePath: String, repeatCount: Int, willBlock: NTAudioPlayerWillPlayBlock?, playingBlock: NTAudioPlayerPlayingBlock?, completeBlock: NTAudioPlayerCompleteBlock?) {
 
         player.delegate = self
+
+        if repeatCount > 0 { player.numberOfLoops = repeatCount}
+
         players[filePath] = player
 
         let timer = createTimer4MonitoringPlayer(player)
