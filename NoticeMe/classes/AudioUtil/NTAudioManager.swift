@@ -67,9 +67,7 @@ class NTAudioManager : NSObject {
      */
     func playAudioWithPath(path: String, sourceType: NTAudioType, needStopOther: Bool, repeatCount: Int = 1, willPlay: NTAudioPlayerWillPlayBlock?, playing: NTAudioPlayerPlayingBlock?, complete: NTAudioPlayerCompleteBlock?) -> AVAudioPlayer? {
 
-
         var player = playerWithFilePath(path)
-
 
         if player != nil {
             stopPlayer(player!)
@@ -118,7 +116,7 @@ class NTAudioManager : NSObject {
      - returns: 如果有，返回播放器
      */
     func playerWithFilePath(filePath: String) -> AVAudioPlayer? {
-        return nil
+        return players[filePath]
     }
 
     /**
@@ -126,30 +124,33 @@ class NTAudioManager : NSObject {
      - parameter player: player description
      */
     func stopPlayer(player: AVAudioPlayer) {
+        guard let path = path4Player(player) else {
+            return
+        }
 
+        if let block = completeCallBacks[path] {
+            block(player: player, success: false)
+        }
+
+        clearResource4Path(path)
     }
 
     /**
      停止全部播放器
      */
     func stopAll() {
-
+        let values = players.values
+        values.forEach {stopPlayer($0)}
     }
 
     /**
      暂停所有播放器
      */
     func pauseAll() {
-
+        players.forEach { $1.pause()}
     }
 
     // MARK: 私有方法
-
-    func convert2WavFromType(type: NTAudioType, withFilePath: String) throws -> String {
-
-        return ""
-    }
-
     func playerDidPlay(timer: NSTimer) {
         guard let path = timer.userInfo?[pathKey] as? String else {
             return
