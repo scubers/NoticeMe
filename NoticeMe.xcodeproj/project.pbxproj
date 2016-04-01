@@ -40,6 +40,40 @@
 		A8DC067D1CAD7DD700B671B0 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8DC06771CAD7DD700B671B0 /* libopencore-amrwb.a */; };
 		A8DC067E1CAD7DD700B671B0 /* NTWavAmrConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06791CAD7DD700B671B0 /* NTWavAmrConverter.mm */; };
 		A8DC06801CAD844400B671B0 /* String+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC067F1CAD844400B671B0 /* String+ex.swift */; };
+		A8F31ACC1CAEA2FF0053B71B /* CGRect+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC065C1CAD56D100B671B0 /* CGRect+ex.swift */; };
+		A8F31ACD1CAEA2FF0053B71B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB391CAAC1D3003EE3B1 /* Person.swift */; };
+		A8F31ACE1CAEA2FF0053B71B /* Int+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06621CAD573500B671B0 /* Int+ex.swift */; };
+		A8F31ACF1CAEA2FF0053B71B /* NTWavAmrConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06791CAD7DD700B671B0 /* NTWavAmrConverter.mm */; };
+		A8F31AD01CAEA2FF0053B71B /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB381CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift */; };
+		A8F31AD11CAEA2FF0053B71B /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8DC066F1CAD7DD700B671B0 /* wav.mm */; };
+		A8F31AD21CAEA2FF0053B71B /* NTMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDBE1CA905ED00697980 /* NTMainMenuViewController.swift */; };
+		A8F31AD31CAEA2FF0053B71B /* NTAppLifeMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB81CA900BB00697980 /* NTAppLifeMgr.swift */; };
+		A8F31AD41CAEA2FF0053B71B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDAB1CA8F93900697980 /* AppDelegate.swift */; };
+		A8F31AD51CAEA2FF0053B71B /* NTMainNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDC01CA907CE00697980 /* NTMainNavgationController.swift */; };
+		A8F31AD61CAEA2FF0053B71B /* UIImage+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06601CAD571400B671B0 /* UIImage+ex.swift */; };
+		A8F31AD71CAEA2FF0053B71B /* NTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B5031CA9851100EFF668 /* NTViewController.swift */; };
+		A8F31AD81CAEA2FF0053B71B /* UIViewController+xx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B5011CA9803F00EFF668 /* UIViewController+xx.swift */; };
+		A8F31AD91CAEA2FF0053B71B /* NTCountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDCC1CA9278000697980 /* NTCountDownViewController.swift */; };
+		A8F31ADA1CAEA2FF0053B71B /* String+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC067F1CAD844400B671B0 /* String+ex.swift */; };
+		A8F31ADB1CAEA2FF0053B71B /* PublicMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB41CA8FCB600697980 /* PublicMethod.swift */; };
+		A8F31ADC1CAEA2FF0053B71B /* NTAddTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B4FB1CA9796300EFF668 /* NTAddTimerViewController.swift */; };
+		A8F31ADD1CAEA2FF0053B71B /* UIView+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC065A1CAD56A200B671B0 /* UIView+ex.swift */; };
+		A8F31ADE1CAEA2FF0053B71B /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8DC066D1CAD7DD700B671B0 /* amrFileCodec.mm */; };
+		A8F31ADF1CAEA2FF0053B71B /* NTAudioSystemAudioSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CF3751CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift */; };
+		A8F31AE01CAEA2FF0053B71B /* CoreDataDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB2E1CAAB859003EE3B1 /* CoreDataDAO.swift */; };
+		A8F31AE11CAEA2FF0053B71B /* CALayer+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC065E1CAD56F700B671B0 /* CALayer+ex.swift */; };
+		A8F31AE21CAEA2FF0053B71B /* NoticeMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A893CD8E1CA8F82300697980 /* NoticeMe.xcdatamodeld */; };
+		A8F31AE31CAEA2FF0053B71B /* NSManagedObject+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB301CAABE1C003EE3B1 /* NSManagedObject+Create.swift */; };
+		A8F31AE41CAEA2FF0053B71B /* NTAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06651CAD5C3800B671B0 /* NTAudioManager.swift */; };
+		A8F31AE51CAEA2FF0053B71B /* NTWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB01CA8FA5F00697980 /* NTWelcomeViewController.swift */; };
+		A8F31AE71CAEA2FF0053B71B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB52CE7B95830FAD9561450 /* Pods.framework */; };
+		A8F31AE81CAEA2FF0053B71B /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8DC06771CAD7DD700B671B0 /* libopencore-amrwb.a */; };
+		A8F31AE91CAEA2FF0053B71B /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8DC06731CAD7DD700B671B0 /* libopencore-amrnb.a */; };
+		A8F31AEB1CAEA2FF0053B71B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A893CD931CA8F82300697980 /* LaunchScreen.storyboard */; };
+		A8F31AEC1CAEA2FF0053B71B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A893CD911CA8F82300697980 /* Assets.xcassets */; };
+		A8F31AED1CAEA2FF0053B71B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A893CD8B1CA8F82300697980 /* Main.storyboard */; };
+		A8F31AF91CAEC2440053B71B /* NTAppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F31AF81CAEC2440053B71B /* NTAppConfiguration.swift */; };
+		A8F31AFA1CAEC2440053B71B /* NTAppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F31AF81CAEC2440053B71B /* NTAppConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +134,10 @@
 		A8DC06781CAD7DD700B671B0 /* NTWavAmrConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTWavAmrConverter.h; sourceTree = "<group>"; };
 		A8DC06791CAD7DD700B671B0 /* NTWavAmrConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTWavAmrConverter.mm; sourceTree = "<group>"; };
 		A8DC067F1CAD844400B671B0 /* String+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ex.swift"; sourceTree = "<group>"; };
+		A8F31AC81CAEA0270053B71B /* NoticeMe copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NoticeMe copy-Info.plist"; path = "/Users/Jrwong/Desktop/code/NoticeMe/NoticeMe copy-Info.plist"; sourceTree = "<absolute>"; };
+		A8F31AF31CAEA2FF0053B71B /* NoticeMe-dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NoticeMe-dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8F31AF41CAEA2FF0053B71B /* NoticeMe copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NoticeMe copy2-Info.plist"; path = "/Users/Jrwong/Desktop/code/NoticeMe/NoticeMe copy2-Info.plist"; sourceTree = "<absolute>"; };
+		A8F31AF81CAEC2440053B71B /* NTAppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAppConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +155,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8F31AE61CAEA2FF0053B71B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8F31AE71CAEA2FF0053B71B /* Pods.framework in Frameworks */,
+				A8F31AE81CAEA2FF0053B71B /* libopencore-amrwb.a in Frameworks */,
+				A8F31AE91CAEA2FF0053B71B /* libopencore-amrnb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +214,8 @@
 				A893CD851CA8F82300697980 /* Products */,
 				266360338395FFC9361256B8 /* Pods */,
 				10816DDD9326CAFFAA338D58 /* Frameworks */,
+				A8F31AC81CAEA0270053B71B /* NoticeMe copy-Info.plist */,
+				A8F31AF41CAEA2FF0053B71B /* NoticeMe copy2-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,6 +224,7 @@
 			children = (
 				A893CD841CA8F82300697980 /* NoticeMe.app */,
 				A893CD9B1CA8F82300697980 /* NoticeMeTests.xctest */,
+				A8F31AF31CAEA2FF0053B71B /* NoticeMe-dev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,6 +294,7 @@
 				A8C7B4FE1CA97A6B00EFF668 /* view */,
 				A893CDB61CA9007100697980 /* mgr */,
 				A893CDB71CA9007100697980 /* service */,
+				A8F31AF71CAEC22E0053B71B /* model */,
 				A893CDB41CA8FCB600697980 /* PublicMethod.swift */,
 			);
 			path = universal;
@@ -480,6 +532,14 @@
 			path = "opencore-amrwb";
 			sourceTree = "<group>";
 		};
+		A8F31AF71CAEC22E0053B71B /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A8F31AF81CAEC2440053B71B /* NTAppConfiguration.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -521,6 +581,26 @@
 			productReference = A893CD9B1CA8F82300697980 /* NoticeMeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A8F31AC91CAEA2FF0053B71B /* NoticeMe-dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8F31AF01CAEA2FF0053B71B /* Build configuration list for PBXNativeTarget "NoticeMe-dev" */;
+			buildPhases = (
+				A8F31ACA1CAEA2FF0053B71B /* Check Pods Manifest.lock */,
+				A8F31ACB1CAEA2FF0053B71B /* Sources */,
+				A8F31AE61CAEA2FF0053B71B /* Frameworks */,
+				A8F31AEA1CAEA2FF0053B71B /* Resources */,
+				A8F31AEE1CAEA2FF0053B71B /* Embed Pods Frameworks */,
+				A8F31AEF1CAEA2FF0053B71B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NoticeMe-dev";
+			productName = NoticeMe;
+			productReference = A8F31AF31CAEA2FF0053B71B /* NoticeMe-dev.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -539,6 +619,9 @@
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = A893CD831CA8F82300697980;
 					};
+					A8F31AC91CAEA2FF0053B71B = {
+						DevelopmentTeam = FJ535WN7FW;
+					};
 				};
 			};
 			buildConfigurationList = A893CD7F1CA8F82300697980 /* Build configuration list for PBXProject "NoticeMe" */;
@@ -555,6 +638,7 @@
 			projectRoot = "";
 			targets = (
 				A893CD831CA8F82300697980 /* NoticeMe */,
+				A8F31AC91CAEA2FF0053B71B /* NoticeMe-dev */,
 				A893CD9A1CA8F82300697980 /* NoticeMeTests */,
 			);
 		};
@@ -575,6 +659,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8F31AEA1CAEA2FF0053B71B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8F31AEB1CAEA2FF0053B71B /* LaunchScreen.storyboard in Resources */,
+				A8F31AEC1CAEA2FF0053B71B /* Assets.xcassets in Resources */,
+				A8F31AED1CAEA2FF0053B71B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +705,51 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		A8F31ACA1CAEA2FF0053B71B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A8F31AEE1CAEA2FF0053B71B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8F31AEF1CAEA2FF0053B71B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AE293EF83B9160AE6F27848D /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -644,6 +783,7 @@
 				A893CDAD1CA8F93900697980 /* AppDelegate.swift in Sources */,
 				A893CDC11CA907CE00697980 /* NTMainNavgationController.swift in Sources */,
 				A8DC06611CAD571400B671B0 /* UIImage+ex.swift in Sources */,
+				A8F31AF91CAEC2440053B71B /* NTAppConfiguration.swift in Sources */,
 				A8C7B5041CA9851100EFF668 /* NTViewController.swift in Sources */,
 				A8C7B5021CA9803F00EFF668 /* UIViewController+xx.swift in Sources */,
 				A893CDCD1CA9278000697980 /* NTCountDownViewController.swift in Sources */,
@@ -667,6 +807,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				A893CDA01CA8F82300697980 /* NoticeMeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8F31ACB1CAEA2FF0053B71B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8F31ACC1CAEA2FF0053B71B /* CGRect+ex.swift in Sources */,
+				A8F31ACD1CAEA2FF0053B71B /* Person.swift in Sources */,
+				A8F31ACE1CAEA2FF0053B71B /* Int+ex.swift in Sources */,
+				A8F31ACF1CAEA2FF0053B71B /* NTWavAmrConverter.mm in Sources */,
+				A8F31AD01CAEA2FF0053B71B /* Person+CoreDataProperties.swift in Sources */,
+				A8F31AD11CAEA2FF0053B71B /* wav.mm in Sources */,
+				A8F31AD21CAEA2FF0053B71B /* NTMainMenuViewController.swift in Sources */,
+				A8F31AD31CAEA2FF0053B71B /* NTAppLifeMgr.swift in Sources */,
+				A8F31AD41CAEA2FF0053B71B /* AppDelegate.swift in Sources */,
+				A8F31AD51CAEA2FF0053B71B /* NTMainNavgationController.swift in Sources */,
+				A8F31AD61CAEA2FF0053B71B /* UIImage+ex.swift in Sources */,
+				A8F31AFA1CAEC2440053B71B /* NTAppConfiguration.swift in Sources */,
+				A8F31AD71CAEA2FF0053B71B /* NTViewController.swift in Sources */,
+				A8F31AD81CAEA2FF0053B71B /* UIViewController+xx.swift in Sources */,
+				A8F31AD91CAEA2FF0053B71B /* NTCountDownViewController.swift in Sources */,
+				A8F31ADA1CAEA2FF0053B71B /* String+ex.swift in Sources */,
+				A8F31ADB1CAEA2FF0053B71B /* PublicMethod.swift in Sources */,
+				A8F31ADC1CAEA2FF0053B71B /* NTAddTimerViewController.swift in Sources */,
+				A8F31ADD1CAEA2FF0053B71B /* UIView+ex.swift in Sources */,
+				A8F31ADE1CAEA2FF0053B71B /* amrFileCodec.mm in Sources */,
+				A8F31ADF1CAEA2FF0053B71B /* NTAudioSystemAudioSourceManager.swift in Sources */,
+				A8F31AE01CAEA2FF0053B71B /* CoreDataDAO.swift in Sources */,
+				A8F31AE11CAEA2FF0053B71B /* CALayer+ex.swift in Sources */,
+				A8F31AE21CAEA2FF0053B71B /* NoticeMe.xcdatamodeld in Sources */,
+				A8F31AE31CAEA2FF0053B71B /* NSManagedObject+Create.swift in Sources */,
+				A8F31AE41CAEA2FF0053B71B /* NTAudioManager.swift in Sources */,
+				A8F31AE51CAEA2FF0053B71B /* NTWelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,6 +977,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NoticeMe/classes/NoticeMe-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -825,6 +1000,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jrwong.NoticeMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NoticeMe/classes/NoticeMe-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -849,6 +1025,59 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jrwong.NoticeMeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NoticeMe.app/NoticeMe";
+			};
+			name = Release;
+		};
+		A8F31AF11CAEA2FF0053B71B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38C2E15ED0AC5C3F6C8F51E4 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "NoticeMe-dev-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NoticeMe/classes/thirdparty/wav-amr/opencore-amrnb",
+					"$(PROJECT_DIR)/NoticeMe/classes/thirdparty/wav-amr/opencore-amrwb",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEVELOPMENT";
+				PRODUCT_BUNDLE_IDENTIFIER = "jrwong.NoticeMe-dev";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NoticeMe/classes/NoticeMe-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A8F31AF21CAEA2FF0053B71B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B9A88D24D353600C6A998F4 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "NoticeMe-dev-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NoticeMe/classes/thirdparty/wav-amr/opencore-amrnb",
+					"$(PROJECT_DIR)/NoticeMe/classes/thirdparty/wav-amr/opencore-amrwb",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEVELOPMENT";
+				PRODUCT_BUNDLE_IDENTIFIER = "jrwong.NoticeMe-dev";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NoticeMe/classes/NoticeMe-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -878,6 +1107,15 @@
 			buildConfigurations = (
 				A893CDA81CA8F82300697980 /* Debug */,
 				A893CDA91CA8F82300697980 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8F31AF01CAEA2FF0053B71B /* Build configuration list for PBXNativeTarget "NoticeMe-dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8F31AF11CAEA2FF0053B71B /* Debug */,
+				A8F31AF21CAEA2FF0053B71B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

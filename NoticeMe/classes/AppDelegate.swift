@@ -7,7 +7,16 @@
 //
 
 import UIKit
-import AudioToolbox
+
+#if DEVELOPMENT
+
+// some dev configuration
+
+#else
+
+// some release configuration
+
+#endif
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
         print("\(documentsDirectory())============")
 
         // MARK: 初始化启动流程
