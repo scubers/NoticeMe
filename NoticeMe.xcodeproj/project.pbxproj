@@ -34,6 +34,12 @@
 		A8DC06611CAD571400B671B0 /* UIImage+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06601CAD571400B671B0 /* UIImage+ex.swift */; };
 		A8DC06631CAD573500B671B0 /* Int+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06621CAD573500B671B0 /* Int+ex.swift */; };
 		A8DC06661CAD5C3800B671B0 /* NTAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06651CAD5C3800B671B0 /* NTAudioManager.swift */; };
+		A8DC067A1CAD7DD700B671B0 /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8DC066D1CAD7DD700B671B0 /* amrFileCodec.mm */; };
+		A8DC067B1CAD7DD700B671B0 /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8DC066F1CAD7DD700B671B0 /* wav.mm */; };
+		A8DC067C1CAD7DD700B671B0 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8DC06731CAD7DD700B671B0 /* libopencore-amrnb.a */; };
+		A8DC067D1CAD7DD700B671B0 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8DC06771CAD7DD700B671B0 /* libopencore-amrwb.a */; };
+		A8DC067E1CAD7DD700B671B0 /* NTWavAmrConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06791CAD7DD700B671B0 /* NTWavAmrConverter.mm */; };
+		A8DC06801CAD844400B671B0 /* String+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC067F1CAD844400B671B0 /* String+ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +87,19 @@
 		A8DC06601CAD571400B671B0 /* UIImage+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ex.swift"; sourceTree = "<group>"; };
 		A8DC06621CAD573500B671B0 /* Int+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+ex.swift"; sourceTree = "<group>"; };
 		A8DC06651CAD5C3800B671B0 /* NTAudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAudioManager.swift; sourceTree = "<group>"; };
+		A8DC066C1CAD7DD700B671B0 /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
+		A8DC066D1CAD7DD700B671B0 /* amrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
+		A8DC066E1CAD7DD700B671B0 /* wav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wav.h; sourceTree = "<group>"; };
+		A8DC066F1CAD7DD700B671B0 /* wav.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = wav.mm; sourceTree = "<group>"; };
+		A8DC06711CAD7DD700B671B0 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		A8DC06721CAD7DD700B671B0 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		A8DC06731CAD7DD700B671B0 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		A8DC06751CAD7DD700B671B0 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		A8DC06761CAD7DD700B671B0 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		A8DC06771CAD7DD700B671B0 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		A8DC06781CAD7DD700B671B0 /* NTWavAmrConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTWavAmrConverter.h; sourceTree = "<group>"; };
+		A8DC06791CAD7DD700B671B0 /* NTWavAmrConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTWavAmrConverter.mm; sourceTree = "<group>"; };
+		A8DC067F1CAD844400B671B0 /* String+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +108,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				92E5D7372ACC083732F295E4 /* Pods.framework in Frameworks */,
+				A8DC067D1CAD7DD700B671B0 /* libopencore-amrwb.a in Frameworks */,
+				A8DC067C1CAD7DD700B671B0 /* libopencore-amrnb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +206,7 @@
 				A80DDB2B1CAAB376003EE3B1 /* Networking */,
 				A8DC06641CAD5AE100B671B0 /* AudioUtil */,
 				A8DC06591CAD567400B671B0 /* extensions */,
+				A8DC06691CAD7DD000B671B0 /* thirdparty */,
 				A893CDAB1CA8F93900697980 /* AppDelegate.swift */,
 				A893CDB01CA8FA5F00697980 /* NTWelcomeViewController.swift */,
 				A893CDC41CA923AD00697980 /* NoticeMe-Bridging-Header.h */,
@@ -394,6 +416,7 @@
 				A8DC06601CAD571400B671B0 /* UIImage+ex.swift */,
 				A8DC065E1CAD56F700B671B0 /* CALayer+ex.swift */,
 				A8DC06621CAD573500B671B0 /* Int+ex.swift */,
+				A8DC067F1CAD844400B671B0 /* String+ex.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -404,6 +427,57 @@
 				A8DC06651CAD5C3800B671B0 /* NTAudioManager.swift */,
 			);
 			path = AudioUtil;
+			sourceTree = "<group>";
+		};
+		A8DC06691CAD7DD000B671B0 /* thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+				A8DC066A1CAD7DD700B671B0 /* wav-amr */,
+			);
+			path = thirdparty;
+			sourceTree = "<group>";
+		};
+		A8DC066A1CAD7DD700B671B0 /* wav-amr */ = {
+			isa = PBXGroup;
+			children = (
+				A8DC066B1CAD7DD700B671B0 /* amrwapper */,
+				A8DC06701CAD7DD700B671B0 /* opencore-amrnb */,
+				A8DC06741CAD7DD700B671B0 /* opencore-amrwb */,
+				A8DC06781CAD7DD700B671B0 /* NTWavAmrConverter.h */,
+				A8DC06791CAD7DD700B671B0 /* NTWavAmrConverter.mm */,
+			);
+			path = "wav-amr";
+			sourceTree = "<group>";
+		};
+		A8DC066B1CAD7DD700B671B0 /* amrwapper */ = {
+			isa = PBXGroup;
+			children = (
+				A8DC066C1CAD7DD700B671B0 /* amrFileCodec.h */,
+				A8DC066D1CAD7DD700B671B0 /* amrFileCodec.mm */,
+				A8DC066E1CAD7DD700B671B0 /* wav.h */,
+				A8DC066F1CAD7DD700B671B0 /* wav.mm */,
+			);
+			path = amrwapper;
+			sourceTree = "<group>";
+		};
+		A8DC06701CAD7DD700B671B0 /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+				A8DC06711CAD7DD700B671B0 /* interf_dec.h */,
+				A8DC06721CAD7DD700B671B0 /* interf_enc.h */,
+				A8DC06731CAD7DD700B671B0 /* libopencore-amrnb.a */,
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		A8DC06741CAD7DD700B671B0 /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+				A8DC06751CAD7DD700B671B0 /* dec_if.h */,
+				A8DC06761CAD7DD700B671B0 /* if_rom.h */,
+				A8DC06771CAD7DD700B671B0 /* libopencore-amrwb.a */,
+			);
+			path = "opencore-amrwb";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -563,7 +637,9 @@
 				A8DC065D1CAD56D100B671B0 /* CGRect+ex.swift in Sources */,
 				A80DDB3B1CAAC1D3003EE3B1 /* Person.swift in Sources */,
 				A8DC06631CAD573500B671B0 /* Int+ex.swift in Sources */,
+				A8DC067E1CAD7DD700B671B0 /* NTWavAmrConverter.mm in Sources */,
 				A80DDB3A1CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift in Sources */,
+				A8DC067B1CAD7DD700B671B0 /* wav.mm in Sources */,
 				A893CDBF1CA905ED00697980 /* NTMainMenuViewController.swift in Sources */,
 				A893CDB91CA900BB00697980 /* NTAppLifeMgr.swift in Sources */,
 				A893CDAD1CA8F93900697980 /* AppDelegate.swift in Sources */,
@@ -572,9 +648,11 @@
 				A8C7B5041CA9851100EFF668 /* NTViewController.swift in Sources */,
 				A8C7B5021CA9803F00EFF668 /* UIViewController+xx.swift in Sources */,
 				A893CDCD1CA9278000697980 /* NTCountDownViewController.swift in Sources */,
+				A8DC06801CAD844400B671B0 /* String+ex.swift in Sources */,
 				A893CDB51CA8FCB600697980 /* PublicMethod.swift in Sources */,
 				A8C7B4FC1CA9796300EFF668 /* NTAddTimerViewController.swift in Sources */,
 				A8DC065B1CAD56A200B671B0 /* UIView+ex.swift in Sources */,
+				A8DC067A1CAD7DD700B671B0 /* amrFileCodec.mm in Sources */,
 				A80DDB2F1CAAB859003EE3B1 /* CoreDataDAO.swift in Sources */,
 				A8DC065F1CAD56F700B671B0 /* CALayer+ex.swift in Sources */,
 				A893CD901CA8F82300697980 /* NoticeMe.xcdatamodeld in Sources */,
@@ -715,6 +793,11 @@
 				INFOPLIST_FILE = NoticeMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NoticeMe/classes/thirdparty/wav-amr/opencore-amrnb",
+					"$(PROJECT_DIR)/NoticeMe/classes/thirdparty/wav-amr/opencore-amrwb",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = jrwong.NoticeMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NoticeMe/classes/NoticeMe-Bridging-Header.h";
@@ -732,6 +815,11 @@
 				INFOPLIST_FILE = NoticeMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NoticeMe/classes/thirdparty/wav-amr/opencore-amrnb",
+					"$(PROJECT_DIR)/NoticeMe/classes/thirdparty/wav-amr/opencore-amrwb",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = jrwong.NoticeMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NoticeMe/classes/NoticeMe-Bridging-Header.h";

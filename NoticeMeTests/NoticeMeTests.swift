@@ -86,6 +86,14 @@ class NoticeMeTests: XCTestCase {
         }
     }
 
+    func testabc() {
+        let path = "/Users/Jrwong/Desktop/test.mp3"
+
+        let ret: Int32 = NTWavAmrConverter.isMP3File(path)
+
+        print(ret)
+    }
+
 
     func testPerformanceExample() {
         // This is an example of a performance test case.

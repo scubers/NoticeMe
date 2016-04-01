@@ -11,6 +11,7 @@ import AVFoundation
 enum NTAudioType {
     case AMR
     case MP3
+    case WAV
 }
 
 class NTAudioManager : NSObject {
@@ -56,14 +57,53 @@ class NTAudioManager : NSObject {
      播放音频
      - parameter path:     文件路径
      - parameter type:     文件类型
-     - parameter willPlay: willPlay description
-     - parameter playing:  playing description
-     - parameter complete: complete description
+     - parameter willPlay: willPlay
+     - parameter playing:  playing
+     - parameter complete: complete
      - returns: 返回播放器
      */
-    func playAudioWithPath(path: String, type: NTAudioType, needStopOther: Bool, willPlay:NTAudioPlayerWillPlayBlock, playing:NTAudioPlayerPlayingBlock, complete: NTAudioPlayerCompleteBlock) -> AVAudioPlayer? {
+    func playAudioWithPath(path: String, sourceType: NTAudioType, needStopOther: Bool, willPlay:NTAudioPlayerWillPlayBlock, playing:NTAudioPlayerPlayingBlock, complete: NTAudioPlayerCompleteBlock) -> AVAudioPlayer? {
 
-        return nil
+        var player = playerWithFilePath(path)
+
+
+        if player != nil {
+            stopPlayer(player!)
+        }
+
+        if needStopOther { stopAll() }
+
+        var destPath = path
+        if sourceType == .AMR {
+            do {
+                try destPath = convert2WavFrom(.AMR, withPath: path)
+            } catch {
+                print("convert to wav fail: \(error)")
+            }
+        }
+
+
+        do {
+            let url  = NSURL(string: destPath)
+            let data = try NSData(contentsOfURL: url!, options: [.MappedRead])
+            player   = try AVAudioPlayer(data: data, fileTypeHint: AVFileTypeWAVE)
+        } catch {
+            print("\(error)")
+        }
+
+        if player == nil {return nil}
+
+        configurePlayer(player!, filePath: destPath, willBlock: willPlay, playingBlock: playing, completeBlock: complete)
+
+        return player
+    }
+
+    func convert2WavFrom(type: NTAudioType, withPath path: String) throws -> String {
+        let newPath = path.stringByAppendingString(".wav")
+        if !NSFileManager.defaultManager().fileExistsAtPath(newPath) {
+            NTWavAmrConverter.convertWavAtPath(path, toAmrAtPath: newPath)
+        }
+        return newPath
     }
 
     /**
@@ -98,6 +138,12 @@ class NTAudioManager : NSObject {
     }
 
     // MARK: 私有方法
+
+    func convert2WavFromType(type: NTAudioType, withFilePath: String) throws -> String {
+
+        return ""
+    }
+
     func playerDidPlay(timer: NSTimer) {
         guard let path = timer.userInfo?["path"] as? String else {
             return
@@ -113,8 +159,6 @@ class NTAudioManager : NSObject {
             }
             block(player: player)
         }
-        
-
     }
 
     private func path4Player(player: AVAudioPlayer) -> String? {
@@ -143,6 +187,25 @@ class NTAudioManager : NSObject {
 
         timers[name]?.invalidate()
         timers.removeValueForKey(name)
+    }
+
+    private func configurePlayer(player: AVAudioPlayer, filePath: String, willBlock: NTAudioPlayerWillPlayBlock?, playingBlock: NTAudioPlayerPlayingBlock?, completeBlock: NTAudioPlayerCompleteBlock?) {
+
+        player.delegate = self
+        players[filePath] = player
+
+        let timer = createTimer4MonitoringPlayer(player)
+        timers[filePath] = timer
+        timer.fire()
+
+        if let playing  = playingBlock {playingCallBacks[filePath] = playing}
+        if let complete = completeBlock {completeCallBacks[filePath] = complete}
+        if let will     = willBlock {willPlayCallBacks[filePath] = will
+            will(player: player)
+        }
+
+        player.prepareToPlay()
+        player.play()
     }
 
 }
