@@ -12,6 +12,8 @@
 		A80DDB311CAABE1C003EE3B1 /* NSManagedObject+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB301CAABE1C003EE3B1 /* NSManagedObject+Create.swift */; };
 		A80DDB3A1CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB381CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift */; };
 		A80DDB3B1CAAC1D3003EE3B1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB391CAAC1D3003EE3B1 /* Person.swift */; };
+		A8330E2B1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift */; };
+		A8330E2C1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift */; };
 		A86CF3761CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CF3751CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift */; };
 		A893CD8D1CA8F82300697980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A893CD8B1CA8F82300697980 /* Main.storyboard */; };
 		A893CD901CA8F82300697980 /* NoticeMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A893CD8E1CA8F82300697980 /* NoticeMe.xcdatamodeld */; };
@@ -94,6 +96,7 @@
 		A80DDB301CAABE1C003EE3B1 /* NSManagedObject+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Create.swift"; sourceTree = "<group>"; };
 		A80DDB381CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A80DDB391CAAC1D3003EE3B1 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		A8330E2A1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTBaseSettingsTableViewHandler.swift; sourceTree = "<group>"; };
 		A86CF3751CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAudioSystemAudioSourceManager.swift; sourceTree = "<group>"; };
 		A893CD841CA8F82300697980 /* NoticeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoticeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A893CD8C1CA8F82300697980 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -536,6 +539,7 @@
 			isa = PBXGroup;
 			children = (
 				A8F31AF81CAEC2440053B71B /* NTAppConfiguration.swift */,
+				A8330E2A1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -786,6 +790,7 @@
 				A8F31AF91CAEC2440053B71B /* NTAppConfiguration.swift in Sources */,
 				A8C7B5041CA9851100EFF668 /* NTViewController.swift in Sources */,
 				A8C7B5021CA9803F00EFF668 /* UIViewController+xx.swift in Sources */,
+				A8330E2B1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */,
 				A893CDCD1CA9278000697980 /* NTCountDownViewController.swift in Sources */,
 				A8DC06801CAD844400B671B0 /* String+ex.swift in Sources */,
 				A893CDB51CA8FCB600697980 /* PublicMethod.swift in Sources */,
@@ -828,6 +833,7 @@
 				A8F31AFA1CAEC2440053B71B /* NTAppConfiguration.swift in Sources */,
 				A8F31AD71CAEA2FF0053B71B /* NTViewController.swift in Sources */,
 				A8F31AD81CAEA2FF0053B71B /* UIViewController+xx.swift in Sources */,
+				A8330E2C1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */,
 				A8F31AD91CAEA2FF0053B71B /* NTCountDownViewController.swift in Sources */,
 				A8F31ADA1CAEA2FF0053B71B /* String+ex.swift in Sources */,
 				A8F31ADB1CAEA2FF0053B71B /* PublicMethod.swift in Sources */,

@@ -47,6 +47,9 @@ func jr_mutablePointer<T>(inout obj: T) -> UnsafeMutablePointer<T> {
     }
 }
 
+func jr_notNil(string: String?) -> String {
+    return string ?? ""
+}
 
 
 /**
