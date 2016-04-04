@@ -25,6 +25,7 @@ class NTMainNavgationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationAlpha(0.5, color: UIColor.yellowColor())
     }
 
 
@@ -37,7 +38,7 @@ class NTMainNavgationController: UINavigationController {
     }
 
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+        return .Default
     }
 
     func test() {

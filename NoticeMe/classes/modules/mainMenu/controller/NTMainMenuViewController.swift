@@ -8,14 +8,52 @@
 
 import UIKit
 import BlocksKit
-import AudioToolbox
 
 class NTMainMenuViewController: NTViewController {
 
+    lazy var menuViewModel = NTMainMenuViewModel()
+
+    var mainMenuView: NTMainMenuView?
+
+    private var baseMenuFrame: CGRect?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = jr_randomColor()
+        view.backgroundColor = UIColor.whiteColor()
         setupNavigationItems()
+
+        setupSubviews()
+    }
+
+    private func setupSubviews() {
+        let height: CGFloat = 200
+        let rect = CGRectMake(0, view.frame.height - height, view.frame.width, height)
+        baseMenuFrame = rect
+        mainMenuView = NTMainMenuView(frame: rect)
+
+        mainMenuView?.dataSource = menuViewModel
+
+        view.addSubview(mainMenuView!)
+
+        mainMenuView?.rx_onPan().subscribeNext({[weak self] (reco: UIGestureRecognizer) in
+            print(reco.locationInView(self!.view))
+
+            switch reco.state {
+            case .Began: print("begin")
+            case .Changed: print("change")
+            case .Ended, .Cancelled: print("ended")
+                UIView.animateWithDuration(0.3, delay: 0, options: [.CurveEaseOut], animations: {
+                    self!.mainMenuView?.frame = self!.baseMenuFrame!
+                    self?.mainMenuView?.userInteractionEnabled = false
+
+                    }, completion: { (success) in
+                        self?.mainMenuView?.userInteractionEnabled = true
+
+                })
+            default: print(reco.state)
+            }
+
+        }).addDisposableTo(getDisposeBag())
 
     }
 
@@ -37,7 +75,7 @@ class NTMainMenuViewController: NTViewController {
     }
 
     private func handleDetailWithItem(item:UIBarButtonItem) {
-        self.navigationController?.pushViewController(NTWelcomeViewController(), animated: true)
+        self.navigationController?.pushViewController(NTCountDownViewController(), animated: true)
     }
 
     private func handleAddWith(item:UIBarButtonItem) {

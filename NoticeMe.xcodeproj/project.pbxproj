@@ -27,6 +27,12 @@
 		A893CDBF1CA905ED00697980 /* NTMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDBE1CA905ED00697980 /* NTMainMenuViewController.swift */; };
 		A893CDC11CA907CE00697980 /* NTMainNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDC01CA907CE00697980 /* NTMainNavgationController.swift */; };
 		A893CDCD1CA9278000697980 /* NTCountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDCC1CA9278000697980 /* NTCountDownViewController.swift */; };
+		A8B293111CB235B8003F00EA /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B293101CB235B8003F00EA /* Disposable.swift */; };
+		A8B293121CB235B8003F00EA /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B293101CB235B8003F00EA /* Disposable.swift */; };
+		A8B293141CB23906003F00EA /* NTMainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B293131CB23906003F00EA /* NTMainMenuView.swift */; };
+		A8B293151CB23906003F00EA /* NTMainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B293131CB23906003F00EA /* NTMainMenuView.swift */; };
+		A8B293181CB24079003F00EA /* NTMainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B293171CB24079003F00EA /* NTMainMenuViewModel.swift */; };
+		A8B293191CB24079003F00EA /* NTMainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B293171CB24079003F00EA /* NTMainMenuViewModel.swift */; };
 		A8C7B4FC1CA9796300EFF668 /* NTAddTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B4FB1CA9796300EFF668 /* NTAddTimerViewController.swift */; };
 		A8C7B5021CA9803F00EFF668 /* UIViewController+xx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B5011CA9803F00EFF668 /* UIViewController+xx.swift */; };
 		A8C7B5041CA9851100EFF668 /* NTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B5031CA9851100EFF668 /* NTViewController.swift */; };
@@ -115,6 +121,9 @@
 		A893CDC01CA907CE00697980 /* NTMainNavgationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTMainNavgationController.swift; sourceTree = "<group>"; };
 		A893CDC41CA923AD00697980 /* NoticeMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoticeMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		A893CDCC1CA9278000697980 /* NTCountDownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTCountDownViewController.swift; sourceTree = "<group>"; };
+		A8B293101CB235B8003F00EA /* Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
+		A8B293131CB23906003F00EA /* NTMainMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTMainMenuView.swift; sourceTree = "<group>"; };
+		A8B293171CB24079003F00EA /* NTMainMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTMainMenuViewModel.swift; sourceTree = "<group>"; };
 		A8C7B4FB1CA9796300EFF668 /* NTAddTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAddTimerViewController.swift; sourceTree = "<group>"; };
 		A8C7B5011CA9803F00EFF668 /* UIViewController+xx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+xx.swift"; sourceTree = "<group>"; };
 		A8C7B5031CA9851100EFF668 /* NTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTViewController.swift; sourceTree = "<group>"; };
@@ -298,6 +307,7 @@
 				A893CDB61CA9007100697980 /* mgr */,
 				A893CDB71CA9007100697980 /* service */,
 				A8F31AF71CAEC22E0053B71B /* model */,
+				A8B2930F1CB23599003F00EA /* extension */,
 				A893CDB41CA8FCB600697980 /* PublicMethod.swift */,
 			);
 			path = universal;
@@ -324,6 +334,7 @@
 				A893CDBB1CA905BE00697980 /* controller */,
 				A893CDBC1CA905BE00697980 /* service */,
 				A893CDBD1CA905BE00697980 /* view */,
+				A8B293161CB24066003F00EA /* viewModel */,
 			);
 			path = mainMenu;
 			sourceTree = "<group>";
@@ -347,6 +358,7 @@
 		A893CDBD1CA905BE00697980 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				A8B293131CB23906003F00EA /* NTMainMenuView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -413,6 +425,22 @@
 			children = (
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		A8B2930F1CB23599003F00EA /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				A8B293101CB235B8003F00EA /* Disposable.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		A8B293161CB24066003F00EA /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A8B293171CB24079003F00EA /* NTMainMenuViewModel.swift */,
+			);
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 		A8C7B4FD1CA97A6B00EFF668 /* controller */ = {
@@ -792,6 +820,9 @@
 				A8C7B5021CA9803F00EFF668 /* UIViewController+xx.swift in Sources */,
 				A8330E2B1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */,
 				A893CDCD1CA9278000697980 /* NTCountDownViewController.swift in Sources */,
+				A8B293141CB23906003F00EA /* NTMainMenuView.swift in Sources */,
+				A8B293111CB235B8003F00EA /* Disposable.swift in Sources */,
+				A8B293181CB24079003F00EA /* NTMainMenuViewModel.swift in Sources */,
 				A8DC06801CAD844400B671B0 /* String+ex.swift in Sources */,
 				A893CDB51CA8FCB600697980 /* PublicMethod.swift in Sources */,
 				A8C7B4FC1CA9796300EFF668 /* NTAddTimerViewController.swift in Sources */,
@@ -835,6 +866,9 @@
 				A8F31AD81CAEA2FF0053B71B /* UIViewController+xx.swift in Sources */,
 				A8330E2C1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */,
 				A8F31AD91CAEA2FF0053B71B /* NTCountDownViewController.swift in Sources */,
+				A8B293151CB23906003F00EA /* NTMainMenuView.swift in Sources */,
+				A8B293121CB235B8003F00EA /* Disposable.swift in Sources */,
+				A8B293191CB24079003F00EA /* NTMainMenuViewModel.swift in Sources */,
 				A8F31ADA1CAEA2FF0053B71B /* String+ex.swift in Sources */,
 				A8F31ADB1CAEA2FF0053B71B /* PublicMethod.swift in Sources */,
 				A8F31ADC1CAEA2FF0053B71B /* NTAddTimerViewController.swift in Sources */,

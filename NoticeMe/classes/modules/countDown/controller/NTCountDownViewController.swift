@@ -12,7 +12,8 @@ class NTCountDownViewController: NTViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        view.backgroundColor = jr_randomColor()
     }
 
 }
