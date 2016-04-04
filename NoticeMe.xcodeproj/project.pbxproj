@@ -15,6 +15,8 @@
 		A8330E2B1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift */; };
 		A8330E2C1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift */; };
 		A86CF3761CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CF3751CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift */; };
+		A88800EA1CB2BA0F0029F171 /* CustomPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88800E91CB2BA0F0029F171 /* CustomPresent.swift */; };
+		A88800EB1CB2BA0F0029F171 /* CustomPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88800E91CB2BA0F0029F171 /* CustomPresent.swift */; };
 		A893CD8D1CA8F82300697980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A893CD8B1CA8F82300697980 /* Main.storyboard */; };
 		A893CD901CA8F82300697980 /* NoticeMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A893CD8E1CA8F82300697980 /* NoticeMe.xcdatamodeld */; };
 		A893CD921CA8F82300697980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A893CD911CA8F82300697980 /* Assets.xcassets */; };
@@ -104,6 +106,7 @@
 		A80DDB391CAAC1D3003EE3B1 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		A8330E2A1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTBaseSettingsTableViewHandler.swift; sourceTree = "<group>"; };
 		A86CF3751CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAudioSystemAudioSourceManager.swift; sourceTree = "<group>"; };
+		A88800E91CB2BA0F0029F171 /* CustomPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresent.swift; sourceTree = "<group>"; };
 		A893CD841CA8F82300697980 /* NoticeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoticeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A893CD8C1CA8F82300697980 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A893CD8F1CA8F82300697980 /* NoticeMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoticeMe.xcdatamodel; sourceTree = "<group>"; };
@@ -216,6 +219,14 @@
 			children = (
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		A88800E81CB2BA0F0029F171 /* transitionAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				A88800E91CB2BA0F0029F171 /* CustomPresent.swift */,
+			);
+			path = transitionAnimator;
 			sourceTree = "<group>";
 		};
 		A893CD7B1CA8F82300697980 = {
@@ -369,6 +380,7 @@
 				A893CDC91CA9275900697980 /* controller */,
 				A893CDCA1CA9275900697980 /* service */,
 				A893CDCB1CA9275900697980 /* view */,
+				A88800E81CB2BA0F0029F171 /* transitionAnimator */,
 			);
 			path = countDown;
 			sourceTree = "<group>";
@@ -814,6 +826,7 @@
 				A893CDB91CA900BB00697980 /* NTAppLifeMgr.swift in Sources */,
 				A893CDAD1CA8F93900697980 /* AppDelegate.swift in Sources */,
 				A893CDC11CA907CE00697980 /* NTMainNavgationController.swift in Sources */,
+				A88800EA1CB2BA0F0029F171 /* CustomPresent.swift in Sources */,
 				A8DC06611CAD571400B671B0 /* UIImage+ex.swift in Sources */,
 				A8F31AF91CAEC2440053B71B /* NTAppConfiguration.swift in Sources */,
 				A8C7B5041CA9851100EFF668 /* NTViewController.swift in Sources */,
@@ -860,6 +873,7 @@
 				A8F31AD31CAEA2FF0053B71B /* NTAppLifeMgr.swift in Sources */,
 				A8F31AD41CAEA2FF0053B71B /* AppDelegate.swift in Sources */,
 				A8F31AD51CAEA2FF0053B71B /* NTMainNavgationController.swift in Sources */,
+				A88800EB1CB2BA0F0029F171 /* CustomPresent.swift in Sources */,
 				A8F31AD61CAEA2FF0053B71B /* UIImage+ex.swift in Sources */,
 				A8F31AFA1CAEC2440053B71B /* NTAppConfiguration.swift in Sources */,
 				A8F31AD71CAEA2FF0053B71B /* NTViewController.swift in Sources */,

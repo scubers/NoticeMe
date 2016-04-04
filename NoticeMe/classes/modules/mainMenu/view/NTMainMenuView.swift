@@ -46,11 +46,8 @@ class NTMainMenuView: UICollectionView {
         self.addGestureRecognizer(panUpAndDown)
         upAndDownPan = panUpAndDown
     }
-    @objc private func handlePanUpAndDown(reco: UIPanGestureRecognizer) {
 
-        let point = reco.translationInView(reco.view)
-        self.frame.origin.y += point.y
-        reco.setTranslation(CGPointZero, inView: reco.view)
+    @objc private func handlePanUpAndDown(reco: UIPanGestureRecognizer) {
 
     }
 

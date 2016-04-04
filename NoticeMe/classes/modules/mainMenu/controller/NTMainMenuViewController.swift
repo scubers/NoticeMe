@@ -25,6 +25,8 @@ class NTMainMenuViewController: NTViewController {
         setupSubviews()
     }
 
+    private var driven: UIPercentDrivenInteractiveTransition? = UIPercentDrivenInteractiveTransition()
+
     private func setupSubviews() {
         let height: CGFloat = 200
         let rect = CGRectMake(0, view.frame.height - height, view.frame.width, height)
@@ -38,10 +40,25 @@ class NTMainMenuViewController: NTViewController {
         mainMenuView?.rx_onPan().subscribeNext({[weak self] (reco: UIGestureRecognizer) in
             print(reco.locationInView(self!.view))
 
+            let re = reco as! UIPanGestureRecognizer
+
+
+            let progress: CGFloat = -re.translationInView(self!.view).y / self!.view.height
+
+            print("\(progress)======")
+
             switch reco.state {
-            case .Began: print("begin")
-            case .Changed: print("change")
-            case .Ended, .Cancelled: print("ended")
+            case .Began:
+
+                let vc = NTCountDownViewController()
+                CustomPresent.shareInstance.gestureDriven = UIPercentDrivenInteractiveTransition()
+                self!.presentViewController(vc, animated: true, completion: nil)
+
+            case .Changed:
+                CustomPresent.shareInstance.gestureDriven?.updateInteractiveTransition(progress)
+
+            case .Ended, .Cancelled: print("")
+
                 UIView.animateWithDuration(0.3, delay: 0, options: [.CurveEaseOut], animations: {
                     self!.mainMenuView?.frame = self!.baseMenuFrame!
                     self?.mainMenuView?.userInteractionEnabled = false
@@ -50,7 +67,8 @@ class NTMainMenuViewController: NTViewController {
                         self?.mainMenuView?.userInteractionEnabled = true
 
                 })
-            default: print(reco.state)
+                CustomPresent.shareInstance.gestureDriven?.finishInteractiveTransition()
+            default: print("")
             }
 
         }).addDisposableTo(getDisposeBag())
