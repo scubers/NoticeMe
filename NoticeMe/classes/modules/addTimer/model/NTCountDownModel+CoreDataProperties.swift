@@ -14,12 +14,13 @@ import CoreData
 
 extension NTCountDownModel {
 
-    @NSManaged var startDate: NSDate?
-    @NSManaged var interval: NSNumber?
-    @NSManaged var audio: String?
     @NSManaged var animation: String?
-    @NSManaged var fireDate: NSDate?
+    @NSManaged var audio: String?
     @NSManaged var createDate: NSDate?
+    @NSManaged var fireDate: NSDate?
+    @NSManaged var interval: NSNumber?
+    @NSManaged var startDate: NSDate?
     @NSManaged var updateDate: NSDate?
+    @NSManaged var id: String?
 
 }

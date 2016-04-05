@@ -11,6 +11,7 @@ import CoreData
 import MagicalRecord
 @testable import NoticeMe
 
+
 class NoticeMeTests: XCTestCase {
     
     override func setUp() {
@@ -24,72 +25,8 @@ class NoticeMeTests: XCTestCase {
     }
     
     func testExample() {
-        let p = Person.newInstanceWith(CoreDataDAO.shareInstance.context, name: Person.self.description()) as? Person
-
-        p?.name = "11"
-        p?.age = 4
-
-        CoreDataDAO.shareInstance.saveContext()
-
-        let req = NSFetchRequest(entityName: Person.self.description())
-
-        do {
-            let arr: Array<Person> = try CoreDataDAO.shareInstance.context.executeFetchRequest(req) as! [Person]
-            arr.forEach { (p: Person) -> () in
-                print(p)
-            }
-        } catch {
-        }
-
     }
 
-    func testGet() {
-        let req = NSFetchRequest(entityName: Person.self.description())
-
-
-        let pre = NSPredicate(format: "age = %d", 4)
-
-        req.predicate = pre
-
-        do {
-            let arr: Array<Person> = try CoreDataDAO.shareInstance.context.executeFetchRequest(req) as! [Person]
-
-            print("\(arr.count)--------------")
-
-
-        } catch {
-
-        }
-
-    }
-
-    func testDelete() {
-        let req = NSFetchRequest(entityName: Person.self.description())
-
-
-        let pre = NSPredicate(format: "age = %d", 2)
-
-        req.predicate = pre
-
-        do {
-            let arr: Array<Person> = try CoreDataDAO.shareInstance.context.executeFetchRequest(req) as! [Person]
-
-            print("\(arr.count)--------------")
-
-            arr.forEach({ (p:Person) -> () in
-                CoreDataDAO.shareInstance.context.deleteObject(p)
-            })
-
-            CoreDataDAO.shareInstance.saveContext()
-            
-        } catch {
-            
-        }
-    }
-
-    func testabc() {
-
-    }
 
 
     func testPerformanceExample() {

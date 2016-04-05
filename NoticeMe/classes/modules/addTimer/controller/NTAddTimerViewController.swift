@@ -68,8 +68,7 @@ class NTAddTimerTableViewHandler: NTBaseSettingsTableViewHandler {
         let maxSecond: NSTimeInterval = 60.0 * 3.0
         slider.rx_value.subscribeNext {[weak self] (value) in
             print(value)
-            self?.countDownModel?.interval = NSNumber(double: 10)
-//            self?.countDownModel?.interval = NSNumber(double: maxSecond * Double(value))
+            self?.countDownModel?.interval = NSNumber(double: Double(value) * maxSecond)
         }.addDisposableTo(getDisposeBag())
 
 
@@ -87,6 +86,12 @@ class NTAddTimerTableViewHandler: NTBaseSettingsTableViewHandler {
         let item = createCommonItem()
         item.reuseId = COUNT_DOWN_AUDIO_CELL_ID
         item.heightForCell = 80
+
+        let base = UIView()
+        item.baseBackgroundView = base
+
+
+
         return item
     }
     func setupAnimationGroup() -> NTBaseSettingsGroup {
@@ -121,6 +126,8 @@ class NTAddTimerTableViewHandler: NTBaseSettingsTableViewHandler {
 
 class NTAddTimerViewController: NTViewController {
 
+    var saved: Bool = false
+
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         modalPresentationStyle = .OverCurrentContext
@@ -154,6 +161,12 @@ class NTAddTimerViewController: NTViewController {
         tableView?.rx_contentOffset.subscribeNext({[weak self] (point) in
             if point.y < -150 {self?.dismissViewControllerAnimated(true, completion: nil)}
         }).addDisposableTo(getDisposeBag())
+    }
+
+    deinit {
+        if !saved {
+            tableViewHandler?.countDownModel?.MR_deleteEntity()
+        }
     }
 
 }

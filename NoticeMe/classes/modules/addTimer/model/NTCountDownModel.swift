@@ -12,12 +12,4 @@ import CoreData
 
 class NTCountDownModel: NSManagedObject {
 
-    func copy2Model(newModel: NTCountDownModel) {
-        newModel.fireDate  = fireDate
-        newModel.audio     = audio
-        newModel.startDate = startDate
-        newModel.animation = animation
-        newModel.interval  = interval
-    }
-
 }
