@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MagicalRecord
 
 class NTAppLifeMgr: NSObject {
 
@@ -24,6 +25,8 @@ class NTAppLifeMgr: NSObject {
             let nav = NTMainNavgationController(rootViewController: NTMainMenuViewController())
             self.appDelegate.window?.rootViewController = nav
         }
+
+        MagicalRecord.setupCoreDataStackWithStoreNamed("Database.sqlite")
 
         return true
     }

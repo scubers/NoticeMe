@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MagicalRecord
 
 #if DEVELOPMENT
 
@@ -27,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         print("\(documentsDirectory())============")
+
+        
 
         // MARK: 初始化启动流程
         return NTAppLifeMgr.shareInstance.application(application, didfinishLaunchWith: launchOptions)
@@ -53,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        CoreDataDAO.shareInstance.saveContext()
+        MagicalRecord.cleanUp()
     }
 
 }

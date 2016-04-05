@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		92E5D7372ACC083732F295E4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB52CE7B95830FAD9561450 /* Pods.framework */; };
-		A80DDB2F1CAAB859003EE3B1 /* CoreDataDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB2E1CAAB859003EE3B1 /* CoreDataDAO.swift */; };
-		A80DDB311CAABE1C003EE3B1 /* NSManagedObject+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB301CAABE1C003EE3B1 /* NSManagedObject+Create.swift */; };
-		A80DDB3A1CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB381CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift */; };
-		A80DDB3B1CAAC1D3003EE3B1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB391CAAC1D3003EE3B1 /* Person.swift */; };
 		A8330E2B1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift */; };
 		A8330E2C1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift */; };
 		A86CF3761CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CF3751CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift */; };
 		A88800EA1CB2BA0F0029F171 /* CustomPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88800E91CB2BA0F0029F171 /* CustomPresent.swift */; };
 		A88800EB1CB2BA0F0029F171 /* CustomPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88800E91CB2BA0F0029F171 /* CustomPresent.swift */; };
+		A88A4BCF1CB3949B006F859E /* m_pic_xiaoha@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88A4BCD1CB3949B006F859E /* m_pic_xiaoha@2x.png */; };
+		A88A4BD01CB3949B006F859E /* m_pic_xiaoha@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88A4BCD1CB3949B006F859E /* m_pic_xiaoha@2x.png */; };
+		A88A4BD11CB3949B006F859E /* m_pic_xiaoha@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88A4BCE1CB3949B006F859E /* m_pic_xiaoha@3x.png */; };
+		A88A4BD21CB3949B006F859E /* m_pic_xiaoha@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88A4BCE1CB3949B006F859E /* m_pic_xiaoha@3x.png */; };
 		A893CD8D1CA8F82300697980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A893CD8B1CA8F82300697980 /* Main.storyboard */; };
 		A893CD901CA8F82300697980 /* NoticeMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A893CD8E1CA8F82300697980 /* NoticeMe.xcdatamodeld */; };
 		A893CD921CA8F82300697980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A893CD911CA8F82300697980 /* Assets.xcassets */; };
@@ -38,6 +38,10 @@
 		A8C7B4FC1CA9796300EFF668 /* NTAddTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B4FB1CA9796300EFF668 /* NTAddTimerViewController.swift */; };
 		A8C7B5021CA9803F00EFF668 /* UIViewController+xx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B5011CA9803F00EFF668 /* UIViewController+xx.swift */; };
 		A8C7B5041CA9851100EFF668 /* NTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B5031CA9851100EFF668 /* NTViewController.swift */; };
+		A8DB2FEA1CB3A40C00594165 /* NTCountDownModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DB2FE71CB3A40C00594165 /* NTCountDownModel.swift */; };
+		A8DB2FEB1CB3A40C00594165 /* NTCountDownModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DB2FE71CB3A40C00594165 /* NTCountDownModel.swift */; };
+		A8DB2FF01CB3A83800594165 /* NTCountDownModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DB2FEF1CB3A83800594165 /* NTCountDownModel+CoreDataProperties.swift */; };
+		A8DB2FF11CB3A83800594165 /* NTCountDownModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DB2FEF1CB3A83800594165 /* NTCountDownModel+CoreDataProperties.swift */; };
 		A8DC065B1CAD56A200B671B0 /* UIView+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC065A1CAD56A200B671B0 /* UIView+ex.swift */; };
 		A8DC065D1CAD56D100B671B0 /* CGRect+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC065C1CAD56D100B671B0 /* CGRect+ex.swift */; };
 		A8DC065F1CAD56F700B671B0 /* CALayer+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC065E1CAD56F700B671B0 /* CALayer+ex.swift */; };
@@ -51,10 +55,8 @@
 		A8DC067E1CAD7DD700B671B0 /* NTWavAmrConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06791CAD7DD700B671B0 /* NTWavAmrConverter.mm */; };
 		A8DC06801CAD844400B671B0 /* String+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC067F1CAD844400B671B0 /* String+ex.swift */; };
 		A8F31ACC1CAEA2FF0053B71B /* CGRect+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC065C1CAD56D100B671B0 /* CGRect+ex.swift */; };
-		A8F31ACD1CAEA2FF0053B71B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB391CAAC1D3003EE3B1 /* Person.swift */; };
 		A8F31ACE1CAEA2FF0053B71B /* Int+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06621CAD573500B671B0 /* Int+ex.swift */; };
 		A8F31ACF1CAEA2FF0053B71B /* NTWavAmrConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06791CAD7DD700B671B0 /* NTWavAmrConverter.mm */; };
-		A8F31AD01CAEA2FF0053B71B /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB381CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift */; };
 		A8F31AD11CAEA2FF0053B71B /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8DC066F1CAD7DD700B671B0 /* wav.mm */; };
 		A8F31AD21CAEA2FF0053B71B /* NTMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDBE1CA905ED00697980 /* NTMainMenuViewController.swift */; };
 		A8F31AD31CAEA2FF0053B71B /* NTAppLifeMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB81CA900BB00697980 /* NTAppLifeMgr.swift */; };
@@ -70,10 +72,8 @@
 		A8F31ADD1CAEA2FF0053B71B /* UIView+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC065A1CAD56A200B671B0 /* UIView+ex.swift */; };
 		A8F31ADE1CAEA2FF0053B71B /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8DC066D1CAD7DD700B671B0 /* amrFileCodec.mm */; };
 		A8F31ADF1CAEA2FF0053B71B /* NTAudioSystemAudioSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CF3751CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift */; };
-		A8F31AE01CAEA2FF0053B71B /* CoreDataDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB2E1CAAB859003EE3B1 /* CoreDataDAO.swift */; };
 		A8F31AE11CAEA2FF0053B71B /* CALayer+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC065E1CAD56F700B671B0 /* CALayer+ex.swift */; };
 		A8F31AE21CAEA2FF0053B71B /* NoticeMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A893CD8E1CA8F82300697980 /* NoticeMe.xcdatamodeld */; };
-		A8F31AE31CAEA2FF0053B71B /* NSManagedObject+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DDB301CAABE1C003EE3B1 /* NSManagedObject+Create.swift */; };
 		A8F31AE41CAEA2FF0053B71B /* NTAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06651CAD5C3800B671B0 /* NTAudioManager.swift */; };
 		A8F31AE51CAEA2FF0053B71B /* NTWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB01CA8FA5F00697980 /* NTWelcomeViewController.swift */; };
 		A8F31AE71CAEA2FF0053B71B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB52CE7B95830FAD9561450 /* Pods.framework */; };
@@ -100,13 +100,11 @@
 		38C2E15ED0AC5C3F6C8F51E4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8B9A88D24D353600C6A998F4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9AB52CE7B95830FAD9561450 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A80DDB2E1CAAB859003EE3B1 /* CoreDataDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDAO.swift; sourceTree = "<group>"; };
-		A80DDB301CAABE1C003EE3B1 /* NSManagedObject+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Create.swift"; sourceTree = "<group>"; };
-		A80DDB381CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A80DDB391CAAC1D3003EE3B1 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		A8330E2A1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTBaseSettingsTableViewHandler.swift; sourceTree = "<group>"; };
 		A86CF3751CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAudioSystemAudioSourceManager.swift; sourceTree = "<group>"; };
 		A88800E91CB2BA0F0029F171 /* CustomPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresent.swift; sourceTree = "<group>"; };
+		A88A4BCD1CB3949B006F859E /* m_pic_xiaoha@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "m_pic_xiaoha@2x.png"; sourceTree = "<group>"; };
+		A88A4BCE1CB3949B006F859E /* m_pic_xiaoha@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "m_pic_xiaoha@3x.png"; sourceTree = "<group>"; };
 		A893CD841CA8F82300697980 /* NoticeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoticeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A893CD8C1CA8F82300697980 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A893CD8F1CA8F82300697980 /* NoticeMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoticeMe.xcdatamodel; sourceTree = "<group>"; };
@@ -130,6 +128,8 @@
 		A8C7B4FB1CA9796300EFF668 /* NTAddTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAddTimerViewController.swift; sourceTree = "<group>"; };
 		A8C7B5011CA9803F00EFF668 /* UIViewController+xx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+xx.swift"; sourceTree = "<group>"; };
 		A8C7B5031CA9851100EFF668 /* NTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTViewController.swift; sourceTree = "<group>"; };
+		A8DB2FE71CB3A40C00594165 /* NTCountDownModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTCountDownModel.swift; sourceTree = "<group>"; };
+		A8DB2FEF1CB3A83800594165 /* NTCountDownModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NTCountDownModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A8DC065A1CAD56A200B671B0 /* UIView+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ex.swift"; sourceTree = "<group>"; };
 		A8DC065C1CAD56D100B671B0 /* CGRect+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+ex.swift"; sourceTree = "<group>"; };
 		A8DC065E1CAD56F700B671B0 /* CALayer+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+ex.swift"; sourceTree = "<group>"; };
@@ -203,17 +203,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A80DDB2A1CAAB376003EE3B1 /* DAO */ = {
-			isa = PBXGroup;
-			children = (
-				A80DDB381CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift */,
-				A80DDB391CAAC1D3003EE3B1 /* Person.swift */,
-				A80DDB2E1CAAB859003EE3B1 /* CoreDataDAO.swift */,
-				A80DDB301CAABE1C003EE3B1 /* NSManagedObject+Create.swift */,
-			);
-			path = DAO;
-			sourceTree = "<group>";
-		};
 		A80DDB2B1CAAB376003EE3B1 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,7 +264,6 @@
 			children = (
 				A893CDB21CA8FA6E00697980 /* modules */,
 				A893CDB31CA8FA6E00697980 /* universal */,
-				A80DDB2A1CAAB376003EE3B1 /* DAO */,
 				A80DDB2B1CAAB376003EE3B1 /* Networking */,
 				A8DC06641CAD5AE100B671B0 /* AudioUtil */,
 				A8DC06591CAD567400B671B0 /* extensions */,
@@ -413,6 +401,7 @@
 				A893CDFB1CA92B2600697980 /* controller */,
 				A893CDFC1CA92B2600697980 /* service */,
 				A893CDFD1CA92B2600697980 /* view */,
+				A8DB2FE51CB3A3E500594165 /* model */,
 			);
 			path = addTimer;
 			sourceTree = "<group>";
@@ -502,9 +491,20 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		A8DB2FE51CB3A3E500594165 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A8DB2FEF1CB3A83800594165 /* NTCountDownModel+CoreDataProperties.swift */,
+				A8DB2FE71CB3A40C00594165 /* NTCountDownModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		A8DC06591CAD567400B671B0 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A88A4BCD1CB3949B006F859E /* m_pic_xiaoha@2x.png */,
+				A88A4BCE1CB3949B006F859E /* m_pic_xiaoha@3x.png */,
 				A8DC065A1CAD56A200B671B0 /* UIView+ex.swift */,
 				A8DC065C1CAD56D100B671B0 /* CGRect+ex.swift */,
 				A8DC06601CAD571400B671B0 /* UIImage+ex.swift */,
@@ -694,6 +694,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A893CD951CA8F82300697980 /* LaunchScreen.storyboard in Resources */,
+				A88A4BD11CB3949B006F859E /* m_pic_xiaoha@3x.png in Resources */,
+				A88A4BCF1CB3949B006F859E /* m_pic_xiaoha@2x.png in Resources */,
 				A893CD921CA8F82300697980 /* Assets.xcassets in Resources */,
 				A893CD8D1CA8F82300697980 /* Main.storyboard in Resources */,
 			);
@@ -711,6 +713,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8F31AEB1CAEA2FF0053B71B /* LaunchScreen.storyboard in Resources */,
+				A88A4BD21CB3949B006F859E /* m_pic_xiaoha@3x.png in Resources */,
+				A88A4BD01CB3949B006F859E /* m_pic_xiaoha@2x.png in Resources */,
 				A8F31AEC1CAEA2FF0053B71B /* Assets.xcassets in Resources */,
 				A8F31AED1CAEA2FF0053B71B /* Main.storyboard in Resources */,
 			);
@@ -817,10 +821,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8DC065D1CAD56D100B671B0 /* CGRect+ex.swift in Sources */,
-				A80DDB3B1CAAC1D3003EE3B1 /* Person.swift in Sources */,
 				A8DC06631CAD573500B671B0 /* Int+ex.swift in Sources */,
 				A8DC067E1CAD7DD700B671B0 /* NTWavAmrConverter.mm in Sources */,
-				A80DDB3A1CAAC1D3003EE3B1 /* Person+CoreDataProperties.swift in Sources */,
+				A8DB2FF01CB3A83800594165 /* NTCountDownModel+CoreDataProperties.swift in Sources */,
 				A8DC067B1CAD7DD700B671B0 /* wav.mm in Sources */,
 				A893CDBF1CA905ED00697980 /* NTMainMenuViewController.swift in Sources */,
 				A893CDB91CA900BB00697980 /* NTAppLifeMgr.swift in Sources */,
@@ -829,6 +832,7 @@
 				A88800EA1CB2BA0F0029F171 /* CustomPresent.swift in Sources */,
 				A8DC06611CAD571400B671B0 /* UIImage+ex.swift in Sources */,
 				A8F31AF91CAEC2440053B71B /* NTAppConfiguration.swift in Sources */,
+				A8DB2FEA1CB3A40C00594165 /* NTCountDownModel.swift in Sources */,
 				A8C7B5041CA9851100EFF668 /* NTViewController.swift in Sources */,
 				A8C7B5021CA9803F00EFF668 /* UIViewController+xx.swift in Sources */,
 				A8330E2B1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */,
@@ -842,10 +846,8 @@
 				A8DC065B1CAD56A200B671B0 /* UIView+ex.swift in Sources */,
 				A8DC067A1CAD7DD700B671B0 /* amrFileCodec.mm in Sources */,
 				A86CF3761CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift in Sources */,
-				A80DDB2F1CAAB859003EE3B1 /* CoreDataDAO.swift in Sources */,
 				A8DC065F1CAD56F700B671B0 /* CALayer+ex.swift in Sources */,
 				A893CD901CA8F82300697980 /* NoticeMe.xcdatamodeld in Sources */,
-				A80DDB311CAABE1C003EE3B1 /* NSManagedObject+Create.swift in Sources */,
 				A8DC06661CAD5C3800B671B0 /* NTAudioManager.swift in Sources */,
 				A893CDB11CA8FA5F00697980 /* NTWelcomeViewController.swift in Sources */,
 			);
@@ -864,10 +866,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8F31ACC1CAEA2FF0053B71B /* CGRect+ex.swift in Sources */,
-				A8F31ACD1CAEA2FF0053B71B /* Person.swift in Sources */,
 				A8F31ACE1CAEA2FF0053B71B /* Int+ex.swift in Sources */,
 				A8F31ACF1CAEA2FF0053B71B /* NTWavAmrConverter.mm in Sources */,
-				A8F31AD01CAEA2FF0053B71B /* Person+CoreDataProperties.swift in Sources */,
+				A8DB2FF11CB3A83800594165 /* NTCountDownModel+CoreDataProperties.swift in Sources */,
 				A8F31AD11CAEA2FF0053B71B /* wav.mm in Sources */,
 				A8F31AD21CAEA2FF0053B71B /* NTMainMenuViewController.swift in Sources */,
 				A8F31AD31CAEA2FF0053B71B /* NTAppLifeMgr.swift in Sources */,
@@ -876,6 +877,7 @@
 				A88800EB1CB2BA0F0029F171 /* CustomPresent.swift in Sources */,
 				A8F31AD61CAEA2FF0053B71B /* UIImage+ex.swift in Sources */,
 				A8F31AFA1CAEC2440053B71B /* NTAppConfiguration.swift in Sources */,
+				A8DB2FEB1CB3A40C00594165 /* NTCountDownModel.swift in Sources */,
 				A8F31AD71CAEA2FF0053B71B /* NTViewController.swift in Sources */,
 				A8F31AD81CAEA2FF0053B71B /* UIViewController+xx.swift in Sources */,
 				A8330E2C1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */,
@@ -889,10 +891,8 @@
 				A8F31ADD1CAEA2FF0053B71B /* UIView+ex.swift in Sources */,
 				A8F31ADE1CAEA2FF0053B71B /* amrFileCodec.mm in Sources */,
 				A8F31ADF1CAEA2FF0053B71B /* NTAudioSystemAudioSourceManager.swift in Sources */,
-				A8F31AE01CAEA2FF0053B71B /* CoreDataDAO.swift in Sources */,
 				A8F31AE11CAEA2FF0053B71B /* CALayer+ex.swift in Sources */,
 				A8F31AE21CAEA2FF0053B71B /* NoticeMe.xcdatamodeld in Sources */,
-				A8F31AE31CAEA2FF0053B71B /* NSManagedObject+Create.swift in Sources */,
 				A8F31AE41CAEA2FF0053B71B /* NTAudioManager.swift in Sources */,
 				A8F31AE51CAEA2FF0053B71B /* NTWelcomeViewController.swift in Sources */,
 			);

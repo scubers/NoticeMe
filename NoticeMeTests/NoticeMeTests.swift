@@ -8,6 +8,7 @@
 
 import XCTest
 import CoreData
+import MagicalRecord
 @testable import NoticeMe
 
 class NoticeMeTests: XCTestCase {
@@ -87,11 +88,7 @@ class NoticeMeTests: XCTestCase {
     }
 
     func testabc() {
-        let path = "/Users/Jrwong/Desktop/test.mp3"
 
-        let ret: Int32 = NTWavAmrConverter.isMP3File(path)
-
-        print(ret)
     }
 
 

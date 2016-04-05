@@ -23,6 +23,7 @@ class NTMainMenuViewController: NTViewController {
         setupNavigationItems()
 
         setupSubviews()
+
     }
 
     private var driven: UIPercentDrivenInteractiveTransition? = UIPercentDrivenInteractiveTransition()

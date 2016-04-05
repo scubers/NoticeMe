@@ -10,6 +10,6 @@ import UIKit
 
 class NTViewController: UIViewController {
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+        return .Default
     }
 }
