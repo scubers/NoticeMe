@@ -10,7 +10,14 @@
         <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="updateDate" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
+    <entity name="NTCountDownTaskModel" representedClassName=".NTCountDownTaskModel" syncable="YES">
+        <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="countDownModel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NTCountDownModel" syncable="YES"/>
+    </entity>
     <elements>
         <element name="NTCountDownModel" positionX="-63" positionY="-18" width="128" height="165"/>
+        <element name="NTCountDownTaskModel" positionX="-63" positionY="45" width="128" height="105"/>
     </elements>
 </model>

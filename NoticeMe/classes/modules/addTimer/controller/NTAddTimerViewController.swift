@@ -7,13 +7,14 @@
 //
 
 import UIKit
-import RxCocoa
+import ReactiveCocoa
 import SnapKit
+import CoreData
+import Aspects
 
 class NTAddTimerTableViewHandler: NTBaseSettingsTableViewHandler {
 
-    var countDownModel: NTCountDownModel? = NTCountDownModel.MR_createEntity()
-
+    var countDownModel: NTCountDownModel?
     override init() {
         super.init()
         setupHandlerData()
@@ -126,8 +127,6 @@ class NTAddTimerTableViewHandler: NTBaseSettingsTableViewHandler {
 
 class NTAddTimerViewController: NTViewController {
 
-    var saved: Bool = false
-
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         modalPresentationStyle = .OverCurrentContext
@@ -158,15 +157,12 @@ class NTAddTimerViewController: NTViewController {
     }
 
     func setupSignal() {
-        tableView?.rx_contentOffset.subscribeNext({[weak self] (point) in
-            if point.y < -150 {self?.dismissViewControllerAnimated(true, completion: nil)}
-        }).addDisposableTo(getDisposeBag())
-    }
 
-    deinit {
-        if !saved {
-            tableViewHandler?.countDownModel?.MR_deleteEntity()
-        }
+        tableView?.rx_contentOffset.subscribeNext({[weak self] (point) in
+            if point.y < -150 && self!.tableView!.dragging {
+                self?.dismissViewControllerAnimated(true, completion: nil)
+            }
+        }).addDisposableTo(getDisposeBag())
     }
 
 }

@@ -9,10 +9,11 @@
 import Foundation
 import RxSwift
 
+private var disposeBagKey = "disposeBagKey"
+
 extension NSObject {
 
     func getDisposeBag() -> DisposeBag {
-        var disposeBagKey = "disposeBagKey"
         if let bag = objc_getAssociatedObject(self, &disposeBagKey) {
             return bag as! DisposeBag
         }

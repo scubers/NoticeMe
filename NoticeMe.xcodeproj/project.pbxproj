@@ -31,6 +31,10 @@
 		A893CDBF1CA905ED00697980 /* NTMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDBE1CA905ED00697980 /* NTMainMenuViewController.swift */; };
 		A893CDC11CA907CE00697980 /* NTMainNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDC01CA907CE00697980 /* NTMainNavgationController.swift */; };
 		A893CDCD1CA9278000697980 /* NTCountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDCC1CA9278000697980 /* NTCountDownViewController.swift */; };
+		A8B1D5B81CBFA302000EA4AF /* NTCountDownTaskModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1D5B61CBFA302000EA4AF /* NTCountDownTaskModel+CoreDataProperties.swift */; };
+		A8B1D5B91CBFA302000EA4AF /* NTCountDownTaskModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1D5B61CBFA302000EA4AF /* NTCountDownTaskModel+CoreDataProperties.swift */; };
+		A8B1D5BA1CBFA302000EA4AF /* NTCountDownTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1D5B71CBFA302000EA4AF /* NTCountDownTaskModel.swift */; };
+		A8B1D5BB1CBFA302000EA4AF /* NTCountDownTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1D5B71CBFA302000EA4AF /* NTCountDownTaskModel.swift */; };
 		A8B293111CB235B8003F00EA /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B293101CB235B8003F00EA /* Disposable.swift */; };
 		A8B293121CB235B8003F00EA /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B293101CB235B8003F00EA /* Disposable.swift */; };
 		A8B293141CB23906003F00EA /* NTMainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B293131CB23906003F00EA /* NTMainMenuView.swift */; };
@@ -123,6 +127,8 @@
 		A893CDC01CA907CE00697980 /* NTMainNavgationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTMainNavgationController.swift; sourceTree = "<group>"; };
 		A893CDC41CA923AD00697980 /* NoticeMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoticeMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		A893CDCC1CA9278000697980 /* NTCountDownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTCountDownViewController.swift; sourceTree = "<group>"; };
+		A8B1D5B61CBFA302000EA4AF /* NTCountDownTaskModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NTCountDownTaskModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A8B1D5B71CBFA302000EA4AF /* NTCountDownTaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTCountDownTaskModel.swift; sourceTree = "<group>"; };
 		A8B293101CB235B8003F00EA /* Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
 		A8B293131CB23906003F00EA /* NTMainMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTMainMenuView.swift; sourceTree = "<group>"; };
 		A8B293171CB24079003F00EA /* NTMainMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTMainMenuViewModel.swift; sourceTree = "<group>"; };
@@ -365,6 +371,7 @@
 		A893CDC81CA9275900697980 /* countDown */ = {
 			isa = PBXGroup;
 			children = (
+				A8B1D5B51CBFA2F2000EA4AF /* model */,
 				A893CDC91CA9275900697980 /* controller */,
 				A893CDCA1CA9275900697980 /* service */,
 				A893CDCB1CA9275900697980 /* view */,
@@ -426,6 +433,15 @@
 			children = (
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		A8B1D5B51CBFA2F2000EA4AF /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A8B1D5B61CBFA302000EA4AF /* NTCountDownTaskModel+CoreDataProperties.swift */,
+				A8B1D5B71CBFA302000EA4AF /* NTCountDownTaskModel.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		A8B2930F1CB23599003F00EA /* extension */ = {
@@ -822,6 +838,7 @@
 			files = (
 				A8DC065D1CAD56D100B671B0 /* CGRect+ex.swift in Sources */,
 				A8DC06631CAD573500B671B0 /* Int+ex.swift in Sources */,
+				A8B1D5B81CBFA302000EA4AF /* NTCountDownTaskModel+CoreDataProperties.swift in Sources */,
 				A8DC067E1CAD7DD700B671B0 /* NTWavAmrConverter.mm in Sources */,
 				A8DC067B1CAD7DD700B671B0 /* wav.mm in Sources */,
 				A893CDBF1CA905ED00697980 /* NTMainMenuViewController.swift in Sources */,
@@ -847,6 +864,7 @@
 				A86CF3761CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift in Sources */,
 				A847A6611CB3C1F600EEBD26 /* NTCountDownModel+CoreDataProperties.swift in Sources */,
 				A8DC065F1CAD56F700B671B0 /* CALayer+ex.swift in Sources */,
+				A8B1D5BA1CBFA302000EA4AF /* NTCountDownTaskModel.swift in Sources */,
 				A893CD901CA8F82300697980 /* NoticeMe.xcdatamodeld in Sources */,
 				A8DC06661CAD5C3800B671B0 /* NTAudioManager.swift in Sources */,
 				A893CDB11CA8FA5F00697980 /* NTWelcomeViewController.swift in Sources */,
@@ -867,6 +885,7 @@
 			files = (
 				A8F31ACC1CAEA2FF0053B71B /* CGRect+ex.swift in Sources */,
 				A8F31ACE1CAEA2FF0053B71B /* Int+ex.swift in Sources */,
+				A8B1D5B91CBFA302000EA4AF /* NTCountDownTaskModel+CoreDataProperties.swift in Sources */,
 				A8F31ACF1CAEA2FF0053B71B /* NTWavAmrConverter.mm in Sources */,
 				A8F31AD11CAEA2FF0053B71B /* wav.mm in Sources */,
 				A8F31AD21CAEA2FF0053B71B /* NTMainMenuViewController.swift in Sources */,
@@ -892,6 +911,7 @@
 				A8F31ADF1CAEA2FF0053B71B /* NTAudioSystemAudioSourceManager.swift in Sources */,
 				A847A6621CB3C1F600EEBD26 /* NTCountDownModel+CoreDataProperties.swift in Sources */,
 				A8F31AE11CAEA2FF0053B71B /* CALayer+ex.swift in Sources */,
+				A8B1D5BB1CBFA302000EA4AF /* NTCountDownTaskModel.swift in Sources */,
 				A8F31AE21CAEA2FF0053B71B /* NoticeMe.xcdatamodeld in Sources */,
 				A8F31AE41CAEA2FF0053B71B /* NTAudioManager.swift in Sources */,
 				A8F31AE51CAEA2FF0053B71B /* NTWelcomeViewController.swift in Sources */,
