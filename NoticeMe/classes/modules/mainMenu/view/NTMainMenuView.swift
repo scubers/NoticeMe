@@ -10,6 +10,7 @@ import UIKit
 import BlocksKit
 import RxCocoa
 import RxSwift
+import MagicalRecord
 
 class NTMainMenuView: UICollectionView {
 

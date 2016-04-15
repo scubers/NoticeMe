@@ -140,6 +140,8 @@ class NTAddTimerViewController: NTViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
         setupSubviews()
 
     }

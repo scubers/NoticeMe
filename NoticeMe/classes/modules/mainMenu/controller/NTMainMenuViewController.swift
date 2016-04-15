@@ -8,10 +8,14 @@
 
 import UIKit
 import BlocksKit
+import MagicalRecord
 
 class NTMainMenuViewController: NTViewController {
 
     lazy var menuViewModel = NTMainMenuViewModel()
+    lazy var managedObjectContext: NSManagedObjectContext? = NSManagedObjectContext.MR_context()
+
+    var taskFetchController: NSFetchedResultsController?
 
     var mainMenuView: NTMainMenuView?
 
@@ -21,11 +25,10 @@ class NTMainMenuViewController: NTViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.whiteColor()
         setupNavigationItems()
-
         setupSubviews()
-
     }
 
+    // MARK: 页面布局
     private var driven: UIPercentDrivenInteractiveTransition? = UIPercentDrivenInteractiveTransition()
 
     private func setupSubviews() {
@@ -93,6 +96,8 @@ class NTMainMenuViewController: NTViewController {
         self.navigationItem.leftBarButtonItem = item2
     }
 
+
+    // MARK: 事件响应
     private func handleDetailWithItem(item:UIBarButtonItem) {
         self.navigationController?.pushViewController(NTCountDownViewController(), animated: true)
     }
