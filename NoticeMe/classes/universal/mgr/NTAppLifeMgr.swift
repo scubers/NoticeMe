@@ -29,6 +29,8 @@ class NTAppLifeMgr: NSObject {
         MagicalRecord.setupCoreDataStackWithStoreNamed("Database.sqlite")
         MagicalRecord.setupAutoMigratingCoreDataStack()
 
+
+
         return true
     }
 

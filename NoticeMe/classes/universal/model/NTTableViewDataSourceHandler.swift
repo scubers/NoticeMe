@@ -31,7 +31,7 @@ class NTTableViewDataSourceHandler: NSObject, UITableViewDataSource {
     var canEditRowBlock: CanEditRowBlock?
     var canMoveRowBlock: CanMoveRowBlock?
     var sectionIndexTitlesBlock: SectionIndexTitlesBlock?
-    var sectionForSectionIndexTitle: SectionForSectionIndexTitle?
+
 
 
 
@@ -101,7 +101,7 @@ class NTTableViewDataSourceHandler: NSObject, UITableViewDataSource {
         }
         return mblock(tableView)
     }
-//    @available(iOS 2.0, *)
+
 //    optional public func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int // tell table which section corresponds to section title/index (e.g. "B",1))
 
     // Data manipulation - insert and delete support

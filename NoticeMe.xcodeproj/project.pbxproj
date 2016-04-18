@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		92E5D7372ACC083732F295E4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB52CE7B95830FAD9561450 /* Pods.framework */; };
+		A81309211CC4BAD00040281F /* NTAddTimerTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81309201CC4BAD00040281F /* NTAddTimerTableViewHandler.swift */; };
+		A81309221CC4BAD00040281F /* NTAddTimerTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81309201CC4BAD00040281F /* NTAddTimerTableViewHandler.swift */; };
 		A8330E2B1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift */; };
 		A8330E2C1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift */; };
 		A847A6611CB3C1F600EEBD26 /* NTCountDownModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A847A6601CB3C1F600EEBD26 /* NTCountDownModel+CoreDataProperties.swift */; };
@@ -104,6 +106,7 @@
 		38C2E15ED0AC5C3F6C8F51E4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8B9A88D24D353600C6A998F4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9AB52CE7B95830FAD9561450 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A81309201CC4BAD00040281F /* NTAddTimerTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAddTimerTableViewHandler.swift; sourceTree = "<group>"; };
 		A8330E2A1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTBaseSettingsTableViewHandler.swift; sourceTree = "<group>"; };
 		A847A6601CB3C1F600EEBD26 /* NTCountDownModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NTCountDownModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A86CF3751CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAudioSystemAudioSourceManager.swift; sourceTree = "<group>"; };
@@ -419,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				A8C7B4FB1CA9796300EFF668 /* NTAddTimerViewController.swift */,
+				A81309201CC4BAD00040281F /* NTAddTimerTableViewHandler.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -870,6 +874,7 @@
 				A8B1D5BA1CBFA302000EA4AF /* NTCountDownTaskModel.swift in Sources */,
 				A893CD901CA8F82300697980 /* NoticeMe.xcdatamodeld in Sources */,
 				A8DC06661CAD5C3800B671B0 /* NTAudioManager.swift in Sources */,
+				A81309211CC4BAD00040281F /* NTAddTimerTableViewHandler.swift in Sources */,
 				A893CDB11CA8FA5F00697980 /* NTWelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -902,6 +907,7 @@
 				A8F31AD71CAEA2FF0053B71B /* NTViewController.swift in Sources */,
 				A8330E2C1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */,
 				A8F31AD91CAEA2FF0053B71B /* NTCountDownViewController.swift in Sources */,
+				A81309221CC4BAD00040281F /* NTAddTimerTableViewHandler.swift in Sources */,
 				A8B293151CB23906003F00EA /* NTMainMenuView.swift in Sources */,
 				A8B293121CB235B8003F00EA /* Disposable.swift in Sources */,
 				A8B293191CB24079003F00EA /* NTMainMenuViewModel.swift in Sources */,

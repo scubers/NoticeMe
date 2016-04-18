@@ -58,7 +58,7 @@ class NTBaseSettingsItem : NSObject {
 
     var settingsType: NTBaseSettingsItemType = .None
 
-    var clearHightLight: Bool = false
+    var clearHighLight: Bool = false
 
 }
 
@@ -197,11 +197,11 @@ class NTBaseSettingsTableViewCell : UITableViewCell {
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
-        if !item!.clearHightLight {super.setSelected(selected, animated: animated)}
+        if !item!.clearHighLight {super.setSelected(selected, animated: animated)}
     }
 
     override func setHighlighted(highlighted: Bool, animated: Bool) {
-        if !item!.clearHightLight {super.setHighlighted(highlighted, animated: animated)}
+        if !item!.clearHighLight {super.setHighlighted(highlighted, animated: animated)}
     }
 
 }
