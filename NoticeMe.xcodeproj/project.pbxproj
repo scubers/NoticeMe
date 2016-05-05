@@ -10,12 +10,12 @@
 		92E5D7372ACC083732F295E4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB52CE7B95830FAD9561450 /* Pods.framework */; };
 		A81309211CC4BAD00040281F /* NTAddTimerTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81309201CC4BAD00040281F /* NTAddTimerTableViewHandler.swift */; };
 		A81309221CC4BAD00040281F /* NTAddTimerTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81309201CC4BAD00040281F /* NTAddTimerTableViewHandler.swift */; };
-		A8330E2B1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift */; };
-		A8330E2C1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift */; };
+		A8330E2B1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift */; };
+		A8330E2C1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift */; };
 		A847A6611CB3C1F600EEBD26 /* NTCountDownModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A847A6601CB3C1F600EEBD26 /* NTCountDownModel+CoreDataProperties.swift */; };
 		A847A6621CB3C1F600EEBD26 /* NTCountDownModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A847A6601CB3C1F600EEBD26 /* NTCountDownModel+CoreDataProperties.swift */; };
-		A86CF3761CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CF3751CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift */; };
-		A87D41BC1CC0F87D00A10F6C /* NTTableViewDataSourceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87D41BB1CC0F87D00A10F6C /* NTTableViewDataSourceHandler.swift */; };
+		A86CF3761CAE45FA007483BC /* AudioSystemAudioSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CF3751CAE45FA007483BC /* AudioSystemAudioSourceManager.swift */; };
+		A87D41BC1CC0F87D00A10F6C /* TableViewDataSourceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87D41BB1CC0F87D00A10F6C /* TableViewDataSourceHandler.swift */; };
 		A88800EA1CB2BA0F0029F171 /* CustomPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88800E91CB2BA0F0029F171 /* CustomPresent.swift */; };
 		A88800EB1CB2BA0F0029F171 /* CustomPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88800E91CB2BA0F0029F171 /* CustomPresent.swift */; };
 		A88A4BCF1CB3949B006F859E /* m_pic_xiaoha@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88A4BCD1CB3949B006F859E /* m_pic_xiaoha@2x.png */; };
@@ -28,9 +28,9 @@
 		A893CD951CA8F82300697980 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A893CD931CA8F82300697980 /* LaunchScreen.storyboard */; };
 		A893CDA01CA8F82300697980 /* NoticeMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CD9F1CA8F82300697980 /* NoticeMeTests.swift */; };
 		A893CDAD1CA8F93900697980 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDAB1CA8F93900697980 /* AppDelegate.swift */; };
-		A893CDB11CA8FA5F00697980 /* NTWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB01CA8FA5F00697980 /* NTWelcomeViewController.swift */; };
+		A893CDB11CA8FA5F00697980 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB01CA8FA5F00697980 /* WelcomeViewController.swift */; };
 		A893CDB51CA8FCB600697980 /* PublicMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB41CA8FCB600697980 /* PublicMethod.swift */; };
-		A893CDB91CA900BB00697980 /* NTAppLifeMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB81CA900BB00697980 /* NTAppLifeMgr.swift */; };
+		A893CDB91CA900BB00697980 /* AppLifeMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB81CA900BB00697980 /* AppLifeMgr.swift */; };
 		A893CDBF1CA905ED00697980 /* NTMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDBE1CA905ED00697980 /* NTMainMenuViewController.swift */; };
 		A893CDC11CA907CE00697980 /* NTMainNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDC01CA907CE00697980 /* NTMainNavgationController.swift */; };
 		A893CDCD1CA9278000697980 /* NTCountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDCC1CA9278000697980 /* NTCountDownViewController.swift */; };
@@ -44,9 +44,8 @@
 		A8B293151CB23906003F00EA /* NTMainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B293131CB23906003F00EA /* NTMainMenuView.swift */; };
 		A8B293181CB24079003F00EA /* NTMainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B293171CB24079003F00EA /* NTMainMenuViewModel.swift */; };
 		A8B293191CB24079003F00EA /* NTMainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B293171CB24079003F00EA /* NTMainMenuViewModel.swift */; };
-		A8C788421CC0908C0083ED5A /* NTBaseDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C788411CC0908C0083ED5A /* NTBaseDao.swift */; };
 		A8C7B4FC1CA9796300EFF668 /* NTAddTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B4FB1CA9796300EFF668 /* NTAddTimerViewController.swift */; };
-		A8C7B5041CA9851100EFF668 /* NTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B5031CA9851100EFF668 /* NTViewController.swift */; };
+		A8C7B5041CA9851100EFF668 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B5031CA9851100EFF668 /* BaseViewController.swift */; };
 		A8DB2FEA1CB3A40C00594165 /* NTCountDownModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DB2FE71CB3A40C00594165 /* NTCountDownModel.swift */; };
 		A8DB2FEB1CB3A40C00594165 /* NTCountDownModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DB2FE71CB3A40C00594165 /* NTCountDownModel.swift */; };
 		A8DC065B1CAD56A200B671B0 /* UIView+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC065A1CAD56A200B671B0 /* UIView+ex.swift */; };
@@ -54,7 +53,7 @@
 		A8DC065F1CAD56F700B671B0 /* CALayer+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC065E1CAD56F700B671B0 /* CALayer+ex.swift */; };
 		A8DC06611CAD571400B671B0 /* UIImage+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06601CAD571400B671B0 /* UIImage+ex.swift */; };
 		A8DC06631CAD573500B671B0 /* Int+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06621CAD573500B671B0 /* Int+ex.swift */; };
-		A8DC06661CAD5C3800B671B0 /* NTAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06651CAD5C3800B671B0 /* NTAudioManager.swift */; };
+		A8DC06661CAD5C3800B671B0 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06651CAD5C3800B671B0 /* AudioManager.swift */; };
 		A8DC067A1CAD7DD700B671B0 /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8DC066D1CAD7DD700B671B0 /* amrFileCodec.mm */; };
 		A8DC067B1CAD7DD700B671B0 /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8DC066F1CAD7DD700B671B0 /* wav.mm */; };
 		A8DC067C1CAD7DD700B671B0 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8DC06731CAD7DD700B671B0 /* libopencore-amrnb.a */; };
@@ -66,30 +65,30 @@
 		A8F31ACF1CAEA2FF0053B71B /* NTWavAmrConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06791CAD7DD700B671B0 /* NTWavAmrConverter.mm */; };
 		A8F31AD11CAEA2FF0053B71B /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8DC066F1CAD7DD700B671B0 /* wav.mm */; };
 		A8F31AD21CAEA2FF0053B71B /* NTMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDBE1CA905ED00697980 /* NTMainMenuViewController.swift */; };
-		A8F31AD31CAEA2FF0053B71B /* NTAppLifeMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB81CA900BB00697980 /* NTAppLifeMgr.swift */; };
+		A8F31AD31CAEA2FF0053B71B /* AppLifeMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB81CA900BB00697980 /* AppLifeMgr.swift */; };
 		A8F31AD41CAEA2FF0053B71B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDAB1CA8F93900697980 /* AppDelegate.swift */; };
 		A8F31AD51CAEA2FF0053B71B /* NTMainNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDC01CA907CE00697980 /* NTMainNavgationController.swift */; };
 		A8F31AD61CAEA2FF0053B71B /* UIImage+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06601CAD571400B671B0 /* UIImage+ex.swift */; };
-		A8F31AD71CAEA2FF0053B71B /* NTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B5031CA9851100EFF668 /* NTViewController.swift */; };
+		A8F31AD71CAEA2FF0053B71B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B5031CA9851100EFF668 /* BaseViewController.swift */; };
 		A8F31AD91CAEA2FF0053B71B /* NTCountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDCC1CA9278000697980 /* NTCountDownViewController.swift */; };
 		A8F31ADA1CAEA2FF0053B71B /* String+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC067F1CAD844400B671B0 /* String+ex.swift */; };
 		A8F31ADB1CAEA2FF0053B71B /* PublicMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB41CA8FCB600697980 /* PublicMethod.swift */; };
 		A8F31ADC1CAEA2FF0053B71B /* NTAddTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B4FB1CA9796300EFF668 /* NTAddTimerViewController.swift */; };
 		A8F31ADD1CAEA2FF0053B71B /* UIView+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC065A1CAD56A200B671B0 /* UIView+ex.swift */; };
 		A8F31ADE1CAEA2FF0053B71B /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8DC066D1CAD7DD700B671B0 /* amrFileCodec.mm */; };
-		A8F31ADF1CAEA2FF0053B71B /* NTAudioSystemAudioSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CF3751CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift */; };
+		A8F31ADF1CAEA2FF0053B71B /* AudioSystemAudioSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CF3751CAE45FA007483BC /* AudioSystemAudioSourceManager.swift */; };
 		A8F31AE11CAEA2FF0053B71B /* CALayer+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC065E1CAD56F700B671B0 /* CALayer+ex.swift */; };
 		A8F31AE21CAEA2FF0053B71B /* NoticeMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A893CD8E1CA8F82300697980 /* NoticeMe.xcdatamodeld */; };
-		A8F31AE41CAEA2FF0053B71B /* NTAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06651CAD5C3800B671B0 /* NTAudioManager.swift */; };
-		A8F31AE51CAEA2FF0053B71B /* NTWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB01CA8FA5F00697980 /* NTWelcomeViewController.swift */; };
+		A8F31AE41CAEA2FF0053B71B /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06651CAD5C3800B671B0 /* AudioManager.swift */; };
+		A8F31AE51CAEA2FF0053B71B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB01CA8FA5F00697980 /* WelcomeViewController.swift */; };
 		A8F31AE71CAEA2FF0053B71B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB52CE7B95830FAD9561450 /* Pods.framework */; };
 		A8F31AE81CAEA2FF0053B71B /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8DC06771CAD7DD700B671B0 /* libopencore-amrwb.a */; };
 		A8F31AE91CAEA2FF0053B71B /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8DC06731CAD7DD700B671B0 /* libopencore-amrnb.a */; };
 		A8F31AEB1CAEA2FF0053B71B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A893CD931CA8F82300697980 /* LaunchScreen.storyboard */; };
 		A8F31AEC1CAEA2FF0053B71B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A893CD911CA8F82300697980 /* Assets.xcassets */; };
 		A8F31AED1CAEA2FF0053B71B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A893CD8B1CA8F82300697980 /* Main.storyboard */; };
-		A8F31AF91CAEC2440053B71B /* NTAppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F31AF81CAEC2440053B71B /* NTAppConfiguration.swift */; };
-		A8F31AFA1CAEC2440053B71B /* NTAppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F31AF81CAEC2440053B71B /* NTAppConfiguration.swift */; };
+		A8F31AF91CAEC2440053B71B /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F31AF81CAEC2440053B71B /* AppConfiguration.swift */; };
+		A8F31AFA1CAEC2440053B71B /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F31AF81CAEC2440053B71B /* AppConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,10 +106,10 @@
 		8B9A88D24D353600C6A998F4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9AB52CE7B95830FAD9561450 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A81309201CC4BAD00040281F /* NTAddTimerTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAddTimerTableViewHandler.swift; sourceTree = "<group>"; };
-		A8330E2A1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTBaseSettingsTableViewHandler.swift; sourceTree = "<group>"; };
+		A8330E2A1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSettingsTableViewHandler.swift; sourceTree = "<group>"; };
 		A847A6601CB3C1F600EEBD26 /* NTCountDownModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NTCountDownModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A86CF3751CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAudioSystemAudioSourceManager.swift; sourceTree = "<group>"; };
-		A87D41BB1CC0F87D00A10F6C /* NTTableViewDataSourceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTTableViewDataSourceHandler.swift; sourceTree = "<group>"; };
+		A86CF3751CAE45FA007483BC /* AudioSystemAudioSourceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSystemAudioSourceManager.swift; sourceTree = "<group>"; };
+		A87D41BB1CC0F87D00A10F6C /* TableViewDataSourceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceHandler.swift; sourceTree = "<group>"; };
 		A88800E91CB2BA0F0029F171 /* CustomPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresent.swift; sourceTree = "<group>"; };
 		A88A4BCD1CB3949B006F859E /* m_pic_xiaoha@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "m_pic_xiaoha@2x.png"; sourceTree = "<group>"; };
 		A88A4BCE1CB3949B006F859E /* m_pic_xiaoha@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "m_pic_xiaoha@3x.png"; sourceTree = "<group>"; };
@@ -124,9 +123,9 @@
 		A893CD9F1CA8F82300697980 /* NoticeMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeMeTests.swift; sourceTree = "<group>"; };
 		A893CDA11CA8F82300697980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A893CDAB1CA8F93900697980 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A893CDB01CA8FA5F00697980 /* NTWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTWelcomeViewController.swift; sourceTree = "<group>"; };
+		A893CDB01CA8FA5F00697980 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		A893CDB41CA8FCB600697980 /* PublicMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicMethod.swift; sourceTree = "<group>"; };
-		A893CDB81CA900BB00697980 /* NTAppLifeMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAppLifeMgr.swift; sourceTree = "<group>"; };
+		A893CDB81CA900BB00697980 /* AppLifeMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLifeMgr.swift; sourceTree = "<group>"; };
 		A893CDBE1CA905ED00697980 /* NTMainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTMainMenuViewController.swift; sourceTree = "<group>"; };
 		A893CDC01CA907CE00697980 /* NTMainNavgationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTMainNavgationController.swift; sourceTree = "<group>"; };
 		A893CDC41CA923AD00697980 /* NoticeMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoticeMe-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -136,16 +135,15 @@
 		A8B293101CB235B8003F00EA /* Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
 		A8B293131CB23906003F00EA /* NTMainMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTMainMenuView.swift; sourceTree = "<group>"; };
 		A8B293171CB24079003F00EA /* NTMainMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTMainMenuViewModel.swift; sourceTree = "<group>"; };
-		A8C788411CC0908C0083ED5A /* NTBaseDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTBaseDao.swift; sourceTree = "<group>"; };
 		A8C7B4FB1CA9796300EFF668 /* NTAddTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAddTimerViewController.swift; sourceTree = "<group>"; };
-		A8C7B5031CA9851100EFF668 /* NTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTViewController.swift; sourceTree = "<group>"; };
+		A8C7B5031CA9851100EFF668 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A8DB2FE71CB3A40C00594165 /* NTCountDownModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTCountDownModel.swift; sourceTree = "<group>"; };
 		A8DC065A1CAD56A200B671B0 /* UIView+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ex.swift"; sourceTree = "<group>"; };
 		A8DC065C1CAD56D100B671B0 /* CGRect+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+ex.swift"; sourceTree = "<group>"; };
 		A8DC065E1CAD56F700B671B0 /* CALayer+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+ex.swift"; sourceTree = "<group>"; };
 		A8DC06601CAD571400B671B0 /* UIImage+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ex.swift"; sourceTree = "<group>"; };
 		A8DC06621CAD573500B671B0 /* Int+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+ex.swift"; sourceTree = "<group>"; };
-		A8DC06651CAD5C3800B671B0 /* NTAudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAudioManager.swift; sourceTree = "<group>"; };
+		A8DC06651CAD5C3800B671B0 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		A8DC066C1CAD7DD700B671B0 /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
 		A8DC066D1CAD7DD700B671B0 /* amrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
 		A8DC066E1CAD7DD700B671B0 /* wav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wav.h; sourceTree = "<group>"; };
@@ -162,7 +160,7 @@
 		A8F31AC81CAEA0270053B71B /* NoticeMe copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NoticeMe copy-Info.plist"; path = "/Users/Jrwong/Desktop/code/NoticeMe/NoticeMe copy-Info.plist"; sourceTree = "<absolute>"; };
 		A8F31AF31CAEA2FF0053B71B /* NoticeMe-dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NoticeMe-dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F31AF41CAEA2FF0053B71B /* NoticeMe copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NoticeMe copy2-Info.plist"; path = "/Users/Jrwong/Desktop/code/NoticeMe/NoticeMe copy2-Info.plist"; sourceTree = "<absolute>"; };
-		A8F31AF81CAEC2440053B71B /* NTAppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTAppConfiguration.swift; sourceTree = "<group>"; };
+		A8F31AF81CAEC2440053B71B /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,7 +277,7 @@
 				A8DC06591CAD567400B671B0 /* extensions */,
 				A8DC06691CAD7DD000B671B0 /* thirdparty */,
 				A893CDAB1CA8F93900697980 /* AppDelegate.swift */,
-				A893CDB01CA8FA5F00697980 /* NTWelcomeViewController.swift */,
+				A893CDB01CA8FA5F00697980 /* WelcomeViewController.swift */,
 				A893CDC41CA923AD00697980 /* NoticeMe-Bridging-Header.h */,
 			);
 			path = classes;
@@ -325,7 +323,7 @@
 		A893CDB61CA9007100697980 /* mgr */ = {
 			isa = PBXGroup;
 			children = (
-				A893CDB81CA900BB00697980 /* NTAppLifeMgr.swift */,
+				A893CDB81CA900BB00697980 /* AppLifeMgr.swift */,
 			);
 			path = mgr;
 			sourceTree = "<group>";
@@ -333,7 +331,6 @@
 		A893CDB71CA9007100697980 /* service */ = {
 			isa = PBXGroup;
 			children = (
-				A8C788411CC0908C0083ED5A /* NTBaseDao.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -469,7 +466,7 @@
 		A8C7B4FD1CA97A6B00EFF668 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				A8C7B5031CA9851100EFF668 /* NTViewController.swift */,
+				A8C7B5031CA9851100EFF668 /* BaseViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -539,8 +536,8 @@
 		A8DC06641CAD5AE100B671B0 /* AudioUtil */ = {
 			isa = PBXGroup;
 			children = (
-				A8DC06651CAD5C3800B671B0 /* NTAudioManager.swift */,
-				A86CF3751CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift */,
+				A8DC06651CAD5C3800B671B0 /* AudioManager.swift */,
+				A86CF3751CAE45FA007483BC /* AudioSystemAudioSourceManager.swift */,
 			);
 			path = AudioUtil;
 			sourceTree = "<group>";
@@ -599,9 +596,9 @@
 		A8F31AF71CAEC22E0053B71B /* model */ = {
 			isa = PBXGroup;
 			children = (
-				A8F31AF81CAEC2440053B71B /* NTAppConfiguration.swift */,
-				A8330E2A1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift */,
-				A87D41BB1CC0F87D00A10F6C /* NTTableViewDataSourceHandler.swift */,
+				A8F31AF81CAEC2440053B71B /* AppConfiguration.swift */,
+				A8330E2A1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift */,
+				A87D41BB1CC0F87D00A10F6C /* TableViewDataSourceHandler.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -844,21 +841,20 @@
 			files = (
 				A8DC065D1CAD56D100B671B0 /* CGRect+ex.swift in Sources */,
 				A8DC06631CAD573500B671B0 /* Int+ex.swift in Sources */,
-				A87D41BC1CC0F87D00A10F6C /* NTTableViewDataSourceHandler.swift in Sources */,
+				A87D41BC1CC0F87D00A10F6C /* TableViewDataSourceHandler.swift in Sources */,
 				A8B1D5B81CBFA302000EA4AF /* NTCountDownTaskModel+CoreDataProperties.swift in Sources */,
 				A8DC067E1CAD7DD700B671B0 /* NTWavAmrConverter.mm in Sources */,
 				A8DC067B1CAD7DD700B671B0 /* wav.mm in Sources */,
 				A893CDBF1CA905ED00697980 /* NTMainMenuViewController.swift in Sources */,
-				A893CDB91CA900BB00697980 /* NTAppLifeMgr.swift in Sources */,
-				A8C788421CC0908C0083ED5A /* NTBaseDao.swift in Sources */,
+				A893CDB91CA900BB00697980 /* AppLifeMgr.swift in Sources */,
 				A893CDAD1CA8F93900697980 /* AppDelegate.swift in Sources */,
 				A893CDC11CA907CE00697980 /* NTMainNavgationController.swift in Sources */,
 				A88800EA1CB2BA0F0029F171 /* CustomPresent.swift in Sources */,
 				A8DC06611CAD571400B671B0 /* UIImage+ex.swift in Sources */,
-				A8F31AF91CAEC2440053B71B /* NTAppConfiguration.swift in Sources */,
+				A8F31AF91CAEC2440053B71B /* AppConfiguration.swift in Sources */,
 				A8DB2FEA1CB3A40C00594165 /* NTCountDownModel.swift in Sources */,
-				A8C7B5041CA9851100EFF668 /* NTViewController.swift in Sources */,
-				A8330E2B1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */,
+				A8C7B5041CA9851100EFF668 /* BaseViewController.swift in Sources */,
+				A8330E2B1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift in Sources */,
 				A893CDCD1CA9278000697980 /* NTCountDownViewController.swift in Sources */,
 				A8B293141CB23906003F00EA /* NTMainMenuView.swift in Sources */,
 				A8B293111CB235B8003F00EA /* Disposable.swift in Sources */,
@@ -868,14 +864,14 @@
 				A8C7B4FC1CA9796300EFF668 /* NTAddTimerViewController.swift in Sources */,
 				A8DC065B1CAD56A200B671B0 /* UIView+ex.swift in Sources */,
 				A8DC067A1CAD7DD700B671B0 /* amrFileCodec.mm in Sources */,
-				A86CF3761CAE45FA007483BC /* NTAudioSystemAudioSourceManager.swift in Sources */,
+				A86CF3761CAE45FA007483BC /* AudioSystemAudioSourceManager.swift in Sources */,
 				A847A6611CB3C1F600EEBD26 /* NTCountDownModel+CoreDataProperties.swift in Sources */,
 				A8DC065F1CAD56F700B671B0 /* CALayer+ex.swift in Sources */,
 				A8B1D5BA1CBFA302000EA4AF /* NTCountDownTaskModel.swift in Sources */,
 				A893CD901CA8F82300697980 /* NoticeMe.xcdatamodeld in Sources */,
-				A8DC06661CAD5C3800B671B0 /* NTAudioManager.swift in Sources */,
+				A8DC06661CAD5C3800B671B0 /* AudioManager.swift in Sources */,
 				A81309211CC4BAD00040281F /* NTAddTimerTableViewHandler.swift in Sources */,
-				A893CDB11CA8FA5F00697980 /* NTWelcomeViewController.swift in Sources */,
+				A893CDB11CA8FA5F00697980 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -897,15 +893,15 @@
 				A8F31ACF1CAEA2FF0053B71B /* NTWavAmrConverter.mm in Sources */,
 				A8F31AD11CAEA2FF0053B71B /* wav.mm in Sources */,
 				A8F31AD21CAEA2FF0053B71B /* NTMainMenuViewController.swift in Sources */,
-				A8F31AD31CAEA2FF0053B71B /* NTAppLifeMgr.swift in Sources */,
+				A8F31AD31CAEA2FF0053B71B /* AppLifeMgr.swift in Sources */,
 				A8F31AD41CAEA2FF0053B71B /* AppDelegate.swift in Sources */,
 				A8F31AD51CAEA2FF0053B71B /* NTMainNavgationController.swift in Sources */,
 				A88800EB1CB2BA0F0029F171 /* CustomPresent.swift in Sources */,
 				A8F31AD61CAEA2FF0053B71B /* UIImage+ex.swift in Sources */,
-				A8F31AFA1CAEC2440053B71B /* NTAppConfiguration.swift in Sources */,
+				A8F31AFA1CAEC2440053B71B /* AppConfiguration.swift in Sources */,
 				A8DB2FEB1CB3A40C00594165 /* NTCountDownModel.swift in Sources */,
-				A8F31AD71CAEA2FF0053B71B /* NTViewController.swift in Sources */,
-				A8330E2C1CAFCF6500F9B0DB /* NTBaseSettingsTableViewHandler.swift in Sources */,
+				A8F31AD71CAEA2FF0053B71B /* BaseViewController.swift in Sources */,
+				A8330E2C1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift in Sources */,
 				A8F31AD91CAEA2FF0053B71B /* NTCountDownViewController.swift in Sources */,
 				A81309221CC4BAD00040281F /* NTAddTimerTableViewHandler.swift in Sources */,
 				A8B293151CB23906003F00EA /* NTMainMenuView.swift in Sources */,
@@ -916,13 +912,13 @@
 				A8F31ADC1CAEA2FF0053B71B /* NTAddTimerViewController.swift in Sources */,
 				A8F31ADD1CAEA2FF0053B71B /* UIView+ex.swift in Sources */,
 				A8F31ADE1CAEA2FF0053B71B /* amrFileCodec.mm in Sources */,
-				A8F31ADF1CAEA2FF0053B71B /* NTAudioSystemAudioSourceManager.swift in Sources */,
+				A8F31ADF1CAEA2FF0053B71B /* AudioSystemAudioSourceManager.swift in Sources */,
 				A847A6621CB3C1F600EEBD26 /* NTCountDownModel+CoreDataProperties.swift in Sources */,
 				A8F31AE11CAEA2FF0053B71B /* CALayer+ex.swift in Sources */,
 				A8B1D5BB1CBFA302000EA4AF /* NTCountDownTaskModel.swift in Sources */,
 				A8F31AE21CAEA2FF0053B71B /* NoticeMe.xcdatamodeld in Sources */,
-				A8F31AE41CAEA2FF0053B71B /* NTAudioManager.swift in Sources */,
-				A8F31AE51CAEA2FF0053B71B /* NTWelcomeViewController.swift in Sources */,
+				A8F31AE41CAEA2FF0053B71B /* AudioManager.swift in Sources */,
+				A8F31AE51CAEA2FF0053B71B /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

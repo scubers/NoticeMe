@@ -9,7 +9,7 @@
 import UIKit
 
 
-class NTTableViewDataSourceHandler: NSObject, UITableViewDataSource {
+class TableViewDataSourceHandler: NSObject, UITableViewDataSource {
 
     typealias NumberOfSectionBlock = (UITableView) -> Int
     typealias NumberOfRowInSectionBlock = (UITableView, Int) -> Int

@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 
         // MARK: 初始化启动流程
-        return NTAppLifeMgr.shareInstance.application(application, didfinishLaunchWith: launchOptions)
+        return AppLifeMgr.shareInstance.application(application, didfinishLaunchWith: launchOptions)
     }
 
     func applicationWillResignActive(application: UIApplication) {

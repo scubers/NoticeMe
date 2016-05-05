@@ -9,12 +9,12 @@
 import AVFoundation
 import MediaPlayer
 
-class NTAudioSystemAudioSourceManager: NSObject {
+class AudioSystemAudioSourceManager: NSObject {
 
     private override init(){
         super.init()
     }
-    static let shareInstance = NTAudioSystemAudioSourceManager()
+    static let shareInstance = AudioSystemAudioSourceManager()
 
     let systemAudioFilePath = "/System/Library/Audio/UISounds/"
 

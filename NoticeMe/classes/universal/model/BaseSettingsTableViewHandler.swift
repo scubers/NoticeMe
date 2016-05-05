@@ -1,5 +1,5 @@
 //
-//  NTBaseSettingsTableViewHandler.swift
+//  BaseSettingsTableViewHandler.swift
 //  NoticeMe
 //
 //  Created by 王俊仁 on 16/4/2.
@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-enum NTBaseSettingsItemType {
+enum BaseSettingsItemType {
     case None
     case DisclosureIndicator
     case DetailDisclosureButton
@@ -19,8 +19,8 @@ enum NTBaseSettingsItemType {
 }
 
 
-class NTBaseSettingsGroup : NSObject {
-    lazy var items : [NTBaseSettingsItem] = Array()
+class BaseSettingsGroup : NSObject {
+    lazy var items : [BaseSettingsItem] = Array()
 
     var heightForHeader: CGFloat = 0
     var heightForFooter: CGFloat = 0
@@ -29,7 +29,7 @@ class NTBaseSettingsGroup : NSObject {
     var titleForFooter: String?
 }
 
-class NTBaseSettingsItem : NSObject {
+class BaseSettingsItem : NSObject {
 
     typealias ActionBlock = (tableView: UITableView, indexPath: NSIndexPath) -> Void
 
@@ -56,19 +56,19 @@ class NTBaseSettingsItem : NSObject {
     var accessoryView: UIView?
     var baseBackgroundView: UIView?
 
-    var settingsType: NTBaseSettingsItemType = .None
+    var settingsType: BaseSettingsItemType = .None
 
     var clearHighLight: Bool = false
 
 }
 
 
-class NTBaseSettingsTableViewHandler: NSObject {
+class BaseSettingsTableViewHandler: NSObject {
 
-    lazy var groups : [NTBaseSettingsGroup] = Array()
+    lazy var groups : [BaseSettingsGroup] = Array()
 
-    func listItemsWithReuseId(id: String) -> [NSIndexPath : NTBaseSettingsItem] {
-        var result = [NSIndexPath : NTBaseSettingsItem]()
+    func listItemsWithReuseId(id: String) -> [NSIndexPath : BaseSettingsItem] {
+        var result = [NSIndexPath : BaseSettingsItem]()
 
         for i in 0..<groups.count {
             let group = groups[i]
@@ -83,7 +83,7 @@ class NTBaseSettingsTableViewHandler: NSObject {
         return result
     }
 
-    func replaceItemsWithReuseId(id: String, item: NTBaseSettingsItem) -> [NSIndexPath]? {
+    func replaceItemsWithReuseId(id: String, item: BaseSettingsItem) -> [NSIndexPath]? {
         var dict = listItemsWithReuseId(id)
         if dict.count == 0 {return nil}
 
@@ -95,7 +95,7 @@ class NTBaseSettingsTableViewHandler: NSObject {
         return array
     }
 
-    func itemAtIndexPath(indexPath: NSIndexPath) -> NTBaseSettingsItem? {
+    func itemAtIndexPath(indexPath: NSIndexPath) -> BaseSettingsItem? {
         if indexPath.section >= groups.count {return nil}
         if indexPath.row >= groups[indexPath.section].items.count {return nil}
         return groups[indexPath.section].items[indexPath.row]
@@ -123,7 +123,7 @@ class NTBaseSettingsTableViewCell : UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    var item: NTBaseSettingsItem? {
+    var item: BaseSettingsItem? {
         didSet {
             didSetItem(item!)
         }
@@ -137,7 +137,7 @@ class NTBaseSettingsTableViewCell : UITableViewCell {
         contentView.addSubview(separator)
     }
 
-    func didSetItem(newItem: NTBaseSettingsItem) {
+    func didSetItem(newItem: BaseSettingsItem) {
         if newItem.img != nil {
             imageView?.image = UIImage(named: newItem.img!)
         } else if newItem.image != nil {
@@ -206,7 +206,7 @@ class NTBaseSettingsTableViewCell : UITableViewCell {
 
 }
 
-extension NTBaseSettingsTableViewHandler : UITableViewDelegate {
+extension BaseSettingsTableViewHandler : UITableViewDelegate {
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let item = groups[indexPath.section].items[indexPath.row]
@@ -219,7 +219,7 @@ extension NTBaseSettingsTableViewHandler : UITableViewDelegate {
 
 }
 
-extension NTBaseSettingsTableViewHandler : UITableViewDataSource {
+extension BaseSettingsTableViewHandler : UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return groups.count
     }

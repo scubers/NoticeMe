@@ -10,16 +10,16 @@ import AVFoundation
 
 let pathKey: String = "path"
 
-enum NTAudioType {
+enum AudioType {
     case AMR
     case MP3
     case WAV
     case CAF
 }
 
-class NTAudioManager : NSObject {
+class AudioManager : NSObject {
 
-    static let shareInstance = NTAudioManager()
+    static let shareInstance = AudioManager()
     private override init() {
         super.init()
         configureAudioSession()
@@ -65,7 +65,7 @@ class NTAudioManager : NSObject {
      - parameter complete: complete
      - returns: 返回播放器
      */
-    func playAudioWithPath(path: String, sourceType: NTAudioType, needStopOther: Bool, repeatCount: Int = 1, willPlay: NTAudioPlayerWillPlayBlock?, playing: NTAudioPlayerPlayingBlock?, complete: NTAudioPlayerCompleteBlock?) -> AVAudioPlayer? {
+    func playAudioWithPath(path: String, sourceType: AudioType, needStopOther: Bool, repeatCount: Int = 1, willPlay: NTAudioPlayerWillPlayBlock?, playing: NTAudioPlayerPlayingBlock?, complete: NTAudioPlayerCompleteBlock?) -> AVAudioPlayer? {
 
         var player = playerWithFilePath(path)
 
@@ -102,7 +102,7 @@ class NTAudioManager : NSObject {
         return player
     }
 
-    func convert2WavFrom(type: NTAudioType, withPath path: String) throws -> String {
+    func convert2WavFrom(type: AudioType, withPath path: String) throws -> String {
         let newPath = path.stringByAppendingString(".wav")
         if !NSFileManager.defaultManager().fileExistsAtPath(newPath) {
             NTWavAmrConverter.convertWavAtPath(path, toAmrAtPath: newPath)
@@ -182,7 +182,7 @@ class NTAudioManager : NSObject {
     private func createTimer4MonitoringPlayer(player: AVAudioPlayer) -> NSTimer {
 
         let path = path4Player(player)
-        let timer = NSTimer(timeInterval: 0.1, target: self, selector: #selector(NTAudioManager.playerDidPlay(_:)), userInfo: [pathKey : path] as? AnyObject, repeats: true)
+        let timer = NSTimer(timeInterval: 0.1, target: self, selector: #selector(AudioManager.playerDidPlay(_:)), userInfo: [pathKey : path] as? AnyObject, repeats: true)
         NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
         return timer
     }
@@ -221,7 +221,7 @@ class NTAudioManager : NSObject {
 
 }
 
-extension NTAudioManager : AVAudioPlayerDelegate {
+extension AudioManager : AVAudioPlayerDelegate {
 
 
     func audioPlayerBeginInterruption(player: AVAudioPlayer) {

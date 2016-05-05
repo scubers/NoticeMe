@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NTViewController: UIViewController {
+class BaseViewController: UIViewController {
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .Default
     }

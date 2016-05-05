@@ -13,7 +13,7 @@ import RxSwift
 import MagicalRecord
 
 class NTAddTimerViewController
-    : NTViewController {
+    : BaseViewController {
 
     lazy var context = NSManagedObjectContext.MR_contextWithParent(NSManagedObjectContext.MR_defaultContext())
 
@@ -52,6 +52,12 @@ class NTAddTimerViewController
             if point.y < -150 && self!.tableView!.dragging {
                 self?.dismissViewControllerAnimated(true, completion: nil)
             }
+
+            if point.y > 100 && self!.tableView!.dragging {
+                self?.save()
+                self?.dismissViewControllerAnimated(true, completion: nil)
+            }
+
         }).addDisposableTo(getDisposeBag())
 
         // MARK: 绑定数据
@@ -68,6 +74,12 @@ class NTAddTimerViewController
         }).addDisposableTo(getDisposeBag())
 
 
+    }
+
+    // MARK: 保存
+    func save() {
+        countDownModel?.createDate = NSDate()
+        context.MR_saveOnlySelfAndWait()
     }
 
 }

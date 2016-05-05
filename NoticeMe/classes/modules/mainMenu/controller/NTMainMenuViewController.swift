@@ -10,7 +10,7 @@ import UIKit
 import BlocksKit
 import MagicalRecord
 
-class NTMainMenuViewController: NTViewController {
+class NTMainMenuViewController: BaseViewController {
 
     lazy var menuViewModel = NTMainMenuViewModel()
     lazy var managedObjectContext: NSManagedObjectContext? = NSManagedObjectContext.MR_context()

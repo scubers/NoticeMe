@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NTCountDownViewController: NTViewController {
+class NTCountDownViewController: BaseViewController {
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)

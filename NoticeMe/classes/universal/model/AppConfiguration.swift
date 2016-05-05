@@ -8,13 +8,13 @@
 
 import UIKit
 
-class NTAppConfiguration: NSObject {
+class AppConfiguration: NSObject {
 
     private override init() {
         super.init()
     }
 
-    static let shareInstance = NTAppConfiguration()
+    static let shareInstance = AppConfiguration()
 
     var appCommonFont: CGFloat       = 14
     var navigationTitleFont: CGFloat = 15

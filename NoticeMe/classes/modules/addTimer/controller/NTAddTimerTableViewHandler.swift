@@ -79,7 +79,7 @@ class NTAddTimeAnimationCollectionViewHandler
 }
 
 
-class NTAddTimerTableViewHandler: NTBaseSettingsTableViewHandler {
+class NTAddTimerTableViewHandler: BaseSettingsTableViewHandler {
 
     var tableView: UITableView?
 
@@ -124,13 +124,13 @@ class NTAddTimerTableViewHandler: NTBaseSettingsTableViewHandler {
     }
 
     // MARK: 倒数时间组
-    func setupTimeGroup() -> NTBaseSettingsGroup {
+    func setupTimeGroup() -> BaseSettingsGroup {
         let group = createCommonGroup()
         group.items.append(setupCountDownTimeCell())
         return group
     }
 
-    func setupCountDownTimeCell() -> NTBaseSettingsItem {
+    func setupCountDownTimeCell() -> BaseSettingsItem {
         let item = createCommonItem()
         item.reuseId = COUNT_DOWN_TIME_CELL_ID
         item.heightForCell = 120
@@ -163,17 +163,17 @@ class NTAddTimerTableViewHandler: NTBaseSettingsTableViewHandler {
     }
 
     // MARK: 提醒声音组
-    func setupAudioGroup() -> NTBaseSettingsGroup {
+    func setupAudioGroup() -> BaseSettingsGroup  {
         let group = createCommonGroup()
         group.items.append(setupAudioCell())
         return group
     }
 
-    func setupAudioCell() -> NTBaseSettingsItem {
+    func setupAudioCell() -> BaseSettingsItem {
         let item                = createCommonItem()
         item.reuseId            = COUNT_DOWN_AUDIO_CELL_ID
         item.heightForCell      = 120
-        item.settingsType       = NTBaseSettingsItemType.AllCustomize
+        item.settingsType       = BaseSettingsItemType.AllCustomize
 
         let base                = UIView()
         item.baseBackgroundView = base
@@ -199,13 +199,13 @@ class NTAddTimerTableViewHandler: NTBaseSettingsTableViewHandler {
     }
 
     // MARK: 倒数动画组
-    func setupAnimationGroup() -> NTBaseSettingsGroup {
+    func setupAnimationGroup() -> BaseSettingsGroup {
         let group = createCommonGroup()
         group.items.append(setupAnimationCell())
         return group
     }
 
-    func setupAnimationCell() -> NTBaseSettingsItem {
+    func setupAnimationCell() -> BaseSettingsItem {
         let item = createCommonItem()
         item.reuseId = COUNT_DOWN_ANIMATION_ID
         item.heightForCell = 100
@@ -231,13 +231,13 @@ class NTAddTimerTableViewHandler: NTBaseSettingsTableViewHandler {
     }
 
     // MARK: 通用私有方法
-    private func createCommonGroup() -> NTBaseSettingsGroup {
-        let group = NTBaseSettingsGroup()
+    private func createCommonGroup() -> BaseSettingsGroup {
+        let group = BaseSettingsGroup()
         return group
     }
 
-    private func createCommonItem() -> NTBaseSettingsItem {
-        let item = NTBaseSettingsItem()
+    private func createCommonItem() -> BaseSettingsItem {
+        let item = BaseSettingsItem()
         item.reuseId = ""
         item.heightForCell = 50
         item.settingsType = .None

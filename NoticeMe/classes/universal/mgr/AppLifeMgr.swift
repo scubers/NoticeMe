@@ -8,11 +8,13 @@
 
 import UIKit
 import MagicalRecord
+import RxCocoa
+import RxSwift
 
-class NTAppLifeMgr: NSObject {
+class AppLifeMgr: NSObject {
 
     private override init() {}
-    static let shareInstance: NTAppLifeMgr = NTAppLifeMgr()
+    static let shareInstance: AppLifeMgr = AppLifeMgr()
     let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
     func application(application: UIApplication, didfinishLaunchWith launchOptions:[NSObject: AnyObject]?) -> Bool {
@@ -26,10 +28,16 @@ class NTAppLifeMgr: NSObject {
             self.appDelegate.window?.rootViewController = nav
         }
 
+        // MARK: 设置MagiclRecord
         MagicalRecord.setupCoreDataStackWithStoreNamed("Database.sqlite")
         MagicalRecord.setupAutoMigratingCoreDataStack()
 
-
+        // MARK: 监听默认Context，有变化立即存储
+        NSNotificationCenter.defaultCenter()
+            .rx_notification(NSManagedObjectContextObjectsDidChangeNotification, object: NSManagedObjectContext.MR_defaultContext())
+            .subscribeNext { (notification: NSNotification) in
+                NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
+        }.addDisposableTo(getDisposeBag())
 
         return true
     }
@@ -40,7 +48,7 @@ class NTAppLifeMgr: NSObject {
      - returns: rootViewController
      */
     private func configureRootViewController() -> UIViewController {
-        let wvc = NTWelcomeViewController()
+        let wvc = WelcomeViewController()
 
         return wvc
     }
