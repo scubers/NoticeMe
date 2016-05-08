@@ -12,4 +12,8 @@ class BaseViewController: UIViewController {
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .Default
     }
+
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }

@@ -23,8 +23,8 @@ class AppLifeMgr: NSObject {
         appDelegate.window?.rootViewController = configureRootViewController()
         appDelegate.window?.makeKeyAndVisible()
 
-        jr_delay(1, queue: dispatch_get_main_queue()) { () -> Void in
-            let nav = NTMainNavgationController(rootViewController: NTMainMenuViewController())
+        jr_delay(0.5, queue: dispatch_get_main_queue()) { () -> Void in
+            let nav = BaseNavigationController(rootViewController: MainViewController())
             self.appDelegate.window?.rootViewController = nav
         }
 

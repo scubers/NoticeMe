@@ -1,8 +1,8 @@
 //
-//  NTCountDownModel+CoreDataProperties.swift
+//  CountDownModel+CoreDataProperties.swift
 //  
 //
-//  Created by 王俊仁 on 16/4/5.
+//  Created by 王俊仁 on 16/5/8.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,15 +12,17 @@
 import Foundation
 import CoreData
 
-extension NTCountDownModel {
+extension CountDownModel {
 
     @NSManaged var animation: String?
     @NSManaged var audio: String?
     @NSManaged var createDate: NSDate?
-    @NSManaged var fireDate: NSDate?
+    @NSManaged var id: String?
     @NSManaged var interval: NSNumber?
     @NSManaged var startDate: NSDate?
     @NSManaged var updateDate: NSDate?
-    @NSManaged var id: String?
+    @NSManaged var repeatType: NSNumber?
+    @NSManaged var countDownState: NSNumber?
+    @NSManaged var title: String?
 
 }
