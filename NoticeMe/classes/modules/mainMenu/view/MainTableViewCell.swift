@@ -41,7 +41,6 @@ class MainTableViewCell: BaseTableViewCell {
             titleLabel.textColor = UIColor.blackColor()
             contentView.addSubview(titleLabel)
         }
-//        titleLabel.backgroundColor = UIColor.purpleColor()
 
         block {
             timeLabel = UILabel()
@@ -49,7 +48,6 @@ class MainTableViewCell: BaseTableViewCell {
             timeLabel.textColor = UIColor.lightGrayColor()
             contentView.addSubview(timeLabel)
         }
-//        timeLabel.backgroundColor = UIColor.blackColor()
         autolayout()
     }
 

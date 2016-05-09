@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JRUtils
 
 enum MainViewState {
     case Default
@@ -52,17 +53,50 @@ class MainViewController: BaseViewController {
 
         tableView.rx_contentOffset.subscribeNext {[weak self] (point) in
             if self!.state == .Default {
-                var y = self!.addTimerView.frame.origin.y - (point.y + self!.tableView.contentInset.top)
+                var y = -(point.y + self!.tableView.contentInset.top) - self!.addTimerView.jex_height
                 y = y > 0 ? 0 : y
-                self!.addTimerView.frame.origin.y = y
+                self!.addTimerView.jex_y = y
             }
 
 
         }.addDisposableTo(self.getDisposeBag())
 
-        tableViewHandler.rx_dragging.subscribeNext { (dragging, decelerate) in
+        tableViewHandler.rx_dragging.subscribeNext {[weak self] (dragging, decelerate) in
+            if !dragging {
+                if self!.tableView.contentOffset.y < -100 {
+                    self?.state = .Adding
+                    UIView.animateWithDuration(0.25, animations: { 
+                        self?.addTimerView.jex_y = 0
+                        }, completion: { (flag) in
+                            
+                    })
+                }
+            }
         }.addDisposableTo(self.getDisposeBag())
 
+
+        addTimerView.rx_paning.subscribeNext {[weak self] (reco) in
+            let adv = self!.addTimerView
+            switch reco.state {
+            case .Changed:
+                let p = reco.translationInView(reco.view)
+                adv.jex_y += p.y
+                if adv.jex_y > 0 {
+                    adv.jex_y = 0
+                }
+                reco.setTranslation(CGPointZero, inView: reco.view)
+            case .Ended,.Cancelled:
+                if adv.jex_y < 10 {
+                    UIView.animateWithDuration(0.25, animations: { 
+                        adv.jex_y = -adv.jex_height
+                        }, completion: { (flag) in
+                            self!.state = .Default
+                    })
+                }
+            default:break
+            }
+
+        }.addDisposableTo(self.getDisposeBag())
     }
 
 }
