@@ -53,9 +53,9 @@ class MainViewController: BaseViewController {
 
         tableView.rx_contentOffset.subscribeNext {[weak self] (point) in
             if self!.state == .Default {
-                var y = -(point.y + self!.tableView.contentInset.top) - self!.addTimerView.jex_height
+                var y = -(point.y + self!.tableView.contentInset.top) - self!.addTimerView.jr_height
                 y = y > 0 ? 0 : y
-                self!.addTimerView.jex_y = y
+                self!.addTimerView.jr_y = y
             }
 
 
@@ -66,7 +66,7 @@ class MainViewController: BaseViewController {
                 if self!.tableView.contentOffset.y < -100 {
                     self?.state = .Adding
                     UIView.animateWithDuration(0.25, animations: { 
-                        self?.addTimerView.jex_y = 0
+                        self?.addTimerView.jr_y = 0
                         }, completion: { (flag) in
                             
                     })
@@ -80,15 +80,15 @@ class MainViewController: BaseViewController {
             switch reco.state {
             case .Changed:
                 let p = reco.translationInView(reco.view)
-                adv.jex_y += p.y
-                if adv.jex_y > 0 {
-                    adv.jex_y = 0
+                adv.jr_y += p.y
+                if adv.jr_y > 0 {
+                    adv.jr_y = 0
                 }
                 reco.setTranslation(CGPointZero, inView: reco.view)
             case .Ended,.Cancelled:
-                if adv.jex_y < 10 {
+                if adv.jr_y < 10 {
                     UIView.animateWithDuration(0.25, animations: { 
-                        adv.jex_y = -adv.jex_height
+                        adv.jr_y = -adv.jr_height
                         }, completion: { (flag) in
                             self!.state = .Default
                     })
