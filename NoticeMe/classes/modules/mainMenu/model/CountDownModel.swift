@@ -7,10 +7,19 @@
 //
 
 import Foundation
-import CoreData
 
 
-class CountDownModel: NSManagedObject {
+class CountDownModel: NSObject {
+
+    var animation: String?
+    var audio: String?
+    var createDate: NSDate?
+    var interval: NSNumber?
+    var startDate: NSDate?
+    var updateDate: NSDate?
+    var repeatType: NSNumber?
+    var countDownState: NSNumber?
+    var title: String?
 
     var repeatTypeEnum: RepeatType {
         get {

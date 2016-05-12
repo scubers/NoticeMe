@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import MagicalRecord
 import RxSwift
+import JRDB
 
 class MainTableViewHandler: NSObject {
 
@@ -36,10 +36,10 @@ class MainTableViewHandler: NSObject {
     // MARK: - 提供给外面的操纵方法
     func reloadModels() {
         // TODO: 重新查询数据库
-        countDownModels = CountDownModel.MR_findAll() as? [CountDownModel] ?? [CountDownModel]()
+        countDownModels = JRDBMgr.defaultDB().findAll(CountDownModel) as! [CountDownModel]
         tableView.reloadData()
 
-        let model = CountDownModel.MR_createEntity()!
+        let model = CountDownModel()
         model.title = "龙看扥灵动减肥龙看扥灵动减肥龙看扥灵动减肥龙看扥灵动减肥龙看扥灵动减肥龙看扥灵动减肥龙看扥灵动减肥"
         model.interval = NSNumber(double: 180)
         countDownModels = [

@@ -10,10 +10,10 @@
 		92E5D7372ACC083732F295E4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB52CE7B95830FAD9561450 /* Pods.framework */; };
 		A8330E2B1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift */; };
 		A8330E2C1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift */; };
+		A861CE151CE4C5510019C252 /* JRDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A861CE141CE4C5510019C252 /* JRDBTests.swift */; };
 		A86CF3761CAE45FA007483BC /* AudioSystemAudioSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CF3751CAE45FA007483BC /* AudioSystemAudioSourceManager.swift */; };
 		A87D41BC1CC0F87D00A10F6C /* TableViewDataSourceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87D41BB1CC0F87D00A10F6C /* TableViewDataSourceHandler.swift */; };
 		A893CD8D1CA8F82300697980 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A893CD8B1CA8F82300697980 /* Main.storyboard */; };
-		A893CD901CA8F82300697980 /* NoticeMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A893CD8E1CA8F82300697980 /* NoticeMe.xcdatamodeld */; };
 		A893CD921CA8F82300697980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A893CD911CA8F82300697980 /* Assets.xcassets */; };
 		A893CD951CA8F82300697980 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A893CD931CA8F82300697980 /* LaunchScreen.storyboard */; };
 		A893CDA01CA8F82300697980 /* NoticeMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CD9F1CA8F82300697980 /* NoticeMeTests.swift */; };
@@ -46,8 +46,6 @@
 		A8F2CC211CDEEA8A0096213A /* RepeatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2CC1F1CDEEA8A0096213A /* RepeatType.swift */; };
 		A8F2CC231CDEEAE00096213A /* CountDownState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2CC221CDEEAE00096213A /* CountDownState.swift */; };
 		A8F2CC241CDEEAE00096213A /* CountDownState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2CC221CDEEAE00096213A /* CountDownState.swift */; };
-		A8F2CC331CDEEEF50096213A /* CountDownModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2CC311CDEEEF50096213A /* CountDownModel+CoreDataProperties.swift */; };
-		A8F2CC341CDEEEF50096213A /* CountDownModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2CC311CDEEEF50096213A /* CountDownModel+CoreDataProperties.swift */; };
 		A8F2CC351CDEEEF50096213A /* CountDownModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2CC321CDEEEF50096213A /* CountDownModel.swift */; };
 		A8F2CC361CDEEEF50096213A /* CountDownModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2CC321CDEEEF50096213A /* CountDownModel.swift */; };
 		A8F2CC381CDEF0CD0096213A /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2CC371CDEF0CD0096213A /* MainTableViewCell.swift */; };
@@ -64,7 +62,6 @@
 		A8F31ADE1CAEA2FF0053B71B /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8DC066D1CAD7DD700B671B0 /* amrFileCodec.mm */; };
 		A8F31ADF1CAEA2FF0053B71B /* AudioSystemAudioSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CF3751CAE45FA007483BC /* AudioSystemAudioSourceManager.swift */; };
 		A8F31AE11CAEA2FF0053B71B /* CALayer+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC065E1CAD56F700B671B0 /* CALayer+ex.swift */; };
-		A8F31AE21CAEA2FF0053B71B /* NoticeMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A893CD8E1CA8F82300697980 /* NoticeMe.xcdatamodeld */; };
 		A8F31AE41CAEA2FF0053B71B /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06651CAD5C3800B671B0 /* AudioManager.swift */; };
 		A8F31AE51CAEA2FF0053B71B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893CDB01CA8FA5F00697980 /* WelcomeViewController.swift */; };
 		A8F31AE71CAEA2FF0053B71B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB52CE7B95830FAD9561450 /* Pods.framework */; };
@@ -92,11 +89,11 @@
 		8B9A88D24D353600C6A998F4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9AB52CE7B95830FAD9561450 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8330E2A1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSettingsTableViewHandler.swift; sourceTree = "<group>"; };
+		A861CE141CE4C5510019C252 /* JRDBTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRDBTests.swift; sourceTree = "<group>"; };
 		A86CF3751CAE45FA007483BC /* AudioSystemAudioSourceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSystemAudioSourceManager.swift; sourceTree = "<group>"; };
 		A87D41BB1CC0F87D00A10F6C /* TableViewDataSourceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceHandler.swift; sourceTree = "<group>"; };
 		A893CD841CA8F82300697980 /* NoticeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoticeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A893CD8C1CA8F82300697980 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A893CD8F1CA8F82300697980 /* NoticeMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoticeMe.xcdatamodel; sourceTree = "<group>"; };
 		A893CD911CA8F82300697980 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A893CD941CA8F82300697980 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A893CD961CA8F82300697980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,7 +129,6 @@
 		A8F2CC1B1CDEE54B0096213A /* MainTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewHandler.swift; sourceTree = "<group>"; };
 		A8F2CC1F1CDEEA8A0096213A /* RepeatType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatType.swift; sourceTree = "<group>"; };
 		A8F2CC221CDEEAE00096213A /* CountDownState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountDownState.swift; sourceTree = "<group>"; };
-		A8F2CC311CDEEEF50096213A /* CountDownModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CountDownModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A8F2CC321CDEEEF50096213A /* CountDownModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountDownModel.swift; sourceTree = "<group>"; };
 		A8F2CC371CDEF0CD0096213A /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		A8F2CC3A1CDEF0E40096213A /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -234,6 +230,7 @@
 			children = (
 				A893CD9F1CA8F82300697980 /* NoticeMeTests.swift */,
 				A893CDA11CA8F82300697980 /* Info.plist */,
+				A861CE141CE4C5510019C252 /* JRDBTests.swift */,
 			);
 			path = NoticeMeTests;
 			sourceTree = "<group>";
@@ -261,7 +258,6 @@
 				A893CD911CA8F82300697980 /* Assets.xcassets */,
 				A893CD931CA8F82300697980 /* LaunchScreen.storyboard */,
 				A893CD961CA8F82300697980 /* Info.plist */,
-				A893CD8E1CA8F82300697980 /* NoticeMe.xcdatamodeld */,
 			);
 			name = supportFiles;
 			sourceTree = "<group>";
@@ -565,7 +561,6 @@
 		A8F2CC1E1CDEEA790096213A /* model */ = {
 			isa = PBXGroup;
 			children = (
-				A8F2CC311CDEEEF50096213A /* CountDownModel+CoreDataProperties.swift */,
 				A8F2CC321CDEEEF50096213A /* CountDownModel.swift */,
 				A8F2CC1F1CDEEA8A0096213A /* RepeatType.swift */,
 				A8F2CC221CDEEAE00096213A /* CountDownState.swift */,
@@ -821,7 +816,6 @@
 				A8DC067B1CAD7DD700B671B0 /* wav.mm in Sources */,
 				A893CDB91CA900BB00697980 /* AppLifeMgr.swift in Sources */,
 				A893CDAD1CA8F93900697980 /* AppDelegate.swift in Sources */,
-				A8F2CC331CDEEEF50096213A /* CountDownModel+CoreDataProperties.swift in Sources */,
 				A8F2CC161CDEE4280096213A /* BaseNavigationController.swift in Sources */,
 				A8DC06611CAD571400B671B0 /* UIImage+ex.swift in Sources */,
 				A8F31AF91CAEC2440053B71B /* ThemeConfig.swift in Sources */,
@@ -838,7 +832,6 @@
 				A86CF3761CAE45FA007483BC /* AudioSystemAudioSourceManager.swift in Sources */,
 				A8F2CC351CDEEEF50096213A /* CountDownModel.swift in Sources */,
 				A8DC065F1CAD56F700B671B0 /* CALayer+ex.swift in Sources */,
-				A893CD901CA8F82300697980 /* NoticeMe.xcdatamodeld in Sources */,
 				A8F2CC131CDEE3F70096213A /* CustomPresent.swift in Sources */,
 				A8F2CC1C1CDEE54B0096213A /* MainTableViewHandler.swift in Sources */,
 				A8DC06661CAD5C3800B671B0 /* AudioManager.swift in Sources */,
@@ -851,6 +844,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A893CDA01CA8F82300697980 /* NoticeMeTests.swift in Sources */,
+				A861CE151CE4C5510019C252 /* JRDBTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -874,12 +868,10 @@
 				A8F2CC391CDEF0CD0096213A /* MainTableViewCell.swift in Sources */,
 				A8F2CC141CDEE3F70096213A /* CustomPresent.swift in Sources */,
 				A8F31ADB1CAEA2FF0053B71B /* PublicMethod.swift in Sources */,
-				A8F2CC341CDEEEF50096213A /* CountDownModel+CoreDataProperties.swift in Sources */,
 				A8F31ADE1CAEA2FF0053B71B /* amrFileCodec.mm in Sources */,
 				A8F31ADF1CAEA2FF0053B71B /* AudioSystemAudioSourceManager.swift in Sources */,
 				A8F31AE11CAEA2FF0053B71B /* CALayer+ex.swift in Sources */,
 				A8F2CC171CDEE4280096213A /* BaseNavigationController.swift in Sources */,
-				A8F31AE21CAEA2FF0053B71B /* NoticeMe.xcdatamodeld in Sources */,
 				A8F31AE41CAEA2FF0053B71B /* AudioManager.swift in Sources */,
 				A8F31AE51CAEA2FF0053B71B /* WelcomeViewController.swift in Sources */,
 				A8F2CC3C1CDEF0E40096213A /* BaseTableViewCell.swift in Sources */,
@@ -1165,19 +1157,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A893CD8E1CA8F82300697980 /* NoticeMe.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A893CD8F1CA8F82300697980 /* NoticeMe.xcdatamodel */,
-			);
-			currentVersion = A893CD8F1CA8F82300697980 /* NoticeMe.xcdatamodel */;
-			path = NoticeMe.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A893CD7C1CA8F82300697980 /* Project object */;
 }

@@ -7,9 +7,7 @@
 //
 
 import UIKit
-import MagicalRecord
-import RxCocoa
-import RxSwift
+import JRDB
 
 class AppLifeMgr: NSObject {
 
@@ -28,16 +26,8 @@ class AppLifeMgr: NSObject {
             self.appDelegate.window?.rootViewController = nav
         }
 
-        // MARK: 设置MagiclRecord
-        MagicalRecord.setupCoreDataStackWithStoreNamed("Database.sqlite")
-        MagicalRecord.setupAutoMigratingCoreDataStack()
-
-        // MARK: 监听默认Context，有变化立即存储
-        NSNotificationCenter.defaultCenter()
-            .rx_notification(NSManagedObjectContextObjectsDidChangeNotification, object: NSManagedObjectContext.MR_defaultContext())
-            .subscribeNext { (notification: NSNotification) in
-                NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
-        }.addDisposableTo(getDisposeBag())
+//        JRDBMgr.shareInstance().registerClazzForUpdateTable(CountDownModel)
+//        JRDBMgr.shareInstance().updateDefaultDB()
 
         return true
     }

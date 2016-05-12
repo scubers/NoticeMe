@@ -8,6 +8,7 @@
 
 import UIKit
 import JRUtils
+import RxCocoa
 
 enum MainViewState {
     case Default

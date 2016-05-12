@@ -1,20 +1,25 @@
 //
-//  NoticeMeTests.swift
-//  NoticeMeTests
+//  JRDBTests.swift
+//  NoticeMe
 //
-//  Created by 王俊仁 on 16/3/28.
+//  Created by 王俊仁 on 16/5/12.
 //  Copyright © 2016年 王俊仁. All rights reserved.
 //
 
 import XCTest
-import JRDB
-@testable import NoticeMe
+import JRDB;
 
-
-class NoticeMeTests: XCTestCase {
+class Person: NSObject {
     
+}
+
+class JRDBTests: XCTestCase {
+
+    var db: FMDatabase = JRDBMgr.shareInstance().createDBWithPath("/Users/Jrwong/Desktop/test.sqlite")
+
     override func setUp() {
         super.setUp()
+        JRDBMgr.shareInstance().registerClazzForUpdateTable(Person)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -22,14 +27,11 @@ class NoticeMeTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
     func testExample() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-
-    func testDropTable() {
-        JRDBMgr.defaultDB().deleteTable4Clazz(CountDownModel)
-    }
-
 
     func testPerformanceExample() {
         // This is an example of a performance test case.
@@ -37,5 +39,5 @@ class NoticeMeTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
+
 }
