@@ -25,13 +25,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
         print("\(documentsDirectory())============")
 
-        
+
+        setupKeyWindow()
 
         // MARK: 初始化启动流程
-        return AppLifeMgr.shareInstance.application(application, didfinishLaunchWith: launchOptions)
+        return true
+//        return AppLifeMgr.shareInstance.application(application, didfinishLaunchWith: launchOptions)
     }
 
     func applicationWillResignActive(application: UIApplication) {

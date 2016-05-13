@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import JRUtils
 
 enum BaseSettingsItemType {
     case None
@@ -133,7 +134,7 @@ class NTBaseSettingsTableViewCell : UITableViewCell {
 
     func setupSubviews() {
         separator = UIView()
-        separator.backgroundColor = jr_rgbaColor(r: 214, g: 214, b: 214, a: 1)
+        separator.backgroundColor = UIColor.jr_fullRgbaColor(r: 214, g: 214, b: 214, a: 1)
         contentView.addSubview(separator)
     }
 

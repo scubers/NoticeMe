@@ -8,6 +8,7 @@
 
 import UIKit
 import JRDB
+import JRUtils
 
 class AppLifeMgr: NSObject {
 
@@ -17,17 +18,6 @@ class AppLifeMgr: NSObject {
 
     func application(application: UIApplication, didfinishLaunchWith launchOptions:[NSObject: AnyObject]?) -> Bool {
 
-        appDelegate.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        appDelegate.window?.rootViewController = configureRootViewController()
-        appDelegate.window?.makeKeyAndVisible()
-
-        jr_delay(0.5, queue: dispatch_get_main_queue()) { () -> Void in
-            let nav = BaseNavigationController(rootViewController: MainViewController())
-            self.appDelegate.window?.rootViewController = nav
-        }
-
-//        JRDBMgr.shareInstance().registerClazzForUpdateTable(CountDownModel)
-//        JRDBMgr.shareInstance().updateDefaultDB()
 
         return true
     }

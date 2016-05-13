@@ -10,6 +10,8 @@
 		92E5D7372ACC083732F295E4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB52CE7B95830FAD9561450 /* Pods.framework */; };
 		A8330E2B1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift */; };
 		A8330E2C1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift */; };
+		A84078421CE6300C00B7496C /* AppDelegate+Launching.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84078411CE6300C00B7496C /* AppDelegate+Launching.swift */; };
+		A84078431CE6300C00B7496C /* AppDelegate+Launching.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84078411CE6300C00B7496C /* AppDelegate+Launching.swift */; };
 		A861CE151CE4C5510019C252 /* JRDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A861CE141CE4C5510019C252 /* JRDBTests.swift */; };
 		A86CF3761CAE45FA007483BC /* AudioSystemAudioSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CF3751CAE45FA007483BC /* AudioSystemAudioSourceManager.swift */; };
 		A87D41BC1CC0F87D00A10F6C /* TableViewDataSourceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87D41BB1CC0F87D00A10F6C /* TableViewDataSourceHandler.swift */; };
@@ -89,6 +91,7 @@
 		8B9A88D24D353600C6A998F4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9AB52CE7B95830FAD9561450 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8330E2A1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSettingsTableViewHandler.swift; sourceTree = "<group>"; };
+		A84078411CE6300C00B7496C /* AppDelegate+Launching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Launching.swift"; sourceTree = "<group>"; };
 		A861CE141CE4C5510019C252 /* JRDBTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRDBTests.swift; sourceTree = "<group>"; };
 		A86CF3751CAE45FA007483BC /* AudioSystemAudioSourceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSystemAudioSourceManager.swift; sourceTree = "<group>"; };
 		A87D41BB1CC0F87D00A10F6C /* TableViewDataSourceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceHandler.swift; sourceTree = "<group>"; };
@@ -238,15 +241,16 @@
 		A893CDAA1CA8F93900697980 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				A893CDAB1CA8F93900697980 /* AppDelegate.swift */,
+				A84078411CE6300C00B7496C /* AppDelegate+Launching.swift */,
+				A893CDB01CA8FA5F00697980 /* WelcomeViewController.swift */,
+				A893CDC41CA923AD00697980 /* NoticeMe-Bridging-Header.h */,
 				A893CDB21CA8FA6E00697980 /* modules */,
 				A893CDB31CA8FA6E00697980 /* universal */,
 				A80DDB2B1CAAB376003EE3B1 /* Networking */,
 				A8DC06641CAD5AE100B671B0 /* AudioUtil */,
 				A8DC06591CAD567400B671B0 /* extensions */,
 				A8DC06691CAD7DD000B671B0 /* thirdparty */,
-				A893CDAB1CA8F93900697980 /* AppDelegate.swift */,
-				A893CDB01CA8FA5F00697980 /* WelcomeViewController.swift */,
-				A893CDC41CA923AD00697980 /* NoticeMe-Bridging-Header.h */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -829,6 +833,7 @@
 				A8F2CC231CDEEAE00096213A /* CountDownState.swift in Sources */,
 				A893CDB51CA8FCB600697980 /* PublicMethod.swift in Sources */,
 				A8DC067A1CAD7DD700B671B0 /* amrFileCodec.mm in Sources */,
+				A84078421CE6300C00B7496C /* AppDelegate+Launching.swift in Sources */,
 				A86CF3761CAE45FA007483BC /* AudioSystemAudioSourceManager.swift in Sources */,
 				A8F2CC351CDEEEF50096213A /* CountDownModel.swift in Sources */,
 				A8DC065F1CAD56F700B671B0 /* CALayer+ex.swift in Sources */,
@@ -858,6 +863,7 @@
 				A8F31AD11CAEA2FF0053B71B /* wav.mm in Sources */,
 				A8F31AD31CAEA2FF0053B71B /* AppLifeMgr.swift in Sources */,
 				A8F31AD41CAEA2FF0053B71B /* AppDelegate.swift in Sources */,
+				A84078431CE6300C00B7496C /* AppDelegate+Launching.swift in Sources */,
 				A8F31AD61CAEA2FF0053B71B /* UIImage+ex.swift in Sources */,
 				A8F31AFA1CAEC2440053B71B /* ThemeConfig.swift in Sources */,
 				A8F31AD71CAEA2FF0053B71B /* BaseViewController.swift in Sources */,

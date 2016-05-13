@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import JRUtils
 
 class MainTableViewCell: BaseTableViewCell {
 
@@ -34,7 +35,7 @@ class MainTableViewCell: BaseTableViewCell {
     }
 
     func setupUI() {
-        block {
+        jr_block {
             titleLabel = UILabel()
             titleLabel.textAlignment = .Left
             titleLabel.numberOfLines = 0
@@ -42,7 +43,7 @@ class MainTableViewCell: BaseTableViewCell {
             contentView.addSubview(titleLabel)
         }
 
-        block {
+        jr_block {
             timeLabel = UILabel()
             timeLabel.textAlignment = .Left
             timeLabel.textColor = UIColor.lightGrayColor()
