@@ -9,10 +9,13 @@
 import UIKit
 import RxSwift
 import JRDB
+import JRUtils
 
 class MainTableViewHandler: NSObject {
-
-    var rx_dragging = PublishSubject<(Bool, Bool)>()
+    
+    // 通知外界的信号
+    var rx_show = PublishSubject<Bool>();
+    var interactable = true
 
     // MARK: - 管理的tablview
     var tableView: UITableView!
@@ -29,8 +32,9 @@ class MainTableViewHandler: NSObject {
         self.tableView.separatorStyle = .None
 
         self.tableView.registerClass(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.self.description())
-        self.tableView.contentInset.top += 30
+        self.tableView.contentInset.top += (30)
         reloadModels()
+//        self.tableView.contentOffset.y = -topInset
     }
 
     // MARK: - 提供给外面的操纵方法
@@ -40,8 +44,8 @@ class MainTableViewHandler: NSObject {
         tableView.reloadData()
 
         let model = CountDownModel()
-        model.title = "龙看扥灵动减肥龙看扥灵动减肥龙看扥灵动减肥龙看扥灵动减肥龙看扥灵动减肥龙看扥灵动减肥龙看扥灵动减肥"
-        model.interval = NSNumber(double: 180)
+        model.title = "xtension MainTableViewHandler: UITableViewDelegate scrollViewWillEndDragging(scrollView:UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {interactable = getProgress() > 1"
+        model.interval = 180
         countDownModels = [
             model,
             model,
@@ -57,13 +61,18 @@ class MainTableViewHandler: NSObject {
     }
 }
 
+private let topExtra: CGFloat = 60
+private let topInset: CGFloat = 30
+
+
 extension MainTableViewHandler: UITableViewDelegate {
-    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
-        rx_dragging.onNext((true, false))
+    
+    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if scrollView.contentOffset.y < -(scrollView.contentInset.top + 50) {
+            rx_show.onNext(true)
+        }
     }
-    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        rx_dragging.onNext((false, decelerate))
-    }
+    
 }
 
 extension MainTableViewHandler: UITableViewDataSource {

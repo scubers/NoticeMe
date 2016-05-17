@@ -12,30 +12,29 @@ import Foundation
 class CountDownModel: NSObject {
 
     var animation: String?
-    var audio: String?
     var createDate: NSDate?
-    var interval: NSNumber?
+    var interval: Double = 0
     var startDate: NSDate?
     var updateDate: NSDate?
-    var repeatType: NSNumber?
-    var countDownState: NSNumber?
+    var repeatType: Int = RepeatType.None.rawValue
+    var countDownState: Int = CountDownState.Idle.rawValue
     var title: String?
 
     var repeatTypeEnum: RepeatType {
         get {
-            return RepeatType(rawValue: Int(repeatType?.intValue ?? 0))!
+            return RepeatType(rawValue: repeatType)!
         }
         set {
-            repeatType = NSNumber(int: Int32(newValue.hashValue))
+            repeatType = newValue.rawValue
         }
     }
 
     var countDownStateEnum: RepeatType {
         get {
-            return RepeatType(rawValue: Int(countDownState?.intValue ?? 0))!
+            return RepeatType(rawValue: countDownState)!
         }
         set {
-            repeatType = NSNumber(int: Int32(newValue.hashValue))
+            repeatType = newValue.rawValue
         }
     }
 

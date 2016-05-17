@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A7A2C1E1CEABA5E00664FE6 /* AddTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A2C1C1CEABA5E00664FE6 /* AddTimerViewController.swift */; };
+		5A7A2C1F1CEABA5E00664FE6 /* AddTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A2C1C1CEABA5E00664FE6 /* AddTimerViewController.swift */; };
+		5A7A2C231CEB04D100664FE6 /* AddTimerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A2C221CEB04D100664FE6 /* AddTimerAnimator.swift */; };
+		5A7A2C241CEB04D100664FE6 /* AddTimerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A2C221CEB04D100664FE6 /* AddTimerAnimator.swift */; };
+		5A7A2C261CEB111800664FE6 /* TitleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A2C251CEB111800664FE6 /* TitleTextView.swift */; };
+		5A7A2C271CEB111800664FE6 /* TitleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A2C251CEB111800664FE6 /* TitleTextView.swift */; };
+		5A7A2C291CEB1B1A00664FE6 /* AddingTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A2C281CEB1B1A00664FE6 /* AddingTimerView.swift */; };
+		5A7A2C2A1CEB1B1A00664FE6 /* AddingTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A2C281CEB1B1A00664FE6 /* AddingTimerView.swift */; };
 		92E5D7372ACC083732F295E4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB52CE7B95830FAD9561450 /* Pods.framework */; };
 		A8330E2B1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift */; };
 		A8330E2C1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift */; };
@@ -26,8 +34,6 @@
 		A8B293111CB235B8003F00EA /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B293101CB235B8003F00EA /* Disposable.swift */; };
 		A8B293121CB235B8003F00EA /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B293101CB235B8003F00EA /* Disposable.swift */; };
 		A8C7B5041CA9851100EFF668 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7B5031CA9851100EFF668 /* BaseViewController.swift */; };
-		A8D50A541CDF549300AF64B0 /* AddTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D50A531CDF549300AF64B0 /* AddTimerView.swift */; };
-		A8D50A551CDF549300AF64B0 /* AddTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D50A531CDF549300AF64B0 /* AddTimerView.swift */; };
 		A8DC065F1CAD56F700B671B0 /* CALayer+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC065E1CAD56F700B671B0 /* CALayer+ex.swift */; };
 		A8DC06611CAD571400B671B0 /* UIImage+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06601CAD571400B671B0 /* UIImage+ex.swift */; };
 		A8DC06661CAD5C3800B671B0 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06651CAD5C3800B671B0 /* AudioManager.swift */; };
@@ -36,8 +42,6 @@
 		A8DC067C1CAD7DD700B671B0 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8DC06731CAD7DD700B671B0 /* libopencore-amrnb.a */; };
 		A8DC067D1CAD7DD700B671B0 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8DC06771CAD7DD700B671B0 /* libopencore-amrwb.a */; };
 		A8DC067E1CAD7DD700B671B0 /* NTWavAmrConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8DC06791CAD7DD700B671B0 /* NTWavAmrConverter.mm */; };
-		A8F2CC131CDEE3F70096213A /* CustomPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2CC071CDEE3F70096213A /* CustomPresent.swift */; };
-		A8F2CC141CDEE3F70096213A /* CustomPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2CC071CDEE3F70096213A /* CustomPresent.swift */; };
 		A8F2CC161CDEE4280096213A /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2CC151CDEE4280096213A /* BaseNavigationController.swift */; };
 		A8F2CC171CDEE4280096213A /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2CC151CDEE4280096213A /* BaseNavigationController.swift */; };
 		A8F2CC191CDEE4770096213A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2CC181CDEE4770096213A /* MainViewController.swift */; };
@@ -88,6 +92,10 @@
 
 /* Begin PBXFileReference section */
 		38C2E15ED0AC5C3F6C8F51E4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5A7A2C1C1CEABA5E00664FE6 /* AddTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTimerViewController.swift; sourceTree = "<group>"; };
+		5A7A2C221CEB04D100664FE6 /* AddTimerAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTimerAnimator.swift; sourceTree = "<group>"; };
+		5A7A2C251CEB111800664FE6 /* TitleTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTextView.swift; sourceTree = "<group>"; };
+		5A7A2C281CEB1B1A00664FE6 /* AddingTimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingTimerView.swift; sourceTree = "<group>"; };
 		8B9A88D24D353600C6A998F4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9AB52CE7B95830FAD9561450 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8330E2A1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSettingsTableViewHandler.swift; sourceTree = "<group>"; };
@@ -110,7 +118,6 @@
 		A893CDC41CA923AD00697980 /* NoticeMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoticeMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		A8B293101CB235B8003F00EA /* Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
 		A8C7B5031CA9851100EFF668 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		A8D50A531CDF549300AF64B0 /* AddTimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTimerView.swift; sourceTree = "<group>"; };
 		A8DC065E1CAD56F700B671B0 /* CALayer+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+ex.swift"; sourceTree = "<group>"; };
 		A8DC06601CAD571400B671B0 /* UIImage+ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ex.swift"; sourceTree = "<group>"; };
 		A8DC06651CAD5C3800B671B0 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
@@ -126,7 +133,6 @@
 		A8DC06771CAD7DD700B671B0 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
 		A8DC06781CAD7DD700B671B0 /* NTWavAmrConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTWavAmrConverter.h; sourceTree = "<group>"; };
 		A8DC06791CAD7DD700B671B0 /* NTWavAmrConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTWavAmrConverter.mm; sourceTree = "<group>"; };
-		A8F2CC071CDEE3F70096213A /* CustomPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresent.swift; sourceTree = "<group>"; };
 		A8F2CC151CDEE4280096213A /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		A8F2CC181CDEE4770096213A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A8F2CC1B1CDEE54B0096213A /* MainTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewHandler.swift; sourceTree = "<group>"; };
@@ -187,6 +193,126 @@
 				8B9A88D24D353600C6A998F4 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5A7A2C0D1CEABA4A00664FE6 /* addTimer */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A2C0E1CEABA4A00664FE6 /* controller */,
+				5A7A2C0F1CEABA4A00664FE6 /* model */,
+				5A7A2C101CEABA4A00664FE6 /* service */,
+				5A7A2C111CEABA4A00664FE6 /* view */,
+			);
+			path = addTimer;
+			sourceTree = "<group>";
+		};
+		5A7A2C0E1CEABA4A00664FE6 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A2C1C1CEABA5E00664FE6 /* AddTimerViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		5A7A2C0F1CEABA4A00664FE6 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5A7A2C101CEABA4A00664FE6 /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		5A7A2C111CEABA4A00664FE6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A2C251CEB111800664FE6 /* TitleTextView.swift */,
+				5A7A2C281CEB1B1A00664FE6 /* AddingTimerView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5A7A2C121CEABA4A00664FE6 /* countDown */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A2C131CEABA4A00664FE6 /* controller */,
+				5A7A2C141CEABA4A00664FE6 /* model */,
+				5A7A2C151CEABA4A00664FE6 /* service */,
+				5A7A2C161CEABA4A00664FE6 /* view */,
+			);
+			path = countDown;
+			sourceTree = "<group>";
+		};
+		5A7A2C131CEABA4A00664FE6 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		5A7A2C141CEABA4A00664FE6 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5A7A2C151CEABA4A00664FE6 /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		5A7A2C161CEABA4A00664FE6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5A7A2C171CEABA4A00664FE6 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A2C181CEABA4A00664FE6 /* controller */,
+				5A7A2C191CEABA4A00664FE6 /* model */,
+				5A7A2C1A1CEABA4A00664FE6 /* service */,
+				5A7A2C1B1CEABA4A00664FE6 /* view */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
+		5A7A2C181CEABA4A00664FE6 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		5A7A2C191CEABA4A00664FE6 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5A7A2C1A1CEABA4A00664FE6 /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		5A7A2C1B1CEABA4A00664FE6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		A80DDB2B1CAAB376003EE3B1 /* Networking */ = {
@@ -269,10 +395,10 @@
 		A893CDB21CA8FA6E00697980 /* modules */ = {
 			isa = PBXGroup;
 			children = (
-				A8F2CBFD1CDEE3F70096213A /* addTimer */,
-				A8F2CC021CDEE3F70096213A /* countDown */,
+				5A7A2C0D1CEABA4A00664FE6 /* addTimer */,
+				5A7A2C121CEABA4A00664FE6 /* countDown */,
+				5A7A2C171CEABA4A00664FE6 /* settings */,
 				A8F2CC091CDEE3F70096213A /* mainMenu */,
-				A8F2CC0F1CDEE3F70096213A /* settings */,
 			);
 			path = modules;
 			sourceTree = "<group>";
@@ -400,99 +526,11 @@
 			path = "opencore-amrwb";
 			sourceTree = "<group>";
 		};
-		A8F2CBFD1CDEE3F70096213A /* addTimer */ = {
-			isa = PBXGroup;
-			children = (
-				A8F2CBFE1CDEE3F70096213A /* controller */,
-				A8F2CBFF1CDEE3F70096213A /* model */,
-				A8F2CC001CDEE3F70096213A /* service */,
-				A8F2CC011CDEE3F70096213A /* view */,
-			);
-			path = addTimer;
-			sourceTree = "<group>";
-		};
-		A8F2CBFE1CDEE3F70096213A /* controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = controller;
-			sourceTree = "<group>";
-		};
-		A8F2CBFF1CDEE3F70096213A /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		A8F2CC001CDEE3F70096213A /* service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = service;
-			sourceTree = "<group>";
-		};
-		A8F2CC011CDEE3F70096213A /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		A8F2CC021CDEE3F70096213A /* countDown */ = {
-			isa = PBXGroup;
-			children = (
-				A8F2CC031CDEE3F70096213A /* controller */,
-				A8F2CC041CDEE3F70096213A /* model */,
-				A8F2CC051CDEE3F70096213A /* service */,
-				A8F2CC061CDEE3F70096213A /* transitionAnimator */,
-				A8F2CC081CDEE3F70096213A /* view */,
-			);
-			path = countDown;
-			sourceTree = "<group>";
-		};
-		A8F2CC031CDEE3F70096213A /* controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = controller;
-			sourceTree = "<group>";
-		};
-		A8F2CC041CDEE3F70096213A /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		A8F2CC051CDEE3F70096213A /* service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = service;
-			sourceTree = "<group>";
-		};
-		A8F2CC061CDEE3F70096213A /* transitionAnimator */ = {
-			isa = PBXGroup;
-			children = (
-				A8F2CC071CDEE3F70096213A /* CustomPresent.swift */,
-			);
-			path = transitionAnimator;
-			sourceTree = "<group>";
-		};
-		A8F2CC081CDEE3F70096213A /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
 		A8F2CC091CDEE3F70096213A /* mainMenu */ = {
 			isa = PBXGroup;
 			children = (
 				A8F2CC0A1CDEE3F70096213A /* controller */,
 				A8F2CC0B1CDEE3F70096213A /* service */,
-				A8F2CC0C1CDEE3F70096213A /* transitionAnimator */,
 				A8F2CC0D1CDEE3F70096213A /* view */,
 				A8F2CC1E1CDEEA790096213A /* model */,
 			);
@@ -511,53 +549,15 @@
 			isa = PBXGroup;
 			children = (
 				A8F2CC1B1CDEE54B0096213A /* MainTableViewHandler.swift */,
+				5A7A2C221CEB04D100664FE6 /* AddTimerAnimator.swift */,
 			);
 			path = service;
-			sourceTree = "<group>";
-		};
-		A8F2CC0C1CDEE3F70096213A /* transitionAnimator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = transitionAnimator;
 			sourceTree = "<group>";
 		};
 		A8F2CC0D1CDEE3F70096213A /* view */ = {
 			isa = PBXGroup;
 			children = (
 				A8F2CC371CDEF0CD0096213A /* MainTableViewCell.swift */,
-				A8D50A531CDF549300AF64B0 /* AddTimerView.swift */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		A8F2CC0F1CDEE3F70096213A /* settings */ = {
-			isa = PBXGroup;
-			children = (
-				A8F2CC101CDEE3F70096213A /* controller */,
-				A8F2CC111CDEE3F70096213A /* service */,
-				A8F2CC121CDEE3F70096213A /* view */,
-			);
-			path = settings;
-			sourceTree = "<group>";
-		};
-		A8F2CC101CDEE3F70096213A /* controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = controller;
-			sourceTree = "<group>";
-		};
-		A8F2CC111CDEE3F70096213A /* service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = service;
-			sourceTree = "<group>";
-		};
-		A8F2CC121CDEE3F70096213A /* view */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -816,12 +816,13 @@
 			files = (
 				A87D41BC1CC0F87D00A10F6C /* TableViewDataSourceHandler.swift in Sources */,
 				A8DC067E1CAD7DD700B671B0 /* NTWavAmrConverter.mm in Sources */,
-				A8D50A541CDF549300AF64B0 /* AddTimerView.swift in Sources */,
 				A8DC067B1CAD7DD700B671B0 /* wav.mm in Sources */,
 				A893CDB91CA900BB00697980 /* AppLifeMgr.swift in Sources */,
+				5A7A2C261CEB111800664FE6 /* TitleTextView.swift in Sources */,
 				A893CDAD1CA8F93900697980 /* AppDelegate.swift in Sources */,
 				A8F2CC161CDEE4280096213A /* BaseNavigationController.swift in Sources */,
 				A8DC06611CAD571400B671B0 /* UIImage+ex.swift in Sources */,
+				5A7A2C1E1CEABA5E00664FE6 /* AddTimerViewController.swift in Sources */,
 				A8F31AF91CAEC2440053B71B /* ThemeConfig.swift in Sources */,
 				A8C7B5041CA9851100EFF668 /* BaseViewController.swift in Sources */,
 				A8330E2B1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift in Sources */,
@@ -837,10 +838,11 @@
 				A86CF3761CAE45FA007483BC /* AudioSystemAudioSourceManager.swift in Sources */,
 				A8F2CC351CDEEEF50096213A /* CountDownModel.swift in Sources */,
 				A8DC065F1CAD56F700B671B0 /* CALayer+ex.swift in Sources */,
-				A8F2CC131CDEE3F70096213A /* CustomPresent.swift in Sources */,
+				5A7A2C231CEB04D100664FE6 /* AddTimerAnimator.swift in Sources */,
 				A8F2CC1C1CDEE54B0096213A /* MainTableViewHandler.swift in Sources */,
 				A8DC06661CAD5C3800B671B0 /* AudioManager.swift in Sources */,
 				A893CDB11CA8FA5F00697980 /* WelcomeViewController.swift in Sources */,
+				5A7A2C291CEB1B1A00664FE6 /* AddingTimerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -863,6 +865,8 @@
 				A8F31AD11CAEA2FF0053B71B /* wav.mm in Sources */,
 				A8F31AD31CAEA2FF0053B71B /* AppLifeMgr.swift in Sources */,
 				A8F31AD41CAEA2FF0053B71B /* AppDelegate.swift in Sources */,
+				5A7A2C241CEB04D100664FE6 /* AddTimerAnimator.swift in Sources */,
+				5A7A2C1F1CEABA5E00664FE6 /* AddTimerViewController.swift in Sources */,
 				A84078431CE6300C00B7496C /* AppDelegate+Launching.swift in Sources */,
 				A8F31AD61CAEA2FF0053B71B /* UIImage+ex.swift in Sources */,
 				A8F31AFA1CAEC2440053B71B /* ThemeConfig.swift in Sources */,
@@ -870,9 +874,9 @@
 				A8F2CC211CDEEA8A0096213A /* RepeatType.swift in Sources */,
 				A8330E2C1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift in Sources */,
 				A8F2CC1D1CDEE54B0096213A /* MainTableViewHandler.swift in Sources */,
+				5A7A2C2A1CEB1B1A00664FE6 /* AddingTimerView.swift in Sources */,
 				A8B293121CB235B8003F00EA /* Disposable.swift in Sources */,
 				A8F2CC391CDEF0CD0096213A /* MainTableViewCell.swift in Sources */,
-				A8F2CC141CDEE3F70096213A /* CustomPresent.swift in Sources */,
 				A8F31ADB1CAEA2FF0053B71B /* PublicMethod.swift in Sources */,
 				A8F31ADE1CAEA2FF0053B71B /* amrFileCodec.mm in Sources */,
 				A8F31ADF1CAEA2FF0053B71B /* AudioSystemAudioSourceManager.swift in Sources */,
@@ -881,8 +885,8 @@
 				A8F31AE41CAEA2FF0053B71B /* AudioManager.swift in Sources */,
 				A8F31AE51CAEA2FF0053B71B /* WelcomeViewController.swift in Sources */,
 				A8F2CC3C1CDEF0E40096213A /* BaseTableViewCell.swift in Sources */,
-				A8D50A551CDF549300AF64B0 /* AddTimerView.swift in Sources */,
 				A8F2CC241CDEEAE00096213A /* CountDownState.swift in Sources */,
+				5A7A2C271CEB111800664FE6 /* TitleTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

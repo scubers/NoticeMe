@@ -15,7 +15,7 @@ class MainTableViewCell: BaseTableViewCell {
     var countDownModel: CountDownModel? {
         didSet {
             titleLabel.text = countDownModel?.title
-            timeLabel.text = countDownModel?.interval?.description
+            timeLabel.text = "\(countDownModel?.interval)"
             setNeedsUpdateConstraints()
         }
     }
