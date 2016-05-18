@@ -47,18 +47,18 @@ class AddTimerViewController: UIViewController {
     func setupUI() {
         
         titleTextView = TitleTextView()
-        view.addSubview(titleTextView)
         titleTextView.jr_height = 50
         titleTextView.jr_width = view.jr_width - 30
         titleTextView.jr_x = 15
         titleTextView.jr_y = 30
+        view.addSubview(titleTextView)
         
         addingTimerView = AddingTimerView()
-        view.addSubview(addingTimerView)
         addingTimerView.frame.size = CGSizeMake(200, 200)
         addingTimerView.center = view.center
         addingTimerView.jr_y = titleTextView.jr_maxY + 80
-        
+        addingTimerView.timeLabel.text = countDownModel.intervalString
+        view.addSubview(addingTimerView)
         
     }
     
@@ -94,7 +94,7 @@ class AddTimerViewController: UIViewController {
             self?.countDownModel.interval -= Double(translatePoint.y)
             self?.countDownModel.interval = max(self!.countDownModel.interval, 1)
             
-            view.timeLabel.text = "\(self!.countDownModel.interval)"
+            view.timeLabel.text = "\(self!.countDownModel.intervalString)"
             
         }.addDisposableTo(self.getDisposeBag())
     }

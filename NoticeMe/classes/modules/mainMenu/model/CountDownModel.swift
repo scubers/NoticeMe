@@ -38,5 +38,11 @@ class CountDownModel: NSObject {
             repeatType = newValue.rawValue
         }
     }
+    
+    var intervalString: String {
+        let minute = Int(interval / 60)
+        let second = Int(interval % 60)
+        return "\(minute) : \(String(format: "%02d", second))"
+    }
 
 }
