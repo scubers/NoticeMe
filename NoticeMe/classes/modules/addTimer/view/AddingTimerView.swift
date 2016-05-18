@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import RxSwift
 
 class AddingTimerView: UIView {
     
-    var waveLayers = [CAShapeLayer]()
-    var testAnimation = UIView()
-    var testLayer = CAShapeLayer()
+    var waveView: WaveView!
+    var timeLabel: UILabel!
+    
+    var rx_pan = PublishSubject<(view: AddingTimerView, translatePoint: CGPoint)>()
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -20,51 +22,51 @@ class AddingTimerView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         clipsToBounds = true
-        backgroundColor = UIColor.jr_randomColor()
         setupUI()
+        setupGesture()
     }
     
     func setupUI() {
-        addSubview(testAnimation)
+        waveView = WaveView()
+        waveView.createWave(UIColor.whiteColor().CGColor, waveWith: 400, height: 300, skwing: 60, amplitude: 6, speed: 8)
+        waveView.createWave(UIColor.blackColor().CGColor, waveWith: 400, height: 300, skwing: 40, amplitude: 5, speed: 6)
+        addSubview(waveView)
+        waveView.beginWave()
+        waveView.jr_y = 80
+        
+        timeLabel = UILabel()
+        timeLabel.textAlignment = .Center
+        timeLabel.textColor = UIColor.yellowColor()
+        timeLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 30)
+        timeLabel.text = "3 : 00"
+        addSubview(timeLabel)
+        
+    }
+    
+    func setupGesture() {
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(AddingTimerView.handlePan(_:)))
+        addGestureRecognizer(pan)
+    }
+    
+    func handlePan(reco: UIPanGestureRecognizer) {
+        let p = reco.translationInView(reco.view)
+        let y = waveView.jr_y + (p.y / 10)
+        waveView.jr_y = min(y, jr_height)
+        waveView.jr_y = max(y, -10)
+        rx_pan.onNext((self, p))
+        reco.setTranslation(CGPointZero, inView: reco.view)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         layer.cornerRadius = frame.width / 2
-        startWave()
+        timeLabel.frame = CGRectMake(0, 0, jr_width, 50)
+        timeLabel.jr_centerY = jr_height / 2
+        bringSubviewToFront(timeLabel)
     }
     
-    func startWave() {
-//        waveLayers.forEach({$0.removeFromSuperlayer()})
-//        waveLayers.removeAll()
-        testLayer.removeFromSuperlayer()
-        testLayer = CAShapeLayer()
-        testLayer.fillColor = UIColor.blackColor().CGColor
-        
-        let maxW :CGFloat = 100000
-        let path = UIBezierPath()
-        path.moveToPoint(CGPointMake(maxW, jr_height / 2))
-        path.addLineToPoint(CGPointMake(maxW, jr_height))
-        path.addLineToPoint(CGPointMake(0, jr_height))
-        path.addLineToPoint(CGPointMake(0, jr_height / 2))
-        
-        Int(maxW).jr_times { (i) in
-            func getY(x:CGFloat) -> CGFloat {
-                let r = x / 40
-//                print(r)
-                return (abs(r - 30)) * sin(r) + self.jr_height / 2
-            }
-//            print("\(CGPointMake(CGFloat(i), getY(CGFloat(i))))----");
-            path.addLineToPoint(CGPointMake(CGFloat(i), getY(CGFloat(i))))
-        }
-//        path.fill()
-        
-        testLayer.path = path.CGPath
-        testAnimation.layer.addSublayer(testLayer)
-        
-        UIView.animateWithDuration(100) {
-            self.testAnimation.frame.origin.x = self.jr_width - maxW
-        }
+    deinit {
+        waveView.stopWave()
     }
 
 }

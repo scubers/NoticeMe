@@ -19,6 +19,8 @@ class AddTimerViewController: UIViewController {
     var titleTextView: TitleTextView!
     var addingTimerView: AddingTimerView!
     
+    var countDownModel: CountDownModel = CountDownModel()
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -55,7 +57,8 @@ class AddTimerViewController: UIViewController {
         view.addSubview(addingTimerView)
         addingTimerView.frame.size = CGSizeMake(200, 200)
         addingTimerView.center = view.center
-        addingTimerView.jr_y -= 100
+        addingTimerView.jr_y = titleTextView.jr_maxY + 80
+        
         
     }
     
@@ -66,16 +69,39 @@ class AddTimerViewController: UIViewController {
         } as! UISwipeGestureRecognizer
         swipe.direction = .Up
         view.addGestureRecognizer(swipe)
+        
+        view.bk_whenTapped { [weak self] in
+            self?.becomeFirstResponder()
+        }
     }
     
     func setupSignal() {
+        
+        titleTextView.textField.rx_text.subscribeNext {[weak self] (text) in
+            self?.countDownModel.title = text
+        }.addDisposableTo(self.getDisposeBag())
+        
         titleTextView.rx_doneClick.subscribeNext {[weak self] (text) in
             if text != nil && text?.characters.count > 0 {
-                
+                self?.saveCountDownModel()
             }
             self?.becomeFirstResponder()
-            self?.dismissViewControllerAnimated(true, completion: nil)
+            self?.rx_end.onNext(text != nil && text?.characters.count > 0)
         }.addDisposableTo(self.getDisposeBag())
+        
+        addingTimerView.rx_pan.subscribeNext {[weak self] (view: AddingTimerView, translatePoint: CGPoint) in
+            
+            self?.countDownModel.interval -= Double(translatePoint.y)
+            self?.countDownModel.interval = max(self!.countDownModel.interval, 1)
+            
+            view.timeLabel.text = "\(self!.countDownModel.interval)"
+            
+        }.addDisposableTo(self.getDisposeBag())
+    }
+    
+    func saveCountDownModel() {
+        countDownModel.createDate = NSDate()
+        countDownModel.jr_save()
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -85,4 +111,5 @@ class AddTimerViewController: UIViewController {
     override func canBecomeFirstResponder() -> Bool {
         return true
     }
+    
 }

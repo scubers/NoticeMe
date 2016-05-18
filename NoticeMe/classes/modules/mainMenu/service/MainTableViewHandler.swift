@@ -34,30 +34,13 @@ class MainTableViewHandler: NSObject {
         self.tableView.registerClass(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.self.description())
         self.tableView.contentInset.top += (30)
         reloadModels()
-//        self.tableView.contentOffset.y = -topInset
     }
 
     // MARK: - 提供给外面的操纵方法
     func reloadModels() {
         // TODO: 重新查询数据库
-        countDownModels = JRDBMgr.defaultDB().findAll(CountDownModel) as! [CountDownModel]
+        countDownModels = CountDownModel.jr_findByConditions(nil, groupBy: nil, orderBy: "createDate", limit: nil, isDesc: true) as! [CountDownModel]
         tableView.reloadData()
-
-        let model = CountDownModel()
-        model.title = "xtension MainTableViewHandler: UITableViewDelegate scrollViewWillEndDragging(scrollView:UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {interactable = getProgress() > 1"
-        model.interval = 180
-        countDownModels = [
-            model,
-            model,
-            model,
-            model,
-            model,
-            model,
-            model,
-            model,
-            model,
-            model,
-            ]
     }
 }
 

@@ -54,13 +54,21 @@ class MainViewController: BaseViewController {
     
     private func setupSignal() {
         tableViewHandler.rx_show.subscribeNext { (flag) in
+            
             self.presentViewController(self.getAddTimerController(), animated:true) {}
+            
         }.addDisposableTo(self.getDisposeBag())
     }
     
     func getAddTimerController() -> AddTimerViewController {
         let nextViewController = AddTimerViewController()
         nextViewController.transitioningDelegate = RZTransitionsManager.shared()
+        
+        nextViewController.rx_end.subscribeNext {[weak self] (saved) in
+            self?.tableViewHandler.reloadModels()
+            self?.dismissViewControllerAnimated(true, completion: nil)
+        }.addDisposableTo(self.getDisposeBag())
+        
         return nextViewController
     }
 

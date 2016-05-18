@@ -22,19 +22,18 @@ class AddTimerAnimator: NSObject, RZAnimationControllerProtocol {
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         let fc = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
         let tc = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
-        print("\(fc)   \(tc)   \(fc?.view)")
         
         let fromView = fc?.view
         let toView = tc?.view
         let container = transitionContext.containerView()
         
         if isPositiveAnimation {
-            let blurview = UIVisualEffectView(effect: UIBlurEffect(style: .ExtraLight))
+            let blurview = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
             container?.addSubview(blurview)
             container?.addSubview(toView!)
             
             toView?.frame = fromView!.bounds
-            toView?.jr_height = fromView!.jr_height - 100
+            toView?.jr_height = fromView!.jr_height
             toView?.jr_y = -toView!.jr_height
             
             blurview.frame = toView!.frame

@@ -11,14 +11,15 @@ import Foundation
 
 class CountDownModel: NSObject {
 
-    var animation: String?
     var createDate: NSDate?
-    var interval: Double = 0
-    var startDate: NSDate?
-    var updateDate: NSDate?
+    var interval: Double = 60 * 3
+    var title: String?
     var repeatType: Int = RepeatType.None.rawValue
     var countDownState: Int = CountDownState.Idle.rawValue
-    var title: String?
+    
+    var startDate: NSDate?
+    var updateDate: NSDate?
+    var animation: String?
 
     var repeatTypeEnum: RepeatType {
         get {
