@@ -12,6 +12,7 @@ import JRDB
 
 extension AppDelegate {
 
+    // MARK: - Key window
     func setupKeyWindow() {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.rootViewController = configureRootViewController()
@@ -26,10 +27,26 @@ extension AppDelegate {
         JRDBMgr.shareInstance().updateDefaultDB()
 
     }
-
+    
     private func configureRootViewController() -> UIViewController {
         let wvc = WelcomeViewController()
         return wvc
     }
 
+    
+    // MARK: - Global Timer
+    func setupGlobalTimer() {
+        stopGlobalTimer()
+        globalTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(AppDelegate.timerBeat(_:)), userInfo: nil, repeats: true)
+    }
+    func stopGlobalTimer() {
+        globalTimer?.invalidate()
+        globalTimer = nil
+    }
+    @objc
+    private func timerBeat(timer:NSTimer) {
+        NSNotificationCenter.defaultCenter().postNotificationName(TimerBeatNotification, object: nil)
+    }
+    
+    
 }

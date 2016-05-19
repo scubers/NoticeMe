@@ -8,8 +8,9 @@
 
 import UIKit
 import JRUtils
-import RxCocoa
 import FXBlurView
+import RxSwift
+import RxCocoa
 import RZTransitions
 
 enum MainViewState {
@@ -53,11 +54,18 @@ class MainViewController: BaseViewController {
     }
     
     private func setupSignal() {
-        tableViewHandler.rx_show.subscribeNext { (flag) in
-            
-            self.presentViewController(self.getAddTimerController(), animated:true) {}
-            
-        }.addDisposableTo(self.getDisposeBag())
+        
+        tableViewHandler
+            .rx_show
+            .subscribeNext {[weak self] (flag) in
+                self?.presentViewController(self!.getAddTimerController(), animated:true) {}
+            }.addDisposableTo(self.getDisposeBag())
+        
+        tableViewHandler
+            .rx_selecteModel
+            .subscribeNext {[weak self] (model: CountDownModel, indexpath: NSIndexPath) in
+                self!.presentViewController(BaseCountDownViewController(countDownModel: model), animated: true, completion: nil)
+            }.addDisposableTo(self.getDisposeBag())
     }
     
     func getAddTimerController() -> AddTimerViewController {

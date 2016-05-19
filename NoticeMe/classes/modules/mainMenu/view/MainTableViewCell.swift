@@ -14,9 +14,7 @@ class MainTableViewCell: BaseTableViewCell {
 
     var countDownModel: CountDownModel? {
         didSet {
-            titleLabel.text = countDownModel?.title
-            timeLabel.text = "\(countDownModel?.interval)"
-            setNeedsUpdateConstraints()
+            didSetCountDownModel()
         }
     }
 
@@ -27,7 +25,6 @@ class MainTableViewCell: BaseTableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupUI()
-//        clipsToBounds = true
 
     }
     required init?(coder aDecoder: NSCoder) {
@@ -35,20 +32,18 @@ class MainTableViewCell: BaseTableViewCell {
     }
 
     func setupUI() {
-        jr_block {
-            titleLabel = UILabel()
-            titleLabel.textAlignment = .Left
-            titleLabel.numberOfLines = 0
-            titleLabel.textColor = UIColor.blackColor()
-            contentView.addSubview(titleLabel)
-        }
 
-        jr_block {
-            timeLabel = UILabel()
-            timeLabel.textAlignment = .Left
-            timeLabel.textColor = UIColor.lightGrayColor()
-            contentView.addSubview(timeLabel)
-        }
+        titleLabel = UILabel()
+        titleLabel.textAlignment = .Left
+        titleLabel.numberOfLines = 0
+        titleLabel.textColor = UIColor.blackColor()
+        contentView.addSubview(titleLabel)
+
+        timeLabel = UILabel()
+        timeLabel.textAlignment = .Left
+        timeLabel.textColor = UIColor.lightGrayColor()
+        contentView.addSubview(timeLabel)
+        
         autolayout()
     }
 
@@ -82,8 +77,17 @@ class MainTableViewCell: BaseTableViewCell {
 
     }
 
+    // MARK: - private method
+    private func didSetCountDownModel() {
+        titleLabel.text = countDownModel?.title
+        timeLabel.text = countDownModel?.intervalString
+        setNeedsUpdateConstraints()
+    }
+    
+    // MARK: - other
     override func setHighlighted(highlighted: Bool, animated: Bool) {}
     override func setSelected(selected: Bool, animated: Bool) {}
 
+    
 
 }

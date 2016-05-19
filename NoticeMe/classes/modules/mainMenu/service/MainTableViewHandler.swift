@@ -15,6 +15,8 @@ class MainTableViewHandler: NSObject {
     
     // 通知外界的信号
     var rx_show = PublishSubject<Bool>();
+    var rx_selecteModel = PublishSubject<(model:CountDownModel, indexpath:NSIndexPath)>();
+    
     var interactable = true
 
     // MARK: - 管理的tablview
@@ -53,6 +55,13 @@ extension MainTableViewHandler: UITableViewDelegate {
     func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if scrollView.contentOffset.y < -(scrollView.contentInset.top + 50) {
             rx_show.onNext(true)
+        }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let model = countDownModels[indexPath.row]
+        dispatch_async(dispatch_get_main_queue()) {
+            self.rx_selecteModel.onNext((model: model,indexpath: indexPath))
         }
     }
     

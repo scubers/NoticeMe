@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A746E0D1CEDAC7400E8A8DB /* ConstantString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A746E0C1CEDAC7400E8A8DB /* ConstantString.swift */; };
+		5A746E0E1CEDAC7400E8A8DB /* ConstantString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A746E0C1CEDAC7400E8A8DB /* ConstantString.swift */; };
+		5A746E101CEDAFF000E8A8DB /* BaseCountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A746E0F1CEDAFF000E8A8DB /* BaseCountDownViewController.swift */; };
+		5A746E111CEDAFF000E8A8DB /* BaseCountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A746E0F1CEDAFF000E8A8DB /* BaseCountDownViewController.swift */; };
 		5A7A2C1E1CEABA5E00664FE6 /* AddTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A2C1C1CEABA5E00664FE6 /* AddTimerViewController.swift */; };
 		5A7A2C1F1CEABA5E00664FE6 /* AddTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A2C1C1CEABA5E00664FE6 /* AddTimerViewController.swift */; };
 		5A7A2C231CEB04D100664FE6 /* AddTimerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A2C221CEB04D100664FE6 /* AddTimerAnimator.swift */; };
@@ -94,6 +98,8 @@
 
 /* Begin PBXFileReference section */
 		38C2E15ED0AC5C3F6C8F51E4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5A746E0C1CEDAC7400E8A8DB /* ConstantString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantString.swift; sourceTree = "<group>"; };
+		5A746E0F1CEDAFF000E8A8DB /* BaseCountDownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCountDownViewController.swift; sourceTree = "<group>"; };
 		5A7A2C1C1CEABA5E00664FE6 /* AddTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTimerViewController.swift; sourceTree = "<group>"; };
 		5A7A2C221CEB04D100664FE6 /* AddTimerAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTimerAnimator.swift; sourceTree = "<group>"; };
 		5A7A2C251CEB111800664FE6 /* TitleTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTextView.swift; sourceTree = "<group>"; };
@@ -255,6 +261,7 @@
 		5A7A2C131CEABA4A00664FE6 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				5A746E0F1CEDAFF000E8A8DB /* BaseCountDownViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -371,6 +378,7 @@
 		A893CDAA1CA8F93900697980 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				5A746E0C1CEDAC7400E8A8DB /* ConstantString.swift */,
 				A893CDAB1CA8F93900697980 /* AppDelegate.swift */,
 				A84078411CE6300C00B7496C /* AppDelegate+Launching.swift */,
 				A893CDB01CA8FA5F00697980 /* WelcomeViewController.swift */,
@@ -823,9 +831,11 @@
 				A8DC067E1CAD7DD700B671B0 /* NTWavAmrConverter.mm in Sources */,
 				A8DC067B1CAD7DD700B671B0 /* wav.mm in Sources */,
 				A893CDB91CA900BB00697980 /* AppLifeMgr.swift in Sources */,
+				5A746E101CEDAFF000E8A8DB /* BaseCountDownViewController.swift in Sources */,
 				5A7A2C261CEB111800664FE6 /* TitleTextView.swift in Sources */,
 				A893CDAD1CA8F93900697980 /* AppDelegate.swift in Sources */,
 				A8F2CC161CDEE4280096213A /* BaseNavigationController.swift in Sources */,
+				5A746E0D1CEDAC7400E8A8DB /* ConstantString.swift in Sources */,
 				A8DC06611CAD571400B671B0 /* UIImage+ex.swift in Sources */,
 				5A7A2C1E1CEABA5E00664FE6 /* AddTimerViewController.swift in Sources */,
 				A8F31AF91CAEC2440053B71B /* ThemeConfig.swift in Sources */,
@@ -874,6 +884,7 @@
 				5A7A2C1F1CEABA5E00664FE6 /* AddTimerViewController.swift in Sources */,
 				A84078431CE6300C00B7496C /* AppDelegate+Launching.swift in Sources */,
 				A8F31AD61CAEA2FF0053B71B /* UIImage+ex.swift in Sources */,
+				5A746E0E1CEDAC7400E8A8DB /* ConstantString.swift in Sources */,
 				A8F31AFA1CAEC2440053B71B /* ThemeConfig.swift in Sources */,
 				A8F31AD71CAEA2FF0053B71B /* BaseViewController.swift in Sources */,
 				A8F2CC211CDEEA8A0096213A /* RepeatType.swift in Sources */,
@@ -886,6 +897,7 @@
 				A8F31ADB1CAEA2FF0053B71B /* PublicMethod.swift in Sources */,
 				A8F31ADE1CAEA2FF0053B71B /* amrFileCodec.mm in Sources */,
 				A8F31ADF1CAEA2FF0053B71B /* AudioSystemAudioSourceManager.swift in Sources */,
+				5A746E111CEDAFF000E8A8DB /* BaseCountDownViewController.swift in Sources */,
 				A8F31AE11CAEA2FF0053B71B /* CALayer+ex.swift in Sources */,
 				A8F2CC171CDEE4280096213A /* BaseNavigationController.swift in Sources */,
 				A8F31AE41CAEA2FF0053B71B /* AudioManager.swift in Sources */,

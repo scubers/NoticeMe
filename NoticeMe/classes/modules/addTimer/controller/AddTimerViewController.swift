@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import SnapKit
 import BlocksKit
+import JRUtils
 
 class AddTimerViewController: UIViewController {
     
@@ -32,7 +33,7 @@ class AddTimerViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        titleTextView.textField.becomeFirstResponder()
+//        titleTextView.textField.becomeFirstResponder()
     }
 
     override func viewDidLoad() {
