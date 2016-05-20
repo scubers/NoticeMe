@@ -15,6 +15,7 @@ class MainTableViewHandler: NSObject {
     
     // 通知外界的信号
     var rx_show = PublishSubject<Bool>();
+    var rx_showSettings = PublishSubject<Bool>();
     var rx_selecteModel = PublishSubject<(model:CountDownModel, indexpath:NSIndexPath)>();
     
     var interactable = true
@@ -55,6 +56,15 @@ extension MainTableViewHandler: UITableViewDelegate {
     func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if scrollView.contentOffset.y < -(scrollView.contentInset.top + 50) {
             rx_show.onNext(true)
+        }
+        
+        if scrollView.contentSize.height < scrollView.jr_height {
+            if scrollView.contentOffset.y > 50 {
+                rx_showSettings.onNext(true)
+            }
+        }
+        else if scrollView.contentOffset.y > (scrollView.contentSize.height - scrollView.jr_height + 50) {
+            rx_showSettings.onNext(true)
         }
     }
     

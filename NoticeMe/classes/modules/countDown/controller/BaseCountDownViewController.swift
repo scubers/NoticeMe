@@ -16,6 +16,7 @@ class BaseCountDownViewController: BaseViewController {
     
     var countDown: CountDownModel!
     var allowSwipeToDismiss: Bool = true
+    var dismissSwipe: UISwipeGestureRecognizer!
     
     var timeLabel: UILabel!
     
@@ -29,7 +30,7 @@ class BaseCountDownViewController: BaseViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.whiteColor()
         setupUI()
-        setupNotification()
+//        setupNotification()
         setupGesture()
     }
     
@@ -38,6 +39,7 @@ class BaseCountDownViewController: BaseViewController {
         timeLabel.textAlignment = .Center
         timeLabel.backgroundColor = UIColor(white: 0.8, alpha: 0.4)
         timeLabel.text = countDown.restIntervalString
+        timeLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 20)
         view.addSubview(timeLabel)
         
         timeLabel.snp_makeConstraints { (make) in
@@ -53,8 +55,10 @@ class BaseCountDownViewController: BaseViewController {
             .rx_notification(TimerBeatNotification, object: nil)
             .subscribeNext {[weak self] _ in
                 
-                assert(self?.countDown.startDate != nil, "start date should be nil")
-
+                if self?.countDown.startDate == nil {
+                    self?.countDown.startDate = NSDate()
+                }
+                
                 self?.updateCountDownProgress((1-self!.countDown.restInterval) / self!.countDown.interval)
                 self?.timeLabel.text = self?.countDown.restIntervalString
                 
@@ -62,19 +66,22 @@ class BaseCountDownViewController: BaseViewController {
     }
     
     private func setupGesture() {
-        let swipeDown = UISwipeGestureRecognizer.init().bk_initWithHandler {[weak self] (reco, state, point) in
+        dismissSwipe = UISwipeGestureRecognizer.init().bk_initWithHandler {[weak self] (reco, state, point) in
             self?.dismissViewControllerAnimated(true, completion: nil)
         } as! UISwipeGestureRecognizer
-        swipeDown.direction = .Down
-        swipeDown.delegate = self
-        view.addGestureRecognizer(swipeDown)
+        dismissSwipe.direction = .Down
+        dismissSwipe.delegate = self
+        
+        view.addGestureRecognizer(dismissSwipe)
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         view.bringSubviewToFront(timeLabel)
+        setupNotification()
     }
 
+    // MARK: - 子类方法
     /**
      子类实现
      - parameter progress: 进度
@@ -86,9 +93,11 @@ class BaseCountDownViewController: BaseViewController {
     
 }
 
+// MARK: - UIGestureRecognizerDelegate
+
 extension BaseCountDownViewController : UIGestureRecognizerDelegate {
     func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
-        if gestureRecognizer.isKindOfClass(UISwipeGestureRecognizer) {
+        if gestureRecognizer == dismissSwipe {
             return allowSwipeToDismiss
         }
         return true

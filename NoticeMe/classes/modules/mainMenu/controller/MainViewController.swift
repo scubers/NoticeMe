@@ -64,7 +64,17 @@ class MainViewController: BaseViewController {
         tableViewHandler
             .rx_selecteModel
             .subscribeNext {[weak self] (model: CountDownModel, indexpath: NSIndexPath) in
-                self!.presentViewController(BaseCountDownViewController(countDownModel: model), animated: true, completion: nil)
+                if let clazz = model.animationTypeEnum.getClazz() as? BaseCountDownViewController.Type {
+                    let vc: BaseCountDownViewController = clazz.init()
+                    vc.countDown = model
+                    self!.presentViewController(vc, animated: true, completion: nil)
+                }
+            }.addDisposableTo(self.getDisposeBag())
+        
+        tableViewHandler
+            .rx_showSettings
+            .subscribeNext {[weak self] (flag) in
+                self?.presentViewController(SettingsViewController(), animated: true, completion: nil)
             }.addDisposableTo(self.getDisposeBag())
     }
     

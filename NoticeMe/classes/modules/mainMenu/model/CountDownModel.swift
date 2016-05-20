@@ -17,9 +17,10 @@ class CountDownModel: NSObject {
     var repeatType: Int = RepeatType.None.rawValue
     var countDownState: Int = CountDownState.Idle.rawValue
     var startDate: NSDate?
+    var animationType: Int = AnimationType.Point.rawValue
+    
     
     var updateDate: NSDate?
-    var animation: String?
     
     var intervalString: String {
         return string4(interval)
@@ -59,6 +60,15 @@ class CountDownModel: NSObject {
         }
         set {
             repeatType = newValue.rawValue
+        }
+    }
+    
+    var animationTypeEnum: AnimationType {
+        get {
+            return AnimationType(rawValue: animationType)!
+        }
+        set {
+            animationType = newValue.rawValue
         }
     }
     
