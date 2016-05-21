@@ -65,6 +65,15 @@ class BaseSettingsItem : NSObject {
 
 
 class BaseSettingsTableViewHandler: NSObject {
+    
+    var tableView: UITableView!
+    
+    convenience init(tableView: UITableView) {
+        self.init()
+        self.tableView = tableView
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+    }
 
     lazy var groups : [BaseSettingsGroup] = Array()
 

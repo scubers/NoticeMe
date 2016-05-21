@@ -16,6 +16,7 @@ class AddingTimerView: UIView {
     
     var rx_pan = PublishSubject<(view: AddingTimerView, translatePoint: CGPoint)>()
     
+    // MARK: - lify cycle
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -26,7 +27,17 @@ class AddingTimerView: UIView {
         setupGesture()
     }
     
-    func setupUI() {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.cornerRadius = frame.width / 2
+        timeLabel.frame = CGRectMake(0, 0, jr_width, 50)
+        timeLabel.jr_centerY = jr_height / 2
+        bringSubviewToFront(timeLabel)
+    }
+    
+    // MARK: - private method
+    
+    private func setupUI() {
         waveView = WaveView()
         waveView.createWave(UIColor.whiteColor().CGColor, waveWith: 400, height: 300, skwing: 60, amplitude: 6, speed: 8)
         waveView.createWave(UIColor.blackColor().CGColor, waveWith: 400, height: 300, skwing: 40, amplitude: 5, speed: 6)
@@ -43,12 +54,13 @@ class AddingTimerView: UIView {
         
     }
     
-    func setupGesture() {
+    private func setupGesture() {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(AddingTimerView.handlePan(_:)))
         addGestureRecognizer(pan)
     }
     
-    func handlePan(reco: UIPanGestureRecognizer) {
+    @objc
+    private func handlePan(reco: UIPanGestureRecognizer) {
         let p = reco.translationInView(reco.view)
         let y = waveView.jr_y + (p.y / 10)
         waveView.jr_y = min(y, jr_height)
@@ -57,13 +69,15 @@ class AddingTimerView: UIView {
         reco.setTranslation(CGPointZero, inView: reco.view)
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        layer.cornerRadius = frame.width / 2
-        timeLabel.frame = CGRectMake(0, 0, jr_width, 50)
-        timeLabel.jr_centerY = jr_height / 2
-        bringSubviewToFront(timeLabel)
+    // MARK: - public method
+    func setProgress(progress: CGFloat, animated: Bool) {
+        UIView.animateWithDuration(animated ? 0.2 : 0, delay: 0, options: .CurveEaseOut, animations: { 
+            self.waveView.jr_y = self.jr_height * (1-progress)
+            }) { (flag) in
+                
+        }
     }
+    
     
     deinit {
         waveView.stopWave()

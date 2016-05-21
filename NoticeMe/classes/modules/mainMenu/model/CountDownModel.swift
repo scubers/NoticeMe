@@ -16,10 +16,34 @@ class CountDownModel: NSObject {
     var title: String?
     var repeatType: Int = RepeatType.None.rawValue
     var countDownState: Int = CountDownState.Idle.rawValue
-    
     var startDate: NSDate?
+    var animationType: Int = AnimationType.Point.rawValue
+    
+    
     var updateDate: NSDate?
-    var animation: String?
+    
+    var intervalString: String {
+        return string4(interval)
+    }
+    
+    var restIntervalString: String {
+        return string4(restInterval)
+    }
+    
+    var restInterval: Double {
+        if let st = startDate {
+            let time = interval - NSDate().timeIntervalSinceDate(st)
+            return time < 0 ? 0 : time
+        }
+        return 0
+    }
+    
+    private func string4(interval: Double) -> String {
+        let minute = Int(interval / 60)
+        let second = Int(interval % 60)
+        return "\(minute) : \(String(format: "%02d", second))"
+    }
+    
 
     var repeatTypeEnum: RepeatType {
         get {
@@ -39,10 +63,13 @@ class CountDownModel: NSObject {
         }
     }
     
-    var intervalString: String {
-        let minute = Int(interval / 60)
-        let second = Int(interval % 60)
-        return "\(minute) : \(String(format: "%02d", second))"
+    var animationTypeEnum: AnimationType {
+        get {
+            return AnimationType(rawValue: animationType)!
+        }
+        set {
+            animationType = newValue.rawValue
+        }
     }
-
+    
 }

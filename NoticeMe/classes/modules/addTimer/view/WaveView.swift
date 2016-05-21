@@ -9,6 +9,7 @@
 import UIKit
 import BlocksKit
 
+// MARK: - 波浪模型
 class WaveModel {
     var width: CGFloat = 0
     var height: CGFloat = 0
@@ -25,8 +26,9 @@ class WaveModel {
     }
 }
 
+// MARK: - WaveView
 class WaveView: UIView {
-
+    
     var waves = [CAShapeLayer]()
     var waveModels = [WaveModel]()
     var displayLink: CADisplayLink?
@@ -44,6 +46,7 @@ class WaveView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - public method
     func clearWaves() {
         displayLink?.invalidate()
         displayLink = nil
@@ -67,11 +70,27 @@ class WaveView: UIView {
         
     }
     
-    func generatePath(waveModel: WaveModel, radian r: CGFloat) -> UIBezierPath {
+    func beginWave() {
+        if displayLink == nil {
+            displayLink = CADisplayLink(target: self, selector: #selector(WaveView.changingWavePath(_:)))
+            displayLink?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
+        }
+    }
+    func stopWave() {
+        displayLink?.invalidate()
+    }
+
+    
+    // MARK: - private method
+    private func generatePath(waveModel: WaveModel, radian r: CGFloat) -> UIBezierPath {
         
         let path = UIBezierPath()
         let beginR = r
         let endR = waveModel.width + r
+        
+        func getYWith(r: CGFloat, waveModel: WaveModel) -> CGFloat {
+            return sin(r / waveModel.skwing) * (cos(r / waveModel.skwing) * waveModel.amplitude)
+        }
         
         path.moveToPoint(CGPointMake(0, getYWith(beginR, waveModel: waveModel)))
         for i in Int(beginR+1)...Int(endR) {
@@ -84,25 +103,10 @@ class WaveView: UIView {
         return path
     }
     
-    func getYWith(r: CGFloat, waveModel: WaveModel) -> CGFloat {
-        return sin(r / waveModel.skwing) * (cos(r / waveModel.skwing) * waveModel.amplitude)
-    }
+   
     
-    
-    
-    func beginWave() {
-        if displayLink == nil {
-            displayLink = CADisplayLink(target: self, selector: #selector(WaveView.changingWavePath(_:)))
-            displayLink?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
-        }
-    }
-    
-    func stopWave() {
-        displayLink?.invalidate()
-    }
-    
-    
-    func changingWavePath(link: CADisplayLink) {
+    @objc
+    private func changingWavePath(link: CADisplayLink) {
         if self.superview == nil {
             link.invalidate()
             link.removeFromRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
@@ -115,4 +119,5 @@ class WaveView: UIView {
         }
         radian += 1
     }
+    
 }
