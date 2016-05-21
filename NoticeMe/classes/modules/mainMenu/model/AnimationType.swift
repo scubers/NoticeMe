@@ -10,6 +10,7 @@ import Foundation
 
 enum AnimationType : Int {
     case Point = 0
+    case Wave
     case AnimationTypeCount
 }
 
@@ -17,6 +18,7 @@ extension AnimationType {
     func getClazz() -> AnyClass! {
         switch self {
         case .Point: return PointCountDownController.self
+        case .Wave: return WaveCountDownController.self
         case .AnimationTypeCount: return nil
         }
     }

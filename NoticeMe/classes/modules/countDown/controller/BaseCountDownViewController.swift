@@ -14,11 +14,17 @@ import SnapKit
 
 class BaseCountDownViewController: BaseViewController {
     
-    var countDown: CountDownModel!
+    var countDown: CountDownModel! {
+        didSet {
+            timeLabel?.text = countDown.restIntervalString
+        }
+    }
     var allowSwipeToDismiss: Bool = true
     var dismissSwipe: UISwipeGestureRecognizer!
     
     var timeLabel: UILabel!
+
+    var displayLink: CADisplayLink?
     
     // MARK: - life cycle
     convenience init(countDownModel: CountDownModel) {
@@ -54,14 +60,7 @@ class BaseCountDownViewController: BaseViewController {
             .defaultCenter()
             .rx_notification(TimerBeatNotification, object: nil)
             .subscribeNext {[weak self] _ in
-                
-                if self?.countDown.startDate == nil {
-                    self?.countDown.startDate = NSDate()
-                }
-                
-                self?.updateCountDownProgress((1-self!.countDown.restInterval) / self!.countDown.interval)
                 self?.timeLabel.text = self?.countDown.restIntervalString
-                
             }.addDisposableTo(self.getDisposeBag())
     }
     
@@ -75,10 +74,16 @@ class BaseCountDownViewController: BaseViewController {
         view.addGestureRecognizer(dismissSwipe)
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillDisappear(animated)
         view.bringSubviewToFront(timeLabel)
         setupNotification()
+        setupLink()
+    }
+
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        stopLink()
     }
 
     // MARK: - 子类方法
@@ -89,8 +94,27 @@ class BaseCountDownViewController: BaseViewController {
     func updateCountDownProgress(progress: Double) {
         print("--------\(progress)----------")
     }
-    
-    
+
+    func setupLink() {
+        stopLink()
+        displayLink = CADisplayLink(target: self, selector: #selector(BaseCountDownViewController.handleLink(_:)))
+        displayLink?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
+    }
+
+    func stopLink() {
+        if displayLink != nil {
+            displayLink?.removeFromRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
+            displayLink?.invalidate()
+        }
+    }
+
+    func handleLink(link: CADisplayLink) {
+        if countDown.startDate == nil {
+            countDown.startDate = NSDate()
+        }
+        updateCountDownProgress(countDown.restInterval / countDown.interval)
+    }
+
 }
 
 // MARK: - UIGestureRecognizerDelegate

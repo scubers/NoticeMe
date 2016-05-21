@@ -64,6 +64,7 @@ class MainViewController: BaseViewController {
         tableViewHandler
             .rx_selecteModel
             .subscribeNext {[weak self] (model: CountDownModel, indexpath: NSIndexPath) in
+                self!.presentViewController(WaveCountDownController(countDownModel: model), animated: true, completion: nil); return;
                 if let clazz = model.animationTypeEnum.getClazz() as? BaseCountDownViewController.Type {
                     let vc: BaseCountDownViewController = clazz.init()
                     vc.countDown = model
