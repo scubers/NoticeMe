@@ -68,7 +68,7 @@ class MainViewController: BaseViewController {
             self?.tableViewHandler.reloadModels()
             self?.dismissViewControllerAnimated(true, completion: nil)
         }.addDisposableTo(self.getDisposeBag())
-        
+
         return nextViewController
     }
 
