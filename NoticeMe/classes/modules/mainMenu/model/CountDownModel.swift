@@ -65,7 +65,7 @@ class CountDownModel: NSObject {
     
     var animationTypeEnum: AnimationType {
         get {
-            return AnimationType.CircleLineFire
+//            return AnimationType.CircleLineFire
 //            return AnimationType(rawValue: animationType)!
             return AnimationType(rawValue: Int(arc4random_uniform(UInt32(AnimationType.AnimationTypeCount.rawValue))))!
         }
