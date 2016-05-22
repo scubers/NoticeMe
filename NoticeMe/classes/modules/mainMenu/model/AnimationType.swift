@@ -11,6 +11,7 @@ import Foundation
 enum AnimationType : Int {
     case Point = 0
     case Wave
+    case CircleLineFire
     case AnimationTypeCount
 }
 
@@ -19,6 +20,7 @@ extension AnimationType {
         switch self {
         case .Point: return PointCountDownController.self
         case .Wave: return WaveCountDownController.self
+        case .CircleLineFire: return CircleLineFireCountDownController.self
         case .AnimationTypeCount: return nil
         }
     }

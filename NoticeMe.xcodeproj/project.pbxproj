@@ -32,6 +32,8 @@
 		92E5D7372ACC083732F295E4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB52CE7B95830FAD9561450 /* Pods.framework */; };
 		A8330E2B1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift */; };
 		A8330E2C1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8330E2A1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift */; };
+		A8365BA11CF18CDC00FCCCE6 /* CircleLineFireCountDownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8365BA01CF18CDC00FCCCE6 /* CircleLineFireCountDownController.swift */; };
+		A8365BA21CF18CDC00FCCCE6 /* CircleLineFireCountDownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8365BA01CF18CDC00FCCCE6 /* CircleLineFireCountDownController.swift */; };
 		A839636C1CF0C104007A73E9 /* WaveCountDownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839636B1CF0C104007A73E9 /* WaveCountDownController.swift */; };
 		A839636D1CF0C104007A73E9 /* WaveCountDownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839636B1CF0C104007A73E9 /* WaveCountDownController.swift */; };
 		A84078421CE6300C00B7496C /* AppDelegate+Launching.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84078411CE6300C00B7496C /* AppDelegate+Launching.swift */; };
@@ -122,6 +124,7 @@
 		8B9A88D24D353600C6A998F4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9AB52CE7B95830FAD9561450 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8330E2A1CAFCF6500F9B0DB /* BaseSettingsTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSettingsTableViewHandler.swift; sourceTree = "<group>"; };
+		A8365BA01CF18CDC00FCCCE6 /* CircleLineFireCountDownController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleLineFireCountDownController.swift; sourceTree = "<group>"; };
 		A839636B1CF0C104007A73E9 /* WaveCountDownController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveCountDownController.swift; sourceTree = "<group>"; };
 		A84078411CE6300C00B7496C /* AppDelegate+Launching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Launching.swift"; sourceTree = "<group>"; };
 		A861CE141CE4C5510019C252 /* JRDBTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRDBTests.swift; sourceTree = "<group>"; };
@@ -279,6 +282,7 @@
 				5A746E0F1CEDAFF000E8A8DB /* BaseCountDownViewController.swift */,
 				5AAEE9FE1CEEA21D00F91DEE /* PointCountDownController.swift */,
 				A839636B1CF0C104007A73E9 /* WaveCountDownController.swift */,
+				A8365BA01CF18CDC00FCCCE6 /* CircleLineFireCountDownController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -853,6 +857,7 @@
 				A8DC067B1CAD7DD700B671B0 /* wav.mm in Sources */,
 				A893CDB91CA900BB00697980 /* AppLifeMgr.swift in Sources */,
 				5A746E101CEDAFF000E8A8DB /* BaseCountDownViewController.swift in Sources */,
+				A8365BA11CF18CDC00FCCCE6 /* CircleLineFireCountDownController.swift in Sources */,
 				5A7A2C261CEB111800664FE6 /* TitleTextView.swift in Sources */,
 				A893CDAD1CA8F93900697980 /* AppDelegate.swift in Sources */,
 				A8F2CC161CDEE4280096213A /* BaseNavigationController.swift in Sources */,
@@ -930,6 +935,7 @@
 				A8F2CC171CDEE4280096213A /* BaseNavigationController.swift in Sources */,
 				A8F31AE41CAEA2FF0053B71B /* AudioManager.swift in Sources */,
 				5A5E77691CEEBEAB00008B22 /* SettingsViewController.swift in Sources */,
+				A8365BA21CF18CDC00FCCCE6 /* CircleLineFireCountDownController.swift in Sources */,
 				A8F31AE51CAEA2FF0053B71B /* WelcomeViewController.swift in Sources */,
 				A839636D1CF0C104007A73E9 /* WaveCountDownController.swift in Sources */,
 				A8F2CC3C1CDEF0E40096213A /* BaseTableViewCell.swift in Sources */,

@@ -10,7 +10,11 @@ import UIKit
 import JRUtils
 
 class PointCountDownController: BaseCountDownViewController {
-    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.clipsToBounds = true
+    }
     
     override func updateCountDownProgress(progress: Double) {
         super.updateCountDownProgress(progress)
@@ -19,13 +23,6 @@ class PointCountDownController: BaseCountDownViewController {
                 point: CGPointMake(CGFloat(arc4random_uniform(UInt32(view.jr_width))), CGFloat(arc4random_uniform(UInt32(view.jr_height)))),
                 initialSize: CGSizeMake(1, 1),
                 endSize: randomSize(CGSizeMake(400, 400)))
-        jr_delay(0.5, queue: dispatch_get_main_queue()) {
-            self.animate(UIColor.jr_randomColor(),
-                         point: CGPointMake(CGFloat(arc4random_uniform(UInt32(self.view.jr_width))), CGFloat(arc4random_uniform(UInt32(self.view.jr_height)))),
-                         initialSize: CGSizeMake(1, 1),
-                         endSize: self.randomSize(CGSizeMake(400, 400)))
-        }
-        
         
         view.bringSubviewToFront(timeLabel)
     }
@@ -41,9 +38,9 @@ class PointCountDownController: BaseCountDownViewController {
         view.addSubview(circle)
         
         UIView.animateWithDuration(0.4, delay: 0, options: .CurveEaseOut, animations: { 
-            circle.alpha = 0
+            circle.alpha = 0.1
             circle.transform = CGAffineTransformMakeScale(endSize.width / (initialSize.width == 0 ? 1 : initialSize.width), endSize.height / (initialSize.height == 0 ? 1 : initialSize.height))
-            }) { (finished) in
+        }) { (finished) in
             circle.removeFromSuperview()
         }
     }
@@ -57,6 +54,7 @@ class PointCountDownController: BaseCountDownViewController {
         let path = UIBezierPath(ovalInRect: circle.bounds)
         shape.path = path.CGPath
         circle.layer.addSublayer(shape)
+        circle.userInteractionEnabled = false
         return circle
     }
     

@@ -12,32 +12,47 @@ import RxSwift
 import BlocksKit
 import SnapKit
 
+private let AccelerometerUpdateInterval = 1/10.0
+
 class BaseCountDownViewController: BaseViewController {
+
     
     var countDown: CountDownModel! {
         didSet {
             timeLabel?.text = countDown.restIntervalString
         }
     }
-    var allowSwipeToDismiss: Bool = true
-    var dismissSwipe: UISwipeGestureRecognizer!
-    
-    var timeLabel: UILabel!
 
-    var displayLink: CADisplayLink?
-    
+    // MARK: - options
+    var allowSwipeToDismiss: Bool = true
+    var needFullFrameUpdate: Bool = true {
+        didSet {
+            if needFullFrameUpdate {
+                if isViewLoaded() && view.window != nil {
+                    setupLink()
+                }
+            } else {
+                stopLink()
+            }
+        }
+    }
+
+    // MARK: - controls
+    var dismissSwipe: UISwipeGestureRecognizer!
+    var timeLabel: UILabel!
+    weak var displayLink: CADisplayLink?
+
     // MARK: - life cycle
     convenience init(countDownModel: CountDownModel) {
         self.init()
         countDown = countDownModel
-        countDown.startDate = NSDate()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.whiteColor()
         setupUI()
-//        setupNotification()
         setupGesture()
+        setupNotification()
     }
     
     private func setupUI() {
@@ -49,8 +64,9 @@ class BaseCountDownViewController: BaseViewController {
         view.addSubview(timeLabel)
         
         timeLabel.snp_makeConstraints { (make) in
-            make.left.right.centerY.equalTo(timeLabel.superview!)
+            make.center.equalTo(timeLabel.superview!)
             make.height.equalTo(40)
+            make.width.equalTo(view.jr_height * 2)
         }
         
     }
@@ -61,6 +77,9 @@ class BaseCountDownViewController: BaseViewController {
             .rx_notification(TimerBeatNotification, object: nil)
             .subscribeNext {[weak self] _ in
                 self?.timeLabel.text = self?.countDown.restIntervalString
+                if !self!.needFullFrameUpdate {
+                    self?.updateCountDownProgress(self!.countDown.restInterval / self!.countDown.interval)
+                }
             }.addDisposableTo(self.getDisposeBag())
     }
     
@@ -73,17 +92,17 @@ class BaseCountDownViewController: BaseViewController {
         
         view.addGestureRecognizer(dismissSwipe)
     }
-    
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillDisappear(animated)
         view.bringSubviewToFront(timeLabel)
-        setupNotification()
         setupLink()
     }
 
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
         stopLink()
+//        motionMgr.stopAccelerometerUpdates()
     }
 
     // MARK: - 子类方法
@@ -97,10 +116,28 @@ class BaseCountDownViewController: BaseViewController {
 
     func setupLink() {
         stopLink()
+
+        guard needFullFrameUpdate else {
+            return
+        }
+
         displayLink = CADisplayLink(target: self, selector: #selector(BaseCountDownViewController.handleLink(_:)))
         displayLink?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
     }
 
+    /**
+     屏幕转向
+
+     - parameter angle: 屏幕垂直于水平面，正握手机为0度
+     */
+    func deviceOrientationChangedTo(angle: Double) {
+        UIView.animateWithDuration(0.1) {
+            self.timeLabel.transform = CGAffineTransformMakeRotation(CGFloat(angle))
+        }
+    }
+
+
+    // MARK: - 动画定时器
     func stopLink() {
         if displayLink != nil {
             displayLink?.removeFromRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
@@ -113,6 +150,9 @@ class BaseCountDownViewController: BaseViewController {
             countDown.startDate = NSDate()
         }
         updateCountDownProgress(countDown.restInterval / countDown.interval)
+        if countDown.restInterval / countDown.interval == 0 {
+            stopLink()
+        }
     }
 
 }

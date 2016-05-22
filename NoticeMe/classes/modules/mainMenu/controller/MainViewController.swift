@@ -32,7 +32,6 @@ class MainViewController: BaseViewController {
         setupUI()
         
         RZTransitionsManager.shared().setAnimationController(AddTimerAnimator(), fromViewController: self.dynamicType, forAction: .PresentDismiss)
-        
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -64,9 +63,9 @@ class MainViewController: BaseViewController {
         tableViewHandler
             .rx_selecteModel
             .subscribeNext {[weak self] (model: CountDownModel, indexpath: NSIndexPath) in
-                self!.presentViewController(WaveCountDownController(countDownModel: model), animated: true, completion: nil); return;
                 if let clazz = model.animationTypeEnum.getClazz() as? BaseCountDownViewController.Type {
                     let vc: BaseCountDownViewController = clazz.init()
+                    model.startDate = NSDate() + 1
                     vc.countDown = model
                     self!.presentViewController(vc, animated: true, completion: nil)
                 }
