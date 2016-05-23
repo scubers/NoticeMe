@@ -40,7 +40,7 @@ class BaseCountDownViewController: BaseViewController {
     // MARK: - controls
     var dismissSwipe: UISwipeGestureRecognizer!
     var timeLabel: UILabel!
-    weak var displayLink: CADisplayLink?
+    var displayLink: CADisplayLink?
 
     // MARK: - life cycle
     convenience init(countDownModel: CountDownModel) {
@@ -142,6 +142,7 @@ class BaseCountDownViewController: BaseViewController {
         if displayLink != nil {
             displayLink?.removeFromRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
             displayLink?.invalidate()
+            displayLink = nil
         }
     }
 
