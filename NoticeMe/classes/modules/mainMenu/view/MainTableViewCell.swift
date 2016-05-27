@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SnapKit
+import SDAutoLayout
 import JRUtils
 
 class MainTableViewCell: BaseTableViewCell {
@@ -50,38 +50,27 @@ class MainTableViewCell: BaseTableViewCell {
     let topMargin: CGFloat = 5
     let leftMargin: CGFloat = 25
     func autolayout() {
-        contentView.bounds = CGRectMake(0, 0, 9999, 9999)
-        titleLabel.snp_makeConstraints { (make) in
-            make.left.top.right.equalTo(titleLabel.superview!).inset(EdgeInsets(top: topMargin, left: leftMargin, bottom: 0, right: leftMargin))
-        }
-        timeLabel.snp_makeConstraints { (make) in
-            make.left.right.equalTo(titleLabel)
-            make.height.equalTo(15)
-            make.top.equalTo(titleLabel.snp_bottom).offset(topMargin)
-            make.bottom.equalTo(timeLabel.superview!).offset(-topMargin)
-        }
         
-    }
-
-    override func updateConstraints() {
-
-        let maxSize = CGSizeMake((appDelegate()?.window?.frame.width)! - 2 * topMargin, CGFloat(MAXFLOAT))
-        let size = NSString(string: titleLabel.text ?? "").boundingRectWithSize(maxSize, options: [.UsesLineFragmentOrigin, .UsesFontLeading], attributes: [
-            NSFontAttributeName : titleLabel.font
-            ], context: nil).size
-
-        titleLabel.snp_updateConstraints { (make) in
-            make.height.equalTo(floor(size.height) + 10)
-        }
-        super.updateConstraints()
-
+        titleLabel.sd_layout()
+            .leftSpaceToView(titleLabel.superview!, leftMargin)
+            .rightSpaceToView(titleLabel.superview!, leftMargin)
+            .topSpaceToView(titleLabel.superview!, topMargin)
+            .autoHeightRatio(0)
+        
+        timeLabel.sd_layout()
+            .leftEqualToView(titleLabel)
+            .rightEqualToView(titleLabel)
+            .topSpaceToView(titleLabel, topMargin)
+            .autoHeightRatio(0)
+        
+        self.setupAutoHeightWithBottomView(timeLabel, bottomMargin: 0)
     }
 
     // MARK: - private method
     private func didSetCountDownModel() {
         titleLabel.text = countDownModel?.title
         timeLabel.text = countDownModel?.intervalString
-        setNeedsUpdateConstraints()
+        self.updateLayout()
     }
     
     // MARK: - other

@@ -10,7 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 import BlocksKit
-import SnapKit
+
 
 private let AccelerometerUpdateInterval = 1/10.0
 
@@ -63,11 +63,17 @@ class BaseCountDownViewController: BaseViewController {
         timeLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 20)
         view.addSubview(timeLabel)
         
-        timeLabel.snp_makeConstraints { (make) in
-            make.center.equalTo(timeLabel.superview!)
-            make.height.equalTo(40)
-            make.width.equalTo(view.jr_height * 2)
-        }
+        timeLabel.sd_layout()
+            .centerXEqualToView(timeLabel.superview!)
+            .centerYEqualToView(timeLabel.superview!)
+            .widthRatioToView(timeLabel.superview!, 2)
+            .heightIs(40)
+        
+//        timeLabel.snp_makeConstraints { (make) in
+//            make.center.equalTo(timeLabel.superview!)
+//            make.height.equalTo(40)
+//            make.width.equalTo(view.jr_height * 2)
+//        }
         
     }
     

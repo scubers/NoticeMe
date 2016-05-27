@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import SnapKit
 import JRUtils
+import SDAutoLayout
 
 enum BaseSettingsItemType {
     case None
@@ -182,14 +182,18 @@ class NTBaseSettingsTableViewCell : UITableViewCell {
 
             let view = NTBaseView()
             contentView.addSubview(view)
-            view.snp_makeConstraints(closure: { (make) in
-                make.edges.equalTo(view.superview!)
-            })
+            view.sd_layout()
+                .spaceToSuperView(UIEdgeInsetsZero)
+//            view.snp_makeConstraints(closure: { (make) in
+//                make.edges.equalTo(view.superview!)
+//            })
 
             view.addSubview(newItem.baseBackgroundView!)
-            newItem.baseBackgroundView!.snp_makeConstraints(closure: { (make) in
-                make.edges.equalTo(view)
-            })
+            newItem.baseBackgroundView?.sd_layout()
+                .spaceToSuperView(UIEdgeInsetsZero)
+//            newItem.baseBackgroundView!.snp_makeConstraints(closure: { (make) in
+//                make.edges.equalTo(view)
+//            })
         default:
             accessoryType = .None
         }

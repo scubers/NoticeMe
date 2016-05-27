@@ -349,11 +349,11 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		A80DDB2B1CAAB376003EE3B1 /* Networking */ = {
+		5AC2A4E41CF83DEE006A8A11 /* config */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Networking;
+			path = config;
 			sourceTree = "<group>";
 		};
 		A893CD7B1CA8F82300697980 = {
@@ -407,9 +407,9 @@
 				A893CDB01CA8FA5F00697980 /* WelcomeViewController.swift */,
 				A893CDC41CA923AD00697980 /* NoticeMe-Bridging-Header.h */,
 				A893CDB21CA8FA6E00697980 /* modules */,
+				5AC2A4E41CF83DEE006A8A11 /* config */,
 				A893CDB31CA8FA6E00697980 /* universal */,
-				A80DDB2B1CAAB376003EE3B1 /* Networking */,
-				A8DC06641CAD5AE100B671B0 /* AudioUtil */,
+				A8DC06641CAD5AE100B671B0 /* audioUtil */,
 				A8DC06591CAD567400B671B0 /* extensions */,
 				A8DC06691CAD7DD000B671B0 /* thirdparty */,
 			);
@@ -501,12 +501,13 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
-		A8DC06641CAD5AE100B671B0 /* AudioUtil */ = {
+		A8DC06641CAD5AE100B671B0 /* audioUtil */ = {
 			isa = PBXGroup;
 			children = (
 				A8DC06651CAD5C3800B671B0 /* AudioManager.swift */,
 				A86CF3751CAE45FA007483BC /* AudioSystemAudioSourceManager.swift */,
 			);
+			name = audioUtil;
 			path = AudioUtil;
 			sourceTree = "<group>";
 		};

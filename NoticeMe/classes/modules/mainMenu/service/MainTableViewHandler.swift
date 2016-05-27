@@ -85,13 +85,17 @@ extension MainTableViewHandler: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(MainTableViewCell.self.description()) as! MainTableViewCell
         configureCell(cell, indexpath: indexPath)
+//        cell.backgroundColor = UIColor.jr_randomColor()
         return cell
     }
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        configureCell(tempCell, indexpath: indexPath)
-        let height = tempCell.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
-        return height + 1
+        
+        let model = countDownModels[indexPath.row]
+        return tableView.cellHeightForIndexPath(indexPath, model: model, keyPath: "countDownModel", cellClass: MainTableViewCell.self, contentViewWidth: tableView.jr_width) + 1
+//        configureCell(tempCell, indexpath: indexPath)
+//        let height = tempCell.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
+//        return height + 1
     }
 
     func configureCell(cell: MainTableViewCell, indexpath: NSIndexPath) {

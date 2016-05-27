@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SnapKit
 import RxSwift
 
 class TitleTextView: UIView {
@@ -31,18 +30,11 @@ class TitleTextView: UIView {
         textField.delegate = self
         addSubview(textField)
         
-        let btnLine = UIView()
-        btnLine.backgroundColor = UIColor.lightGrayColor()
-        addSubview(btnLine)
-        
-        btnLine.snp_makeConstraints { (make) in
-            make.height.equalTo(1)
-            make.left.right.bottom.equalTo(btnLine.superview!)
-        }
-        
-        textField.snp_makeConstraints { (make) in
-            make.edges.equalTo(textField.superview!)
-        }
+        textField.sd_layout()
+            .spaceToSuperView(UIEdgeInsetsZero)
+//        textField.snp_makeConstraints { (make) in
+//            make.edges.equalTo(textField.superview!)
+//        }
     }
     
 }
