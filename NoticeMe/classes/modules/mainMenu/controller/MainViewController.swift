@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDAutoLayout
 import JRUtils
 import FXBlurView
 import RxSwift
@@ -23,41 +24,56 @@ class MainViewController: BaseViewController {
     var tableView: UITableView!
     var tableViewHandler: MainTableViewHandler!
     
+    var addView: AddView!
+    
     var state: MainViewState = .Default
 
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.whiteColor()
-        setupUI()
+        _setupUI()
+        _setupSignal()
         
         RZTransitionsManager.shared().setAnimationController(AddTimerAnimator(), fromViewController: self.dynamicType, forAction: .PresentDismiss)
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = true
+        addView.startWave()
     }
 
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        addView.stopWave()
     }
 
-    // MARK: - 私有方法
-    private func setupUI() {
+    // MARK: - private
+    private func _setupUI() {
         tableView = UITableView(frame: view.bounds, style: .Plain)
         view.addSubview(tableView)
         tableViewHandler = MainTableViewHandler(tableView: tableView)
         
-        setupSignal()
-
+        addView = AddView()
+        view.addSubview(addView)
+        addView.sd_layout()
+            .widthIs(50)
+            .heightEqualToWidth()
+            .rightSpaceToView(addView.superview!, 30)
+            .bottomSpaceToView(addView.superview!, 50)
+        addView.startWave()
+        
+        addView.bk_whenTapped { [weak self]  in
+            self?.presentViewController(self!._getAddTimerController(), animated: true, completion: nil)
+        }
     }
     
-    private func setupSignal() {
+    private func _setupSignal() {
         
         tableViewHandler
             .rx_show
             .subscribeNext {[weak self] (flag) in
-                self?.presentViewController(self!.getAddTimerController(), animated:true) {}
+                self?.presentViewController(self!._getAddTimerController(), animated:true) {}
             }.addDisposableTo(self.getDisposeBag())
         
         tableViewHandler
@@ -78,7 +94,7 @@ class MainViewController: BaseViewController {
             }.addDisposableTo(self.getDisposeBag())
     }
     
-    func getAddTimerController() -> AddTimerViewController {
+    private func _getAddTimerController() -> AddTimerViewController {
         let nextViewController = AddTimerViewController()
         nextViewController.transitioningDelegate = RZTransitionsManager.shared()
         

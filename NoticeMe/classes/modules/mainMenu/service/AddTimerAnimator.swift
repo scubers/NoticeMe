@@ -11,15 +11,25 @@ import JRUtils
 import RZTransitions
 import FXBlurView
 
+let upBlurTag = 100010101
+let downBlurTag = 100010102
+
 class AddTimerAnimator: NSObject, RZAnimationControllerProtocol {
     
     var isPositiveAnimation: Bool = false
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 0.25
+        return 0.4
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+        isPositiveAnimation ?
+            positiveAnimation(transitionContext) :
+            negativeAnimation(transitionContext)
+    }
+    
+    func positiveAnimation(transitionContext: UIViewControllerContextTransitioning) {
+        
         let fc = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
         let tc = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
         
@@ -27,46 +37,53 @@ class AddTimerAnimator: NSObject, RZAnimationControllerProtocol {
         let toView = tc?.view
         let container = transitionContext.containerView()
         
-        if isPositiveAnimation {
-            let blurview = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
-            container?.addSubview(blurview)
-            container?.addSubview(toView!)
-            
-            toView?.frame = fromView!.bounds
-            toView?.jr_height = fromView!.jr_height
-            toView?.jr_y = -toView!.jr_height
-            
-            blurview.frame = toView!.frame
-            
-            UIView.animateWithDuration(self.transitionDuration(transitionContext),
-                                       delay: 0,
-                                       options: .CurveEaseOut,
-                                       animations: {
-                                        
-//                                        fromView?.transform = CGAffineTransformMakeScale(0.95, 0.95)
-                                        toView?.jr_y = 0
-                                        blurview.jr_y = 0
-                },
-                                       completion: { (flag) in
-                                        transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-            })
-            
-        } else {
-            container?.addSubview(fromView!)
-            let blurview = container?.subviews.filter{$0.isKindOfClass(UIVisualEffectView)}.last
-            UIView.animateWithDuration(self.transitionDuration(transitionContext),
-                                       delay: 0,
-                                       options: .CurveEaseOut,
-                                       animations: {
-                                        
-                                        toView?.transform = CGAffineTransformIdentity
-                                        fromView?.jr_y = -fromView!.jr_height
-                                        blurview?.jr_y = -blurview!.jr_height
-                },
-                                       completion: { (flag) in
-                                        transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-            })
-            
-        }
+        let effect = UIBlurEffect(style: .Light)
+        let blurview = UIVisualEffectView(effect: effect)
+        blurview.effect = nil
+        container?.addSubview(blurview)
+        container?.addSubview(toView!)
+        
+        toView?.frame = fromView!.bounds
+        blurview.frame = toView!.frame
+        toView?.alpha = 0
+        
+        UIView.animateWithDuration(self.transitionDuration(transitionContext),
+                                   delay: 0,
+                                   options: .CurveEaseOut,
+                                   animations: {
+                                    
+                                    toView?.alpha = 1
+                                    blurview.effect = effect
+                                    
+            },
+                                   completion: { (flag) in
+                                    transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+        })
+
+    }
+    func negativeAnimation(transitionContext: UIViewControllerContextTransitioning) {
+        
+        let fc = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! AddTimerViewController
+//        let tc = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+        
+        let fromView = fc.view
+//        let toView = tc?.view
+        let container = transitionContext.containerView()
+        
+        container?.addSubview(fromView!)
+        let blurview = container?.subviews.filter{$0.isKindOfClass(UIVisualEffectView)}.last as! UIVisualEffectView
+        UIView.animateWithDuration(self.transitionDuration(transitionContext),
+                                   delay: 0,
+                                   options: .CurveEaseOut,
+                                   animations: {
+                                    
+                                    fromView?.alpha = 0
+                                    blurview.effect = nil
+                                    
+                                    container?.insertSubview(fromView, belowSubview: blurview)
+                    },
+                                   completion: { (flag) in
+                                    transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+        })
     }
 }

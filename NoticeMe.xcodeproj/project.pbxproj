@@ -27,6 +27,8 @@
 		5A7A2C2A1CEB1B1A00664FE6 /* AddingTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A2C281CEB1B1A00664FE6 /* AddingTimerView.swift */; };
 		5AAEE9FF1CEEA21D00F91DEE /* PointCountDownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAEE9FE1CEEA21D00F91DEE /* PointCountDownController.swift */; };
 		5AAEEA001CEEA21D00F91DEE /* PointCountDownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAEE9FE1CEEA21D00F91DEE /* PointCountDownController.swift */; };
+		5AC2A4E61CF84795006A8A11 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC2A4E51CF84795006A8A11 /* AddView.swift */; };
+		5AC2A4E71CF84795006A8A11 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC2A4E51CF84795006A8A11 /* AddView.swift */; };
 		5ADEA8681CEC19CA00134C19 /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEA8671CEC19CA00134C19 /* WaveView.swift */; };
 		5ADEA8691CEC19CA00134C19 /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEA8671CEC19CA00134C19 /* WaveView.swift */; };
 		92E5D7372ACC083732F295E4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB52CE7B95830FAD9561450 /* Pods.framework */; };
@@ -120,6 +122,7 @@
 		5A7A2C251CEB111800664FE6 /* TitleTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTextView.swift; sourceTree = "<group>"; };
 		5A7A2C281CEB1B1A00664FE6 /* AddingTimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingTimerView.swift; sourceTree = "<group>"; };
 		5AAEE9FE1CEEA21D00F91DEE /* PointCountDownController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointCountDownController.swift; sourceTree = "<group>"; };
+		5AC2A4E51CF84795006A8A11 /* AddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		5ADEA8671CEC19CA00134C19 /* WaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
 		8B9A88D24D353600C6A998F4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9AB52CE7B95830FAD9561450 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -594,6 +597,7 @@
 			isa = PBXGroup;
 			children = (
 				A8F2CC371CDEF0CD0096213A /* MainTableViewCell.swift */,
+				5AC2A4E51CF84795006A8A11 /* AddView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -877,6 +881,7 @@
 				A8F2CC231CDEEAE00096213A /* CountDownState.swift in Sources */,
 				5A5E77681CEEBEAB00008B22 /* SettingsViewController.swift in Sources */,
 				A893CDB51CA8FCB600697980 /* PublicMethod.swift in Sources */,
+				5AC2A4E61CF84795006A8A11 /* AddView.swift in Sources */,
 				A8DC067A1CAD7DD700B671B0 /* amrFileCodec.mm in Sources */,
 				A84078421CE6300C00B7496C /* AppDelegate+Launching.swift in Sources */,
 				A839636C1CF0C104007A73E9 /* WaveCountDownController.swift in Sources */,
@@ -915,6 +920,7 @@
 				5A7A2C241CEB04D100664FE6 /* AddTimerAnimator.swift in Sources */,
 				5A7A2C1F1CEABA5E00664FE6 /* AddTimerViewController.swift in Sources */,
 				5AAEEA001CEEA21D00F91DEE /* PointCountDownController.swift in Sources */,
+				5AC2A4E71CF84795006A8A11 /* AddView.swift in Sources */,
 				A84078431CE6300C00B7496C /* AppDelegate+Launching.swift in Sources */,
 				A8F31AD61CAEA2FF0053B71B /* UIImage+ex.swift in Sources */,
 				5A746E0E1CEDAC7400E8A8DB /* ConstantString.swift in Sources */,

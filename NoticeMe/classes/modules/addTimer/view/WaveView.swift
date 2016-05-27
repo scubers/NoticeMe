@@ -11,13 +11,15 @@ import BlocksKit
 
 // MARK: - 波浪模型
 class WaveModel {
+    var offsetY: CGFloat = 0
     var width: CGFloat = 0
     var height: CGFloat = 0
     var skwing: CGFloat = 40
     var amplitude: CGFloat = 5
     var waveSpeed: CGFloat = 2
     
-    init(width w: CGFloat = 0, height h: CGFloat = 0, skwing: CGFloat = 40, amplitude: CGFloat = 5, waveSpeed speed: CGFloat = 2) {
+    init(offsetY oy: CGFloat = 0, width w: CGFloat = 0, height h: CGFloat = 0, skwing: CGFloat = 40, amplitude: CGFloat = 5, waveSpeed speed: CGFloat = 2) {
+        self.offsetY   = oy
         self.width     = w
         self.height    = h
         self.skwing    = skwing
@@ -55,11 +57,11 @@ class WaveView: UIView {
         waveModels.removeAll()
     }
     
-    func createWave(color: CGColor, waveWith width: CGFloat, height: CGFloat, skwing: CGFloat, amplitude: CGFloat, speed: CGFloat) {
+    func createWave(color: CGColor, offsetY: CGFloat = 0, waveWith width: CGFloat, height: CGFloat, skwing: CGFloat, amplitude: CGFloat, speed: CGFloat) {
         
         let wave = CAShapeLayer()
         wave.fillColor = color
-        let model = WaveModel(width: width, height: height, skwing: skwing, amplitude: amplitude, waveSpeed: speed)
+        let model = WaveModel(offsetY: offsetY, width: width, height: height, skwing: skwing, amplitude: amplitude, waveSpeed: speed)
         
         wave.path = generatePath(model, radian: radian).CGPath
         
@@ -89,7 +91,7 @@ class WaveView: UIView {
         let endR = waveModel.width + r
         
         func getYWith(r: CGFloat, waveModel: WaveModel) -> CGFloat {
-            return sin(r / waveModel.skwing) * (cos(r / waveModel.skwing) * waveModel.amplitude)
+            return sin(r / waveModel.skwing) * (cos(r / waveModel.skwing) * waveModel.amplitude) + waveModel.offsetY
         }
         
         path.moveToPoint(CGPointMake(0, getYWith(beginR, waveModel: waveModel)))
