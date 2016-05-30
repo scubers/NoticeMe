@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import BlocksKit
 import JRUtils
+import SDAutoLayout
 
 
 class AddTimerViewController: UIViewController {
@@ -48,19 +49,21 @@ class AddTimerViewController: UIViewController {
     func setupUI() {
         
         titleTextView = TitleTextView()
-        titleTextView.jr_height = 50
-        titleTextView.jr_width = view.jr_width - 30
-        titleTextView.jr_x = 15
-        titleTextView.jr_y = 30
         view.addSubview(titleTextView)
+        titleTextView.sd_layout()
+            .topSpaceToView(view, 30)
+            .leftSpaceToView(view, 15)
+            .rightSpaceToView(view, 15)
+            .heightIs(50)
         
         addingTimerView = AddingTimerView()
-        addingTimerView.frame.size = CGSizeMake(200, 200)
-        addingTimerView.center = view.center
-        addingTimerView.jr_y = titleTextView.jr_maxY + 80
         addingTimerView.timeLabel.text = countDownModel.intervalString
         view.addSubview(addingTimerView)
-        
+        addingTimerView.sd_layout()
+            .widthIs(200)
+            .heightEqualToWidth()
+            .centerXEqualToView(view)
+            .centerYIs(view.jr_height * 0.4)
     }
     
     func setupGesture() {

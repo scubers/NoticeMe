@@ -71,12 +71,6 @@ class MainViewController: BaseViewController {
     private func _setupSignal() {
         
         tableViewHandler
-            .rx_show
-            .subscribeNext {[weak self] (flag) in
-                self?.presentViewController(self!._getAddTimerController(), animated:true) {}
-            }.addDisposableTo(self.getDisposeBag())
-        
-        tableViewHandler
             .rx_selecteModel
             .subscribeNext {[weak self] (model: CountDownModel, indexpath: NSIndexPath) in
                 if let clazz = model.animationTypeEnum.getClazz() as? BaseCountDownViewController.Type {
@@ -87,11 +81,6 @@ class MainViewController: BaseViewController {
                 }
             }.addDisposableTo(self.getDisposeBag())
         
-        tableViewHandler
-            .rx_showSettings
-            .subscribeNext {[weak self] (flag) in
-                self?.presentViewController(SettingsViewController(), animated: true, completion: nil)
-            }.addDisposableTo(self.getDisposeBag())
     }
     
     private func _getAddTimerController() -> AddTimerViewController {
