@@ -73,9 +73,11 @@ class WaveView: UIView {
     }
     
     func beginWave() {
+#if !((arch(x86_64) || arch(i386)) && os(iOS))
         displayLink?.invalidate()
         displayLink = CADisplayLink(target: self, selector: #selector(WaveView.changingWavePath(_:)))
         displayLink?.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
+#endif
     }
     func stopWave() {
         displayLink?.invalidate()

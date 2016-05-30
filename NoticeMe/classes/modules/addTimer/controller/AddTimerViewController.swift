@@ -22,7 +22,9 @@ class AddTimerViewController: UIViewController {
     var addingTimerView: AddingTimerView!
     
     var countDownModel: CountDownModel = CountDownModel()
-    
+
+
+    // MARK: - life cycle
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -30,6 +32,13 @@ class AddTimerViewController: UIViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nil, bundle: nil)
         self.modalPresentationStyle = .Custom
+    }
+
+    convenience init(countDownModel: CountDownModel?) {
+        self.init(nibName: nil, bundle: nil)
+        if let countDownModel = countDownModel {
+            self.countDownModel = countDownModel
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -41,14 +50,16 @@ class AddTimerViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.clearColor()
         
-        setupUI()
-        setupGesture()
-        setupSignal()
+        _setupUI()
+        _setupGesture()
+        _setupSignal()
     }
-    
-    func setupUI() {
+
+    // MARK: - private
+    private func _setupUI() {
         
         titleTextView = TitleTextView()
+        titleTextView.textField.text = countDownModel.title
         view.addSubview(titleTextView)
         titleTextView.sd_layout()
             .topSpaceToView(view, 30)
@@ -66,7 +77,7 @@ class AddTimerViewController: UIViewController {
             .centerYIs(view.jr_height * 0.4)
     }
     
-    func setupGesture() {
+    private func _setupGesture() {
         let swipe = UISwipeGestureRecognizer.init().bk_initWithHandler {[weak self] (reco, state, point) in
             self?.becomeFirstResponder()
             self?.dismissViewControllerAnimated(true, completion: nil)
@@ -79,8 +90,8 @@ class AddTimerViewController: UIViewController {
         }
     }
     
-    func setupSignal() {
-        
+    private func _setupSignal() {
+
         titleTextView.textField.rx_text.subscribeNext {[weak self] (text) in
             self?.countDownModel.title = text
         }.addDisposableTo(self.getDisposeBag())
@@ -102,16 +113,27 @@ class AddTimerViewController: UIViewController {
             
         }.addDisposableTo(self.getDisposeBag())
     }
-    
+
+    // MARK: - public
+
     func saveCountDownModel() {
-        countDownModel.createDate = NSDate()
-        countDownModel.jr_save()
+        if countDownModel.ID() == nil && countDownModel.jr_customPrimarykeyValue() == nil {
+            // save
+            countDownModel.createDate = NSDate()
+            countDownModel.jr_save()
+        } else {
+            // update
+            countDownModel.updateDate = NSDate()
+            countDownModel.jr_updateWithColumn(nil)
+        }
     }
-    
+
+
+
+    // MARK: - Other
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
-    
     override func canBecomeFirstResponder() -> Bool {
         return true
     }

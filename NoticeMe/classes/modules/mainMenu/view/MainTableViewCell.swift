@@ -16,8 +16,14 @@ private let maxEditViewWidth: CGFloat = 50
 
 class MainTableViewCell: MGSwipeTableCell {
 
-    var containerView: UIView!
-    
+//    var containerView: UIView!
+
+    typealias DeleteBlock = (cell: MainTableViewCell) -> Void
+    typealias EditBlock = (cell: MainTableViewCell) -> Void
+
+    var deleteBlock: DeleteBlock?
+    var editBlock: EditBlock?
+
     var countDownModel: CountDownModel? {
         didSet {
             _didSetCountDownModel()
@@ -30,7 +36,6 @@ class MainTableViewCell: MGSwipeTableCell {
     // MARK: - LifeCycle
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        backgroundColor = UIColor.jr_randomColor()
         _setupUI()
         _setupButtons()
         
@@ -43,19 +48,19 @@ class MainTableViewCell: MGSwipeTableCell {
     // MARK: - private method
     private func _setupUI() {
         
-        containerView = UIView()
-        contentView.addSubview(containerView)
-        
+//        containerView = UIView()
+//        contentView.addSubview(containerView)
+
         titleLabel = UILabel()
         titleLabel.textAlignment = .Left
         titleLabel.numberOfLines = 0
         titleLabel.textColor = UIColor.blackColor()
-        containerView.addSubview(titleLabel)
+        contentView.addSubview(titleLabel)
         
         timeLabel = UILabel()
         timeLabel.textAlignment = .Left
         timeLabel.textColor = UIColor.lightGrayColor()
-        containerView.addSubview(timeLabel)
+        contentView.addSubview(timeLabel)
         
         _autolayout()
     }
@@ -64,34 +69,34 @@ class MainTableViewCell: MGSwipeTableCell {
     let leftMargin: CGFloat = 25
     private func _autolayout() {
         
-        containerView.sd_layout()
-            .spaceToSuperView(UIEdgeInsetsZero)
-        
+//        containerView.sd_layout()
+//            .spaceToSuperView(UIEdgeInsetsZero)
+
         titleLabel.sd_layout()
             .leftSpaceToView(titleLabel.superview!, leftMargin)
             .rightSpaceToView(titleLabel.superview!, leftMargin)
             .topSpaceToView(titleLabel.superview!, topMargin)
             .autoHeightRatio(0)
-        
+
+
         timeLabel.sd_layout()
             .leftEqualToView(titleLabel)
             .rightEqualToView(titleLabel)
             .topSpaceToView(titleLabel, topMargin)
             .autoHeightRatio(0)
         
-        containerView.setupAutoHeightWithBottomView(timeLabel, bottomMargin: 0)
-        self.setupAutoHeightWithBottomView(containerView, bottomMargin: 5)
+        self.setupAutoHeightWithBottomView(timeLabel, bottomMargin: 0)
     }
     
     private func _setupButtons() {
         rightButtons = [
 
-            _createButton(nil, image: UIImage(named: "flurries"), block: { (cell) -> Bool in
-                print(1)
+            _createButton(nil, image: UIImage(named: "flurries"), block: {[weak self] (cell) -> Bool in
+                self?.deleteBlock?(cell: self!)
                 return true
             }),
-            _createButton(nil, image: UIImage(named: "fog"), block: { (cell) -> Bool in
-                print(2)
+            _createButton(nil, image: UIImage(named: "fog"), block: {[weak self] (cell) -> Bool in
+                self?.editBlock?(cell: self!)
                 return true
             }),
         ]
@@ -107,12 +112,19 @@ class MainTableViewCell: MGSwipeTableCell {
     private func _didSetCountDownModel() {
         titleLabel.text = countDownModel?.title
         timeLabel.text = countDownModel?.intervalString
-        self.contentView.updateLayout()
+//        contentView.updateLayout()
     }
     
     // MARK: - other
     override func setHighlighted(highlighted: Bool, animated: Bool) {}
     override func setSelected(selected: Bool, animated: Bool) {}
+
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        print("titlelabel = \(titleLabel.frame)")
+//        print("timeLabel = \(timeLabel.frame)")
+//
+//    }
 
 }
 

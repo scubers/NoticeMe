@@ -13,7 +13,7 @@ class AddingTimerView: UIView {
     
     var waveView: WaveView!
     var timeLabel: UILabel!
-    
+
     var rx_pan = PublishSubject<(view: AddingTimerView, translatePoint: CGPoint)>()
     
     // MARK: - lify cycle

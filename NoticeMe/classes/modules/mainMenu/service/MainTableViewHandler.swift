@@ -14,7 +14,7 @@ import JRUtils
 class MainTableViewHandler: NSObject {
     
     // 通知外界的信号
-    var rx_show = PublishSubject<Bool>();
+    var rx_showEditController = PublishSubject<CountDownModel>();
     var rx_selecteModel = PublishSubject<(model:CountDownModel, indexpath:NSIndexPath)>();
     
     var interactable = true
@@ -52,12 +52,6 @@ private let topInset: CGFloat = 30
 
 extension MainTableViewHandler: UITableViewDelegate {
     
-    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        if scrollView.contentOffset.y < -(scrollView.contentInset.top + 50) {
-            rx_show.onNext(true)
-        }
-    }
-    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let model = countDownModels[indexPath.row]
         dispatch_async(dispatch_get_main_queue()) {
@@ -75,7 +69,19 @@ extension MainTableViewHandler: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(MainTableViewCell.self.description()) as! MainTableViewCell
         configureCell(cell, indexpath: indexPath)
-//        cell.backgroundColor = UIColor.jr_randomColor()
+
+        cell.deleteBlock = { [weak self] cell in
+            let idx = self?.tableView.indexPathForCell(cell)
+            let model = self?.countDownModels[idx!.row]
+            self?.countDownModels.removeAtIndex(idx!.row)
+            model?.jr_delete()
+            self?.tableView.deleteRowsAtIndexPaths([idx!], withRowAnimation: .Left)
+        }
+
+        cell.editBlock = {[weak self] cell in
+            self?.rx_showEditController.onNext(cell.countDownModel!)
+        }
+
         return cell
     }
 
