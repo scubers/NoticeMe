@@ -45,7 +45,7 @@ extension AppDelegate {
     }
     @objc
     private func timerBeat(timer:NSTimer) {
-        NSNotificationCenter.defaultCenter().postNotificationName(TimerBeatNotification, object: nil)
+        NSNotificationCenter.defaultCenter().postNotificationName(Notifications.Global.TimerBeat, object: nil)
     }
     
     

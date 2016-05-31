@@ -10,4 +10,9 @@ import Foundation
 
 // MARK: - NSNotificationCenter key
 
-let TimerBeatNotification: String = "TimerBeatNotification"
+public struct Notifications {
+    public struct Global {
+         /// post by 1 second
+        public static let TimerBeat = "TimerBeatNotification"
+    }
+}

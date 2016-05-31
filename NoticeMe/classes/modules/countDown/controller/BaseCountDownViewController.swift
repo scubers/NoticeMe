@@ -50,12 +50,24 @@ class BaseCountDownViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.whiteColor()
-        setupUI()
-        setupGesture()
-        setupNotification()
+        _setupUI()
+        _setupGesture()
+        _setupNotification()
     }
     
-    private func setupUI() {
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        view.bringSubviewToFront(timeLabel)
+        setupLink()
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        stopLink()
+    }
+    
+    // MARK: - private
+    private func _setupUI() {
         timeLabel = UILabel()
         timeLabel.textAlignment = .Center
         timeLabel.backgroundColor = UIColor(white: 0.8, alpha: 0.4)
@@ -69,18 +81,12 @@ class BaseCountDownViewController: BaseViewController {
             .widthRatioToView(timeLabel.superview!, 2)
             .heightIs(40)
         
-//        timeLabel.snp_makeConstraints { (make) in
-//            make.center.equalTo(timeLabel.superview!)
-//            make.height.equalTo(40)
-//            make.width.equalTo(view.jr_height * 2)
-//        }
-        
     }
     
-    private func setupNotification() {
+    private func _setupNotification() {
         NSNotificationCenter
             .defaultCenter()
-            .rx_notification(TimerBeatNotification, object: nil)
+            .rx_notification(Notifications.Global.TimerBeat, object: nil)
             .subscribeNext {[weak self] _ in
                 self?.timeLabel.text = self?.countDown.restIntervalString
                 if !self!.needFullFrameUpdate {
@@ -89,7 +95,7 @@ class BaseCountDownViewController: BaseViewController {
             }.addDisposableTo(self.getDisposeBag())
     }
     
-    private func setupGesture() {
+    private func _setupGesture() {
         dismissSwipe = UISwipeGestureRecognizer.init().bk_initWithHandler {[weak self] (reco, state, point) in
             self?.dismissViewControllerAnimated(true, completion: nil)
         } as! UISwipeGestureRecognizer
@@ -99,17 +105,6 @@ class BaseCountDownViewController: BaseViewController {
         view.addGestureRecognizer(dismissSwipe)
     }
 
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        view.bringSubviewToFront(timeLabel)
-        setupLink()
-    }
-
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-        stopLink()
-//        motionMgr.stopAccelerometerUpdates()
-    }
 
     // MARK: - 子类方法
     /**
