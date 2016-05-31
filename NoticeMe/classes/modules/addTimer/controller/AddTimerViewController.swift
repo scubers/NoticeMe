@@ -44,6 +44,10 @@ class AddTimerViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 //        titleTextView.textField.becomeFirstResponder()
+//        jr_delay(1, queue: dispatch_get_main_queue()) { 
+//            self.addingTimerView.setProgress(0.1, animated: true)
+//        }
+        addingTimerView.setProgress(CGFloat(countDownModel.interval / Config.AddMaxInterval), animated: true)
     }
 
     override func viewDidLoad() {
@@ -92,9 +96,11 @@ class AddTimerViewController: UIViewController {
     
     private func _setupSignal() {
 
+        
         titleTextView.textField.rx_text.subscribeNext {[weak self] (text) in
             self?.countDownModel.title = text
         }.addDisposableTo(self.getDisposeBag())
+        
         
         titleTextView.rx_doneClick.subscribeNext {[weak self] (text) in
             if text != nil && text?.characters.count > 0 {
@@ -104,10 +110,15 @@ class AddTimerViewController: UIViewController {
             self?.rx_end.onNext(text != nil && text?.characters.count > 0)
         }.addDisposableTo(self.getDisposeBag())
         
+        
         addingTimerView.rx_pan.subscribeNext {[weak self] (view: AddingTimerView, translatePoint: CGPoint) in
-            
+            if !self!.isFirstResponder() {
+                self?.becomeFirstResponder()
+            }
             self?.countDownModel.interval -= Double(translatePoint.y)
             self?.countDownModel.interval = max(self!.countDownModel.interval, 1)
+            
+            self?.addingTimerView.setProgress(CGFloat(self!.countDownModel.interval / Config.AddMaxInterval), animated: false)
             
             view.timeLabel.text = "\(self!.countDownModel.intervalString)"
             

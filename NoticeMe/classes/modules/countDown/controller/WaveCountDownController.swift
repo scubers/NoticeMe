@@ -16,8 +16,10 @@ class WaveCountDownController: BaseCountDownViewController {
         super.viewDidLoad()
         waveView = WaveView()
         waveView?.jr_y = view.jr_height
-        waveView?.createWave(UIColor.lightGrayColor().CGColor, waveWith: view.jr_width, height: view.jr_height, skwing: 60, amplitude: 6, speed: 10)
+        waveView?.createWave(Colors.Wave.Color1.CGColor, waveWith: view.jr_width, height: view.jr_height, skwing: 60, amplitude: 6, speed: 10)
+        waveView?.createWave(Colors.Wave.Color2.CGColor, waveWith: view.jr_width, height: view.jr_height, skwing: 60, amplitude: 6, speed: 8)
         view.addSubview(waveView!)
+        NSLog("\(view)")
     }
 
     override func viewWillAppear(animated: Bool) {

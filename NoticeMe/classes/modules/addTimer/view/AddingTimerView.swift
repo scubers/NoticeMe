@@ -22,9 +22,10 @@ class AddingTimerView: UIView {
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = Colors.Wave.Background
         clipsToBounds = true
-        setupUI()
-        setupGesture()
+        _setupUI()
+        _setupGesture()
     }
     
     override func layoutSubviews() {
@@ -37,42 +38,44 @@ class AddingTimerView: UIView {
     
     // MARK: - private method
     
-    private func setupUI() {
+    private func _setupUI() {
         waveView = WaveView()
-        waveView.createWave(UIColor.whiteColor().CGColor, waveWith: 400, height: 300, skwing: 60, amplitude: 6, speed: 8)
-        waveView.createWave(UIColor.blackColor().CGColor, waveWith: 400, height: 300, skwing: 40, amplitude: 5, speed: 6)
+        waveView.createWave(Colors.Wave.Color1.CGColor, waveWith: 400, height: 300, skwing: 60, amplitude: 6, speed: 8)
+        waveView.createWave(Colors.Wave.Color2.CGColor, waveWith: 400, height: 300, skwing: 40, amplitude: 5, speed: 6)
         addSubview(waveView)
         waveView.beginWave()
         waveView.jr_y = 80
         
         timeLabel = UILabel()
         timeLabel.textAlignment = .Center
-        timeLabel.textColor = UIColor.yellowColor()
+        timeLabel.textColor = Colors.White
         timeLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 30)
         timeLabel.text = "3 : 00"
         addSubview(timeLabel)
         
     }
     
-    private func setupGesture() {
-        let pan = UIPanGestureRecognizer(target: self, action: #selector(AddingTimerView.handlePan(_:)))
+    private func _setupGesture() {
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(AddingTimerView._handlePan(_:)))
         addGestureRecognizer(pan)
     }
     
-    @objc
-    private func handlePan(reco: UIPanGestureRecognizer) {
+    @objc private func _handlePan(reco: UIPanGestureRecognizer) {
         let p = reco.translationInView(reco.view)
-        let y = waveView.jr_y + (p.y / 10)
-        waveView.jr_y = min(y, jr_height)
-        waveView.jr_y = max(y, -10)
+//        let y = waveView.jr_y + (p.y / 10)
+//        waveView.jr_y = min(y, jr_height)
+//        waveView.jr_y = max(y, -10)
         rx_pan.onNext((self, p))
         reco.setTranslation(CGPointZero, inView: reco.view)
     }
     
     // MARK: - public method
     func setProgress(progress: CGFloat, animated: Bool) {
-        UIView.animateWithDuration(animated ? 0.2 : 0, delay: 0, options: .CurveEaseOut, animations: { 
+        let progress = max(min(progress, 1), 0)
+        print(progress)
+        UIView.animateWithDuration(animated ? 0.35 : 0, delay: 0, options: .CurveEaseOut, animations: {
             self.waveView.jr_y = self.jr_height * (1-progress)
+            self.waveView.jr_height = self.jr_height
             }) { (flag) in
                 
         }

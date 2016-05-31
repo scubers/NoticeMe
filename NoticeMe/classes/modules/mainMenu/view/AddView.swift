@@ -47,7 +47,8 @@ class AddView: UIView {
         self.addSubview(waveContainer)
         
         waveView = WaveView()
-        waveView.createWave(UIColor.blackColor().CGColor, waveWith: 100, height: 100, skwing: 40, amplitude: 3, speed: 4)
+        waveView.createWave(Colors.Wave.Color1.CGColor, waveWith: 100, height: 100, skwing: 40, amplitude: 3, speed: 4)
+        waveView.createWave(Colors.Wave.Color2.CGColor, waveWith: 100, height: 100, skwing: 40, amplitude: 4, speed:3)
         waveView.userInteractionEnabled = false
         waveContainer.addSubview(waveView)
         
