@@ -64,7 +64,7 @@ class MainViewController: BaseViewController {
         addView.startWave()
         
         addView.bk_whenTapped { [weak self]  in
-            self?.presentViewController(self!._getAddTimerController(), animated: true, completion: nil)
+            self?.presentViewController(self!._getAddTimerController(nil), animated: true, completion: nil)
         }
     }
     
@@ -80,11 +80,16 @@ class MainViewController: BaseViewController {
                     self!.presentViewController(vc, animated: true, completion: nil)
                 }
             }.addDisposableTo(self.getDisposeBag())
-        
+
+        tableViewHandler
+            .rx_showEditController
+            .subscribeNext {[weak self] (model) in
+                self?.presentViewController(self!._getAddTimerController(model), animated: true, completion: nil)
+            }.addDisposableTo(self.getDisposeBag())
     }
     
-    private func _getAddTimerController() -> AddTimerViewController {
-        let nextViewController = AddTimerViewController()
+    private func _getAddTimerController(model: CountDownModel?) -> AddTimerViewController {
+        let nextViewController = AddTimerViewController(countDownModel: model)
         nextViewController.transitioningDelegate = RZTransitionsManager.shared()
         
         nextViewController.rx_end.subscribeNext {[weak self] (saved) in
