@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import BlocksKit
 
 // MARK: - 波浪模型
 class WaveModel {
