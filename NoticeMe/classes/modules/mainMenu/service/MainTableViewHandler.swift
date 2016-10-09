@@ -8,7 +8,6 @@
 
 import UIKit
 import RxSwift
-import JRDB
 import JRUtils
 
 class MainTableViewHandler: NSObject {
@@ -41,7 +40,7 @@ class MainTableViewHandler: NSObject {
     // MARK: - 提供给外面的操纵方法
     func reloadModels() {
         // TODO: 重新查询数据库
-        countDownModels = CountDownModel.jr_findByConditions(nil, groupBy: nil, orderBy: "createDate", limit: nil, isDesc: true) as! [CountDownModel]
+        countDownModels = J_Select(CountDownModel).Order("createDate").Descend().list();
         tableView.reloadData()
     }
 }

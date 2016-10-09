@@ -135,7 +135,7 @@ class AddTimerViewController: UIViewController {
         } else {
             // update
             countDownModel.updateDate = NSDate()
-            countDownModel.jr_updateWithColumn(nil)
+            countDownModel.jr_updateOnlyColumns(nil)
         }
     }
 

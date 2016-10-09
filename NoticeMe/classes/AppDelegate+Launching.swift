@@ -8,7 +8,7 @@
 
 import Foundation
 import JRUtils
-import JRDB
+import JRDBSwift
 
 extension AppDelegate {
 
@@ -22,8 +22,10 @@ extension AppDelegate {
             let nav = BaseNavigationController(rootViewController: MainViewController())
             self.window?.rootViewController = nav
         }
-
-        JRDBMgr.shareInstance().registerClazzForUpdateTable(CountDownModel)
+        JRDBMgr.shareInstance().registerClazzes([
+            CountDownModel.self,
+            ]);
+//        JRDBMgr.shareInstance()
         JRDBMgr.shareInstance().updateDefaultDB()
 
     }
